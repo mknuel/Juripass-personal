@@ -1,1 +1,1 @@
-# juripass_lawyer_frontend
+# lawyerportal
