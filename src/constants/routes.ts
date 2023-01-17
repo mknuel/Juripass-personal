@@ -1,0 +1,13 @@
+export const LANDING = '/'
+export const LOGIN = '/login'
+export const SIGNUP = '/signup'
+export const DASHBOARD = '/dashboard' 
+export const DASHBOARDHOME = '/home' 
+export const CASES = '/cases' 
+export const NEWCASES = '/case' 
+export const EXISTINGCASES = '/dashboard' 
+export const TRACKCASES = '/dashboard' 
+export const FILLINGS = '/dashboard' 
+export const DRAFTS = '/dashboard' 
+export const FIRMS = '/dashboard' 
+
