@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import DashboardLayout from './components/dashboard-layout';
 import Layout from './components/layout';
@@ -12,9 +12,9 @@ import './styles/index.css'
 const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
+const DashboardHome = lazy(() => import('./views/dashboard/home'))
 
 function App() {
-  const navigate = useNavigate()
   const theme = useSelector((state: any) => state.theme.value)
 
   useEffect(() => {
@@ -22,12 +22,6 @@ function App() {
     document.body.setAttribute('data-theme', theme ? 'dark' : 'light');
   }, [theme])
 
-  // useEffect(() => {
-  //   //redirect to home
-  //   if (window.location.pathname === "/") {
-  //     navigate("/home")
-  //   }
-  // }, [])
   return (
     <div className="App">
       <Suspense fallback={<Loader />}>
@@ -48,7 +42,7 @@ function App() {
 
             {/* nested route for dashboard (same header and sidebar) */}
             <Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>
-              <Route index element={<Landing />} />
+              <Route index element={<DashboardHome />} />
               <Route path={ROUTE.CASES} element={<Landing />} />
               <Route path={ROUTE.NEWCASES} element={<Landing />} />
               <Route path={ROUTE.EXISTINGCASES} element={<Landing />} />

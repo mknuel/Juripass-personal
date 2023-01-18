@@ -1,0 +1,19 @@
+#dashboard {
+   // height: 100vh;
+   display: flex;
+   align-items: flex-start;
+
+   &-sidebar {
+      width: 320px;
+      height: calc(100vh - 6em);
+      padding: 3em;
+      background-color: var(--color-background-light);
+   }
+
+   &-main {
+      width: 100%;
+      height: calc(100vh - 6em);
+      padding: 3em;
+      background-color: var(--color-background-dark);
+   }
+}

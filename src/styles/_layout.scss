@@ -1,0 +1,10 @@
+#layout {
+   &-body {
+      min-height: 90vh;
+   }
+
+   &-footer {
+      background-color: var(--color-secondary);
+      color: var(--color-text-light);
+   }
+}
