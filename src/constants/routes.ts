@@ -1,6 +1,6 @@
 export const LANDING = '/'
-export const ABOUT = '/about'
-export const POLICY = '/policy'
+export const ABOUT = 'about'
+export const POLICY = 'policy'
 export const LOGIN = '/login'
 export const SIGNUP = '/signup'
 export const RESETPASSWORD = '/reset-password'
