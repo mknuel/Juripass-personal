@@ -1,0 +1,65 @@
+
+.sidebar{
+    display: block;
+    padding: 1rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    &__list{
+        display: block;
+        position: relative;
+        margin: 4rem 0 10rem 0;
+    }
+
+    &__item{
+        margin: 2.5rem 0;
+        text-transform: capitalize;
+        color: var(--color-text-alt);
+    }
+
+    &__link{
+        color: inherit;
+        display: inline-flex;
+        transition: .15s ease-in-out;
+
+        svg{
+            fill: currentColor;
+            margin-right: 1rem;
+        }
+
+      &:hover{
+            
+            color: var(--color-secondary);
+        } 
+
+    }
+
+    &__logo{
+        width: 6.63rem;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+
+        img{
+            object-fit: cover;
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+    }
+}
+
+.active{
+    color: var(--color-secondary);
+}
+
+.button{
+    border: none;
+    outline: hidden;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
