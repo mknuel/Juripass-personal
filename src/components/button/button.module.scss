@@ -1,8 +1,10 @@
 
 .btn{
     border: none;
+    display: inline-block;
     outline:none;
-    padding: 1.25rem 2.5rem;
+    padding: 1.2rem 2.25rem;
+    height: fit-content;
     cursor: pointer;
     color: var(--color-secondary);
     font-size: 1.6rem;
@@ -10,6 +12,7 @@
     font-weight: 500;
     border-radius: 3rem;
     transition: .2s ease-in-out;
+    background-color: transparent;
     &::first-letter{
         text-transform: capitalize;
     }

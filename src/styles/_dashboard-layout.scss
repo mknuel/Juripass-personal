@@ -8,6 +8,10 @@
       width: max(32rem, 320px);
       height: calc(100vh);
       padding: 1.5rem 3rem;
+          position: sticky;
+          top: 0;
+          left: 0;
+
 
       background-color: var(--color-background-light);
    }
@@ -20,3 +24,23 @@
       background-color: var(--color-background-dark);
    }
 }
+
+
+/* .head__user{
+   animation: OpenPopup .3s ease-in-out 1 ;
+}
+
+@keyframes OpenPopup {
+
+    from{
+        width: 3rem;
+        height: 3rem;
+
+    }
+    to{
+        width: 22.6rem;
+        height: 39.3rem;
+    }
+    
+}
+ */
