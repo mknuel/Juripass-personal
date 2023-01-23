@@ -12,6 +12,7 @@ import './styles/index.css'
 const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
+const About = lazy(() => import('./views/About'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             {/* nested route for main pages due to same header and footer */}
             <Route path={ROUTE.LANDING} element={<Layout />}>
               <Route index element={<Landing />} />
-              <Route path={ROUTE.ABOUT} element={<Landing />} />
+              <Route path={ROUTE.ABOUT} element={<About />} />
               <Route path={ROUTE.POLICY} element={<Landing />} />
             </Route>
 
