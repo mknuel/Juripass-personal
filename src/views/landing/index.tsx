@@ -8,6 +8,7 @@ import Features from '../../views/landing/features'
 
 import './landing.scss'
 import About from './about'
+import Attestation from './attestation'
 
 function Landing() {
   return (
@@ -16,6 +17,7 @@ function Landing() {
         <Hero />
         <Features />
         <About />
+        <Attestation />
       </div>
     </Page>
   )

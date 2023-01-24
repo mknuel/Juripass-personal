@@ -92,6 +92,9 @@
     column-gap: 10px;
     row-gap: 10px;
 }
+.ftrs-card img{
+    width: 280px;
+}
 .abt img{
     width: 100%;
 }
@@ -125,4 +128,59 @@
     position: absolute;
     bottom: -330%;
     left: 20%;
+}
+.attestation{
+    margin-top: -10px;
+    padding: 100px;
+    background-color: #dddbdb;
+}
+.attestation h2{
+    color: #1B1A19;
+    font-size: 28px;
+}
+.attestation p{
+    color: #4d494a;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.a-card{
+    margin-top: 90px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #BABBBE;
+    border-radius: 0.1rem;
+    height: 220px;
+    
+}
+.quote{
+    position: absolute;
+    top: -18px;
+    right: 20px;
+}
+.testi p{
+    font-size: 10px;    
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.ownerImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.owner{
+    margin-left: 20px;
+}
+.owner p{
+    font-size: 10px;
+    margin-top: -20px;
 }
