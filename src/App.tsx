@@ -13,6 +13,7 @@ const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
+const Firms = lazy(() => import('./views/dashboard/firms'))
 
 function App() {
   const theme = useSelector((state: any) => state.theme.value)
@@ -49,7 +50,7 @@ function App() {
               <Route path={ROUTE.TRACKCASES} element={<Landing />} />
               <Route path={ROUTE.FILLINGS} element={<Landing />} />
               <Route path={ROUTE.DRAFTS} element={<Landing />} />
-              <Route path={ROUTE.FIRMS} element={<Landing />} />
+              <Route path={ROUTE.FIRMS} element={<Firms />} />
             </Route>
           </Routes>
         </BrowserRouter>
