@@ -13,13 +13,13 @@ import {
 	SavedDraftsIcon,
 	LogoutIcon,
 	TrackCaseIcon,
-} from "../../assets/icons";
+} from "../icons/icons";
 
 function Sidebar() {
 	return (
 		<aside className={style.sidebar}>
 			<div className={style.sidebar__logo}>
-				<img src="./assets/logo.png" alt="juripass logo" />
+				<img src="/assets/logo.png" alt="juripass logo" />
 			</div>
 			<ul className={style.sidebar__list}>
 				<li className={style.sidebar__item}>
@@ -35,7 +35,7 @@ function Sidebar() {
 
 				<li className={style.sidebar__item}>
 					<NavLink
-						to={ROUTE.NEWCASES}
+						to={ROUTE.NEWCASES.default}
 						className={(navData) =>
 							`${navData.isActive ? style.active : ""} ${style.sidebar__link}`
 						}>

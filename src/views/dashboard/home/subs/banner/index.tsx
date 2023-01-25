@@ -1,6 +1,10 @@
 import React from "react";
 import style from "../../home.module.scss";
-import { ArrowDown, ArrowUp, HammerIcon } from "../../../../../assets/icons";
+import {
+	ArrowDown,
+	ArrowUp,
+	HammerIcon,
+} from "../../../../../components/icons/icons";
 
 function Card() {
 	return (

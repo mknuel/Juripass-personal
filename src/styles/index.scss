@@ -3,6 +3,8 @@
 @import './_mixins.scss';
 @import './_typo.scss';
 @import './_dashboard-layout.scss';
+@import './_reset.scss';
+
 
 :root {
   --color-primary: #FAB641;
@@ -13,9 +15,17 @@
   --color-text-dark: #231F20;
   --color-text-alt: #cbccce;
   --color-text-primary: #9b9b9b;
+  --color-text-mid: #898a8c;
   --color-green: #5DB975;
   --color-red: #FA7066;
   --color-black: #000;
+  
+  // border raadius
+  --border-radius-container: .25rem;
+  --border-radius-input: 3rem;
+
+
+
   
 }
 
@@ -32,6 +42,7 @@
   --color-red: #FA7066;
   --color-black: #000;
   
+
 
 }
 
@@ -76,3 +87,7 @@ body{
 }
 
 
+input,select{
+  outline: none;
+  border: 1px solid currentColor;
+}
