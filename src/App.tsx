@@ -13,6 +13,7 @@ const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
 const About = lazy(() => import('./views/About'))
+const Policy = lazy(() => import('./views/Policy'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
             <Route path={ROUTE.LANDING} element={<Layout />}>
               <Route index element={<Landing />} />
               <Route path={ROUTE.ABOUT} element={<About />} />
-              <Route path={ROUTE.POLICY} element={<Landing />} />
+              <Route path={ROUTE.POLICY} element={<Policy />} />
             </Route>
 
             <Route path={ROUTE.LOGIN} element={<Login />} />
