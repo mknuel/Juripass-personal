@@ -35,7 +35,7 @@ function Sidebar() {
 
 				<li className={style.sidebar__item}>
 					<NavLink
-						to={ROUTE.NEWCASES.default}
+						to={ROUTE.NEWCASES.DEFAULT}
 						className={(navData) =>
 							`${navData.isActive ? style.active : ""} ${style.sidebar__link}`
 						}>

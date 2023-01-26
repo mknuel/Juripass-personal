@@ -8,9 +8,9 @@ export const FORGOTPASSWORD = '/forgot-password'
 export const DASHBOARD = '/dashboard'
 export const CASES = 'cases'
 export const NEWCASES = {
-	default: "new-case/",
-	basic_info: "basic-info",
-	claimant: "claimant",
+	DEFAULT: "new-case/",
+	BASIC_INFO: "basic-info",
+	CLAIMANT: "claimant",
 };
 export const EXISTINGCASES = 'case'
 export const TRACKCASES = 'track-cases'

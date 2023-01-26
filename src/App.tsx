@@ -9,7 +9,6 @@ import * as ROUTE from './constants/routes'
 import './styles/index.css'
 
 // lazy load routes
-
 const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
@@ -54,13 +53,13 @@ function App() {
 						<Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>
 							<Route index element={<DashboardHome />} />
 							<Route path={ROUTE.CASES} element={<Landing />} />
-							<Route path={ROUTE.NEWCASES.default} element={<FileCase />}>
+							<Route path={ROUTE.NEWCASES.DEFAULT} element={<FileCase />}>
 								<Route index element={<FileCase />} />
 								<Route
-									path={ROUTE.NEWCASES.basic_info}
+									path={ROUTE.NEWCASES.BASIC_INFO}
 									element={<BasicInfo />}
 								/>
-								<Route path={ROUTE.NEWCASES.claimant} element={<Claimant />} />
+								<Route path={ROUTE.NEWCASES.CLAIMANT} element={<Claimant />} />
 							</Route>
 							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
 							<Route path={ROUTE.TRACKCASES} element={<Landing />} />
