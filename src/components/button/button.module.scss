@@ -1,0 +1,52 @@
+
+.btn{
+    border: none;
+    display: inline-block;
+    outline:none;
+    padding: 1.2rem 2.25rem;
+    height: fit-content;
+    cursor: pointer;
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+    border: 1px solid currentColor;
+    font-weight: 500;
+    border-radius: 3rem;
+    transition: .2s ease-in-out;
+    background-color: transparent;
+    &::first-letter{
+        text-transform: capitalize;
+    }
+
+    &-pri{
+
+        &:hover{
+            border: 1px solid var(--color-secondary);
+            color: var(--color-text-light);
+            background-color: var(--color-secondary);
+        }
+        
+    }    
+
+    &-ter{
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        &:hover{
+
+        }
+    }
+
+    &-wrap{
+         border: none;
+    outline:none;
+    // padding: 1.5rem 3rem;
+    cursor: pointer;
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+
+    svg{
+        fill: currentColor;
+    }
+    }
+
+
+}
