@@ -14,50 +14,66 @@ const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
 const Firms = lazy(() => import('./views/dashboard/firms'))
+const IconPage = lazy(() => import("./views/icon-page"));
+
+// dashboard routes
+const FileCase = lazy(() => import("./views/dashboard/file-case"));
+const BasicInfo = lazy(() => import("./views/dashboard/file-case/subs/basic"));
+const Claimant = lazy(
+	() => import("./views/dashboard/file-case/subs/claimant/index")
+);
 
 function App() {
-  const theme = useSelector((state: any) => state.theme.value)
+	const theme = useSelector((state: any) => state.theme.value);
 
-  useEffect(() => {
-    //toggle styles between light and dark theme
-    document.body.setAttribute('data-theme', theme ? 'dark' : 'light');
-  }, [theme])
+	useEffect(() => {
+		//toggle styles between light and dark theme
+		document.body.setAttribute("data-theme", theme ? "dark" : "light");
+	}, [theme]);
 
-  return (
-    <div className="App">
-      <Suspense fallback={<Loader />}>
-        <BrowserRouter>
-          <Routes>
+	return (
+		<div className="App">
+			<Suspense fallback={<Loader />}>
+				<BrowserRouter>
+					<Routes>
+						<Route path={"/icons"} element={<IconPage />} />
 
-            {/* nested route for main pages due to same header and footer */}
-            <Route path={ROUTE.LANDING} element={<Layout />}>
-              <Route index element={<Landing />} />
-              <Route path={ROUTE.ABOUT} element={<Landing />} />
-              <Route path={ROUTE.POLICY} element={<Landing />} />
-            </Route>
+						{/* nested route for main pages due to same header and footer */}
+						<Route path={ROUTE.LANDING} element={<Layout />}>
+							<Route index element={<Landing />} />
+							<Route path={ROUTE.ABOUT} element={<Landing />} />
+							<Route path={ROUTE.POLICY} element={<Landing />} />
+						</Route>
 
-            <Route path={ROUTE.LOGIN} element={<Login />} />
-            <Route path={ROUTE.SIGNUP} element={<SignUp />} />
-            <Route path={ROUTE.FORGOTPASSWORD} element={<SignUp />} />
-            <Route path={ROUTE.RESETPASSWORD} element={<SignUp />} />
+						<Route path={ROUTE.LOGIN} element={<Login />} />
+						<Route path={ROUTE.SIGNUP} element={<SignUp />} />
+						<Route path={ROUTE.FORGOTPASSWORD} element={<SignUp />} />
+						<Route path={ROUTE.RESETPASSWORD} element={<SignUp />} />
 
-            {/* nested route for dashboard (same header and sidebar) */}
-            <Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>
-              <Route index element={<DashboardHome />} />
-              <Route path={ROUTE.CASES} element={<Landing />} />
-              <Route path={ROUTE.NEWCASES} element={<Landing />} />
-              <Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
-              <Route path={ROUTE.TRACKCASES} element={<Landing />} />
-              <Route path={ROUTE.FILLINGS} element={<Landing />} />
-              <Route path={ROUTE.DRAFTS} element={<Landing />} />
-              <Route path={ROUTE.FIRMS} element={<Firms />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </Suspense>
-      <ToastContainer />
-    </div>
-  );
+						{/* nested route for dashboard (same header and sidebar) */}
+						<Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>
+							<Route index element={<DashboardHome />} />
+							<Route path={ROUTE.CASES} element={<Landing />} />
+							<Route path={ROUTE.NEWCASES.DEFAULT} element={<FileCase />}>
+								<Route index element={<FileCase />} />
+								<Route
+									path={ROUTE.NEWCASES.BASIC_INFO}
+									element={<BasicInfo />}
+								/>
+								<Route path={ROUTE.NEWCASES.CLAIMANT} element={<Claimant />} />
+							</Route>
+							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
+							<Route path={ROUTE.TRACKCASES} element={<Landing />} />
+							<Route path={ROUTE.FILLINGS} element={<Landing />} />
+							<Route path={ROUTE.DRAFTS} element={<Landing />} />
+							<Route path={ROUTE.FIRMS} element={<Landing />} />
+						</Route>
+					</Routes>
+				</BrowserRouter>
+			</Suspense>
+			<ToastContainer />
+		</div>
+	);
 }
 
 export default App;
