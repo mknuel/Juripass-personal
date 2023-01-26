@@ -1,8 +1,8 @@
 import React from "react";
 import style from "../../home.module.scss";
 import {
-	ArrowDown,
-	ArrowUp,
+	ArrowDownIcon,
+	ArrowUpIcon,
 	HammerIcon,
 } from "../../../../../components/icons/icons";
 
@@ -17,7 +17,7 @@ function Card() {
 
 			<div className={style["card__content--alt"]}>
 				<div className={`${style.card__status} ${style["card__status--red"]}`}>
-					<ArrowDown />
+					<ArrowDownIcon />
 					&nbsp;
 					<span className={"dark"}>25</span>
 					&nbsp;
@@ -26,7 +26,7 @@ function Card() {
 
 				<div
 					className={`${style.card__status} ${style["card__status--green"]}`}>
-					<ArrowUp />
+					<ArrowUpIcon />
 					&nbsp;
 					<span className={"dark"}>75</span>
 					&nbsp;

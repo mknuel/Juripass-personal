@@ -44,3 +44,32 @@
     
 }
  */
+
+ .icon__item{
+    display: flex;
+    justify-content: space-between;
+    // margin: 1rem;
+    padding: 1rem 5rem;
+    font-size: 1.6rem;
+    width: 60%;
+    margin: 1rem auto;
+color: var(--color-secondary);
+
+svg{
+    fill: currentColor;
+    width: 3rem;
+    height: 3rem;
+}
+
+
+}
+.icon__item__header{
+    position: sticky;
+    top: 0;
+    color: white;
+    text-transform: capitalize;
+    left: 0;
+    padding: 2rem;
+    background-color: var(--color-secondary);
+    // height: 10rem;
+}
