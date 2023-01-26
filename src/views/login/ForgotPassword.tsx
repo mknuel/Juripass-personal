@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 
 import logo from '../../../src/assets/images/logo.png'
@@ -15,12 +15,12 @@ const ForgotPassword = () => {
     const notify = () => {
         toast(
         <div className='toast'>
-            <img src={icon} alt="" />
+            <img src={icon} alt="logo" />
             <div className='toast-h'>
-                <p>New password set successfully!</p>
+                <p>Instructions sent!</p>
             </div>
             <div className='toast-d'>
-                <p>Login with your new password to continue to your account.</p>
+                <p>Instructions to set your password have been sent to your email.</p>
             </div>
         </div>, {
         position: "top-right",
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
                 <div className='left-s'>
                     <div className="s-main">
                     <div className="sp-logo">
-                        <img className="s-logo" src={logo}></img>
+                        <img className="s-logo" src={logo} alt='logo'></img>
                     </div>
                     <div className="wc">
                         <div className='heading' >Forgot Password</div>

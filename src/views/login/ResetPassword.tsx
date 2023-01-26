@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 import icon from '../../../src/assets/icons/Icon.png'
 import { ToastContainer, toast} from 'react-toastify';
 import logo from '../../../src/assets/images/logo.png'
-import justice from '../../../src/assets/images/justice.png'
 import eye from '../../../src/assets/icons/eye-slash.png'
 
 import './login.scss'
@@ -17,7 +16,7 @@ const ResetPassword = () => {
     const notify = () => {
         toast(
         <div className='toast'>
-            <img src={icon} alt="" />
+            <img src={icon} alt="logo" />
             <div className='toast-h'>
                 <p>New password set successfully!</p>
             </div>
@@ -37,7 +36,7 @@ const ResetPassword = () => {
     );
     
         setTimeout(() => {
-            navigate('/reset-password')
+            navigate('/login')
         }, 5000);
     }
   
@@ -49,7 +48,7 @@ const ResetPassword = () => {
       <div className='left-s'>
         <div className="s-main">
           <div className="sp-logo">
-            <img className="s-logo" src={logo}></img>
+            <img className="s-logo" src={logo} alt='logo'></img>
           </div>
           <div className="wc">
             <div className='heading' >Reset Password</div>
@@ -61,19 +60,19 @@ const ResetPassword = () => {
               <p className="label">New password</p>
               <div className='pass-icon'>
                   <input className="pass" placeholder="Enter new password" type={showPassword ? 'text': 'password'} />
-                  <img src={!showPassword ? eye : ''} className="eye" onClick={() => setShowPassword(!showPassword)} />
+                  <img src={!showPassword ? eye : ''} className="eye" onClick={() => setShowPassword(!showPassword)} alt='eye' />
               </div>  
             </div>
             <div className="p-word">
               <p className="label">Confirm password</p>
               <div className='pass-icon'>
                   <input className="pass" placeholder="Confirm new password" type={showPassword ? 'text': 'password'} />
-                  <img src={!showPassword ? eye : ''} className="eye" onClick={() => setShowPassword(!showPassword)} />
+                  <img src={!showPassword ? eye : ''} className="eye" onClick={() => setShowPassword(!showPassword)} alt='eye' />
               </div>  
             </div>
             </div>
             <div className="s-button">
-              <button className="sign-btn">Reset password</button>
+              <button onClick={notify} className="sign-btn">Reset password</button>
             </div>
           </div>
         </div>
