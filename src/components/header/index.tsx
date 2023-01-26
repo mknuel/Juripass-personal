@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { ASSETS } from '../../assets/icons'
 import * as ROUTE from '../../constants/routes'
 import { BtnPrimary, BtnTertiary } from '../button'
+import './index.scss';
 
 function Header() {
   const active = {

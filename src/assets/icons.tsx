@@ -1,12 +1,10 @@
 import LogoDark from './icons/logo-dark.svg'
 import LogoLight from './icons/logo-light.svg'
-import HeroBg from './icons/herobg.png'
 
 
 export const ASSETS = {
 	LogoDark,
 	LogoLight,
-	HeroBg
 }
 
 export const DashboardIcon = () => {
