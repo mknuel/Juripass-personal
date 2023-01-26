@@ -1,5 +1,6 @@
 @import './_landing.scss';
-@import './_layout.scss';
+@import '../components/header';
+@import '../components/footer';
 @import './_mixins.scss';
 @import './_typo.scss';
 @import './_dashboard-layout.scss';
@@ -16,7 +17,7 @@
   --color-green: #5DB975;
   --color-red: #FA7066;
   --color-black: #000;
-  
+
 }
 
 [data-theme=dark] {
@@ -31,13 +32,18 @@
   --color-green: #5DB975;
   --color-red: #FA7066;
   --color-black: #000;
-  
+
 
 }
 
 
+.con {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: auto;
+}
 
-img{
+img {
   pointer-events: none;
 }
 
@@ -45,34 +51,36 @@ img{
 *::after,
 *::before {
   margin: 0;
-	padding: 0;
-	color: inherit;
-	box-sizing: border-box;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
   backface-visibility: hidden;
 }
 
 
 html {
-	font-size: 62.5%;
-	@include respond(big-desktop) {
-		font-size: 75%;
-	}	
-	@include respond(tab-land) {
-		font-size: 56.25%; //1rem = 8px
-	}	
-	@include respond(tab-port) {
-		font-size: 50%; //1rem = 9px
-	}	
-	@include respond(phone) {
-		font-size: 50%;
-	}	
+  font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 8px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 9px
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 
   height: 100%;
 
-}	
-
-body{
-  font-size: 1.6rem;
 }
 
-
+body {
+  font-size: 1.6rem;
+}
