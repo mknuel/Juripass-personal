@@ -8,7 +8,10 @@ import just2 from '../../../src/assets/images/just2.png'
 
 import './about.scss'
 
+import { innovation } from '../../constants/innovation'
+
 import hit from '../../../src/assets/images/Mask group (2).png'
+import { team } from '../../constants/team'
 const index = () => {
   return (
     <div className='main-about'>
@@ -63,6 +66,45 @@ const index = () => {
               <p>We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.</p>
             </div>
           </div>
+        </div>
+      </div>
+        <div className='innovation'>
+        <div className='heading-in'>
+          <h4>Juripass Innovation</h4>
+          <p>The right solution to your legal concerns</p>
+        </div>
+        <div className='flex-inv'>
+        {innovation.map((innovation) => (
+          <div className='flex-card'>
+              <div className='in-img'>
+                  <img src={innovation.icon} alt="" />
+              </div>
+              <div className='in-title'>
+                <h4>{ innovation.title }</h4>
+              </div>
+              <div className='in-desc'>
+                <p>{ innovation.description }</p>
+              </div>
+            </div>
+        ))}
+        </div>
+      </div>
+      <div className='team'>
+        <div className='head-team'>
+          <h4>Our Team</h4>
+          <p>The right solution to your legal concerns</p>
+        </div>
+        <div className='team-flex'>
+          {team.map((team) => (
+          <div className='team-profile'>
+            <div className='team-image'>
+              <img src={team.photo} alt="" />
+            <div className='team-name'>
+                <p>{ team.name }</p>
+            </div>
+            </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

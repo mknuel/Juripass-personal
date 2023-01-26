@@ -12,8 +12,8 @@ import './styles/index.css'
 const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
-const About = lazy(() => import('./views/About'))
-const Policy = lazy(() => import('./views/Policy'))
+const About = lazy(() => import('./views/About/'))
+const Policy = lazy(() => import('./views/Policy/'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
 
 function App() {

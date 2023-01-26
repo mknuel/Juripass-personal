@@ -23,7 +23,7 @@
 .mid-text p{
     top: 150px;
     text-align: center;
-    color: rgb(134, 51, 51);
+    color: white;
     width: 900px;
     left: 210px;
     top:  120px;
@@ -40,7 +40,7 @@
 .txt-re{
     width: 50%;
 }
-.txt-re .explanantion {
+.txt-re .explanation {
     font-size: 16px;
     line-height: 24px;
 }
@@ -48,6 +48,9 @@
 .heading p{
     font-weight: bold;
     font-size: 18px;
+}
+.explanation p{
+    color: #36373A;
 }
 .img-re {
     width: 35%;
@@ -124,4 +127,64 @@
 }
 .txt-just{
     width: 40%;
+}
+.innovation{
+    background-color: var(--color-secondary);
+    padding: 100px;
+}
+.heading-in{
+    color: white;
+}
+.heading-in p{
+    opacity: 0.6;
+}
+.flex-inv{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.flex-card{
+    margin-top: 90px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #BABBBE;
+    border-radius: 0.9rem;
+    height: 280px;
+    width: 350px;
+}
+.in-title  {
+    color: white;
+    width: 250px;
+}
+.in-desc{
+    color: white;
+    font-size: 16px;
+    opacity: 0.7;
+    width: 350px;
+}
+.team{
+    padding: 100px;
+    background-color: #d0d1d3;
+}
+.head-team p{
+    opacity: 0.6;
+}
+.team-flex{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.team-image{
+    position: relative;
+    filter: grayscale(100%);
+}
+.team-name{
+    position: relative;
+    top: -70px;
+    right: -20px;
+    color: white;
+    width: 180px;
 }
