@@ -11,7 +11,7 @@
   --color-background-light: #FFFFFF;
   --color-background-dark: #EDEEF1;
   --color-text-light: #FFFFFF;
-  --color-text-dark: #231F20;
+  --color-text-dark: #231f2058;
   --color-text-alt: #cbccce;
   --color-text-primary: #9b9b9b;
   --color-text-mid: #898a8c;
@@ -71,15 +71,15 @@ html {
   }
 
   @include respond(tab-land) {
-    font-size: 56.25%; //1rem = 8px
+    font-size: 66.25%; //1rem = 8px
   }
 
   @include respond(tab-port) {
-    font-size: 50%; //1rem = 9px
+    font-size: 60%; //1rem = 9px
   }
 
   @include respond(phone) {
-    font-size: 50%;
+    font-size: 60%;
   }
 
   height: 100%;

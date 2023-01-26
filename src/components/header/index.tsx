@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { ASSETS } from '../../assets/icons'
+import { LOGO } from '../../assets/logos/logo'
 import * as ROUTE from '../../constants/routes'
 import { BtnPrimary, BtnSecondary, BtnTertiary } from '../button'
 import './index.scss';
@@ -13,7 +13,7 @@ function Header() {
   return (
     <header className='header con'>
       <div className='header-logo'>
-        <img src={ASSETS.LogoDark} alt="logo" />
+        <img src={LOGO.LogoDark} alt="logo" />
       </div>
       <nav className='header-nav'>
         <div>

@@ -4,7 +4,7 @@
    // hero section starts
    & #hero {
       position: relative;
-      background: url(../../assets/herobg.png);
+      background: url(../../assets/images/herobg.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -21,7 +21,8 @@
       }
 
       & .con {
-         height: 60vh;
+         position: relative;
+         height: 58vh;
          display: flex;
          justify-content: flex-start;
          align-items: center;
@@ -34,7 +35,7 @@
             text-align: left;
 
             & h1 {
-               font-size: 8.5rem;
+               font-size: 8.4rem;
                color: var(--color-text-light);
                margin-bottom: 0.4em;
             }
@@ -77,7 +78,7 @@
             z-index: 1;
             background-color: var(--color-background-light);
             bottom: -10%;
-            right: 10%;
+            right: 0%;
             display: flex;
             align-items: center;
             padding: 2em 4.5em;
@@ -112,7 +113,7 @@
 
    // users section starts 
    & #users {
-      padding: 13em 0;
+      padding: 11em 0;
 
       & .con {
          display: flex;
@@ -134,19 +135,95 @@
    }
 
    & #features {
-      &-body{
-         &_item{
-            background-color: var(--color-background-light);
-            & div{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               background-color: var(--color-background-dark);
+      & .features {
+         &-heading {
+            margin-bottom: 4em;
+         }
+
+         &-body {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &_item {
+               width: 304px;
+               height: 350px;
+               background-color: var(--color-background-light);
+               padding: 4em;
+               border-radius: 15px;
+               margin: 0.8em;
+
+               & div {
+                  width: 100px;
+                  height: 100px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: var(--color-background-dark);
+                  border-radius: 10px;
+                  margin-bottom: 2em;
+               }
+
+               & b {
+                  display: block;
+                  font-size: 1.8rem;
+                  font-weight: 600;
+                  margin-bottom: 0.9em;
+               }
+
+               & p {
+                  font-size: 1.6rem;
+                  line-height: 1.5;
+               }
+            }
+         }
+      }
+
+   }
+
+   & #about {
+      background-color: var(--color-secondary);
+
+      & .con {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-height: 650px;
+      }
+
+      & .about {
+         &-text {
+            width: 50%;
+            & p {
+               font-size: 3rem;
+               color: var(--color-text-light);
+               font-weight: 600;
+               max-width: 450px;
+               margin-bottom: 1.8em;
+            }
+
+            & button {
+               width: 250px;
+               height: 60px;
+               font-size: 2rem;
+               font-weight: 600;
+            }
+         }
+
+         &-img {
+            position: relative;
+            width: 50%;
+
+            & img {
+      
             }
          }
       }
    }
 
+   #comments{
+      background-color: var(--color-background-dark);
+   }
    & .heading {
       color: var(--color-secondary);
       font-size: 2.9rem;

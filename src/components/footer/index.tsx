@@ -1,5 +1,5 @@
 import React from 'react'
-import { ASSETS } from '../../assets/icons'
+import { LOGO } from '../../assets/logos/logo'
 
 function Footer() {
   return (
@@ -10,7 +10,7 @@ function Footer() {
       <footer className='footer con'>
         <div className='footer-con'>
           <div className='footer-left'>
-            <img src={ASSETS.LogoLight} alt="logo" />
+            <img src={LOGO.LogoLight} alt="logo" />
             <p>
               We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.
             </p>
