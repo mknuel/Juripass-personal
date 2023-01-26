@@ -1,4 +1,4 @@
-import loader from '../../assets/icons/loader.svg';
+import loader from '../../assets/loader.svg';
 
 function Loader() {
   return (

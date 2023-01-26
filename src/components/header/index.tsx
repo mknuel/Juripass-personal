@@ -2,12 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { ASSETS } from '../../assets/icons'
 import * as ROUTE from '../../constants/routes'
-import { BtnPrimary, BtnTertiary } from '../button'
+import { BtnPrimary, BtnSecondary, BtnTertiary } from '../button'
 import './index.scss';
 
 function Header() {
   const active = {
-    borderBottom: '3px solid #0D294D'
+    borderBottom: '3px solid #0D294D',
+    fontWeight: 'bold'
   }
   return (
     <header className='header con'>
@@ -32,8 +33,8 @@ function Header() {
         </div>
       </nav>
       <div className='header-btns'>
-        <BtnPrimary>Login</BtnPrimary>
-        <BtnTertiary>Sign Up</BtnTertiary>
+        <BtnSecondary>Login</BtnSecondary>
+        <BtnPrimary>Sign Up</BtnPrimary>
       </div>
     </header>
   )

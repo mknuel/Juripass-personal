@@ -22,10 +22,6 @@
   // border raadius
   --border-radius-container: .25rem;
   --border-radius-input: 3rem;
-
-
-
-
 }
 
 [data-theme=dark] {
@@ -47,7 +43,8 @@
 
 
 .con {
-  max-width: 1500px;
+  max-width: 1300px;
+  padding: 0 1em;
   margin: auto;
 }
 

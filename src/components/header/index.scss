@@ -1,28 +1,28 @@
 .header {
-   margin-top: 1em ;
-   margin-bottom: 1em ;
-   padding: 1em 2em;
    display: flex;
    align-items: center;
    justify-content: space-between;
+
+   &-logo{
+      width: 235px;
+   }
 
    &-nav {
       display: flex;
 
       & a {
-         padding:5px 0;
+         padding: 5px 0;
          margin: 0 10px;
+         font-size: 1.6em;
 
-         &.active::after{
-            content: "";
-            position: absolute;
-            width: auto;
-            background: -webkit-linear-gradient(to left , var(--color-secondary) 20%, var(--color-primary) 20%, var(--color-secondary) 60%);
-         }
       }
    }
 
    &-btns {
+      padding: 1.5em 0;
+      & button{
+         width: 110px
+      }
       & button:nth-child(2) {
          margin-left: 15px;
       }
