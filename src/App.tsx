@@ -7,6 +7,8 @@ import Layout from './components/layout';
 import Loader from './components/loader';
 import * as ROUTE from './constants/routes'
 import './styles/index.css'
+import ForgotPassword from './views/login/ForgotPassword';
+import ResetPassword from './views/login/ResetPassword';
 
 // lazy load routes
 const SignUp = lazy(() => import('./views/signup'))
@@ -39,8 +41,8 @@ function App() {
 
             <Route path={ROUTE.LOGIN} element={<Login />} />
             <Route path={ROUTE.SIGNUP} element={<SignUp />} />
-            <Route path={ROUTE.FORGOTPASSWORD} element={<SignUp />} />
-            <Route path={ROUTE.RESETPASSWORD} element={<SignUp />} />
+            <Route path={ROUTE.FORGOTPASSWORD} element={<ForgotPassword />} />
+            <Route path={ROUTE.RESETPASSWORD} element={<ResetPassword />} />
 
             {/* nested route for dashboard (same header and sidebar) */}
             <Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>

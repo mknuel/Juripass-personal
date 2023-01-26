@@ -2,37 +2,36 @@
 
 .s-body {
     background-image: url('../../../src/assets/images/justice.png');
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow-y: scroll;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 .left-s{
-    position: absolute;
+    // position: absolute;
     left: 0;
     top: 0;
     z-index: 20;
     width: 55%;
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
     border-top-right-radius: 4rem;
     border-bottom-right-radius: 4rem;
 }
 .right-s{
     width: 45%;
-    height: 100vh;
+    // height: 100vh;
    
 }
 .right-s img{
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     object-fit: contain;
 }
 .s-main {
-    padding: 100px 150px;
+    padding: 100px 0;
+    width: 50%;
+    margin: 0 auto;
     background-color: white;
-    height: 100vh;
+    // height: 100vh;
     /* display: flex;
     justify-content: center; */
 }
@@ -43,9 +42,9 @@
     align-items: center;
 }
 .wc .heading{
-    margin: 20px 0px 5px 0px;
-    font-size: 2rem;
-    font-weight: 800;
+    margin: 70px 0px 5px 0px;
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--color-secondary);
 }
 .wc span{
@@ -56,18 +55,18 @@
     width: 70px;
 }
 .login {
+    margin-top: 20px;
     padding: 20px 0;
 }
 
 .pass,
 .user {
-    width: 94%;
-    max-width: 94%;
+    width: 100%;
     height: 40px;
     background-color: white;
     border: 1px solid #ced4da;
     border-radius: 25px;
-    margin-top: -10px;
+    margin-top: 10px;
     padding: 0 15px;
 }
  .pass::placeholder, 
@@ -76,23 +75,32 @@
  }
 
 .label {
-    color: rgb(12, 11, 11);
-    font-size: 15px;
+    color: rgb(70, 67, 67);
+    font-size: 14px;
+    font-weight: 700;
     padding: 5px 0 0 0;
 }
+.p-word{
+    margin-top: 20px;
+}
 .cb {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;  
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
 }
 .rem {
     display: flex;
-    flex-direction: row;
+}
+.rem p{
+    font-weight: 400;
+    color: #595a5a;
 }
 .check-name {
     margin-left: 10px;
+    color: #595a5a;
 }
 .f-pass {
     font-weight: 800;
@@ -104,8 +112,8 @@
 }
 .eye {
     position: absolute;
-    right: 10px;
-    top: 3px;
+    right: 20px;
+    top: 20px;
 }
 .sign-btn {
     padding: 16px 20px;
@@ -116,16 +124,38 @@
     border-radius: 40px;
     color: var(--color-secondary);
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
 }
 .sign-up {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 20px;
+}
+.sign-up p{
+    color: #595a5a;
 }
 .s-link{
     margin-left: 5px;
     text-decoration: none;
     font-weight: 700;
     color: var(--color-secondary);
+}
+.toast{
+    width: 100px;
+    height: 120px;
+}
+.toast-h p{
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    width: 300px;
+}
+.toast-d{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 300px;
 }

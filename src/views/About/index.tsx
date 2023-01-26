@@ -8,11 +8,11 @@ import just2 from '../../../src/assets/images/just2.png'
 
 import './about.scss'
 
-import { innovation } from '../../constants/innovation'
+import { innovation } from '../../constants/Innovation'
 
 import hit from '../../../src/assets/images/Mask group (2).png'
-import { team } from '../../constants/team'
-const index = () => {
+import { team } from '../../constants/Team'
+const About = () => {
   return (
     <div className='main-about'>
         <div className='header-a'>
@@ -111,4 +111,4 @@ const index = () => {
   )
 }
 
-export default index
+export default About
