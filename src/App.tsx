@@ -13,15 +13,14 @@ const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
-const Firms = lazy(() => import('./views/dashboard/firms'))
+const Policy = lazy(() => import('./views/policy'))
 const IconPage = lazy(() => import("./views/icon-page"));
 
 // dashboard routes
 const FileCase = lazy(() => import("./views/dashboard/file-case"));
 const BasicInfo = lazy(() => import("./views/dashboard/file-case/subs/basic"));
-const Claimant = lazy(
-	() => import("./views/dashboard/file-case/subs/claimant/index")
-);
+const Firms = lazy(() => import('./views/dashboard/firms'))
+const Claimant = lazy(() => import("./views/dashboard/file-case/subs/claimant/index"));
 
 function App() {
 	const theme = useSelector((state: any) => state.theme.value);
@@ -42,7 +41,7 @@ function App() {
 						<Route path={ROUTE.LANDING} element={<Layout />}>
 							<Route index element={<Landing />} />
 							<Route path={ROUTE.ABOUT} element={<Landing />} />
-							<Route path={ROUTE.POLICY} element={<Landing />} />
+							<Route path={ROUTE.POLICY} element={<Policy />} />
 						</Route>
 
 						<Route path={ROUTE.LOGIN} element={<Login />} />
