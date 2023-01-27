@@ -18,6 +18,8 @@
   --color-green: #5DB975;
   --color-red: #FA7066;
   --color-black: #000;
+  --color-gray-100: #BABBBE;
+  --color-gray-200: #636466;
 
   // border raadius
   --border-radius-container: .25rem;
@@ -67,7 +69,7 @@ html {
   font-size: 62.5%;
 
   @include respond(big-desktop) {
-    font-size: 75%;
+    font-size: 100%;
   }
 
   @include respond(tab-land) {

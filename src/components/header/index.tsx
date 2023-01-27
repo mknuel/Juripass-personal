@@ -11,30 +11,32 @@ function Header() {
     fontWeight: 'bold'
   }
   return (
-    <header className='header con'>
-      <div className='header-logo'>
-        <img src={LOGO.LogoDark} alt="logo" />
-      </div>
-      <nav className='header-nav'>
-        <div>
-          <NavLink to={ROUTE.LANDING} style={({ isActive }) => isActive ? active : undefined}>
-            Home
-          </NavLink>
+    <header className='header'>
+      <div className='con'>
+        <div className='header-logo'>
+          <img src={LOGO.LogoDark} alt="logo" />
         </div>
-        <div>
-          <NavLink to={ROUTE.ABOUT}>
-            About Us
-          </NavLink>
+        <nav className='header-nav'>
+          <div>
+            <NavLink to={ROUTE.LANDING} style={({ isActive }) => isActive ? active : undefined}>
+              Home
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to={ROUTE.ABOUT}>
+              About Us
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to={ROUTE.POLICY}>
+              Privacy Policy
+            </NavLink>
+          </div>
+        </nav>
+        <div className='header-btns'>
+          <BtnSecondary>Login</BtnSecondary>
+          <BtnPrimary>Sign Up</BtnPrimary>
         </div>
-        <div>
-          <NavLink to={ROUTE.POLICY}>
-            Privacy Policy
-          </NavLink>
-        </div>
-      </nav>
-      <div className='header-btns'>
-        <BtnSecondary>Login</BtnSecondary>
-        <BtnPrimary>Sign Up</BtnPrimary>
       </div>
     </header>
   )

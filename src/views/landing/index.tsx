@@ -137,6 +137,42 @@ function Landing() {
             </div>
           </div>
         </section>
+
+        {/* frequently asked questions section */}
+        <section id='questions'>
+          <div className='con'>
+            <div className='questions-heading'>
+              <h3 className='questions-heading_main heading'>Frequently Asked Questions</h3>
+              <p className='questions-heading_sub heading-sub'>Everything you need to know about redefining litigation through Juripass. <br />Can’t find the answer you are looking for, kindly send us a mail.</p>
+            </div>
+            <div className='questions-body'>
+              <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>What States Does Juripass Offer its e-filing Service in?</h4>
+                <p className='questions-body-item_text'>At the moment, Juripass is being implemented in the Ondo State Judiciary. We are working assiduously to spread our reach in other states. Very soon users will be able to file cases across other jurisdictions.</p>
+              </div>
+              <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>How Much Does it Cost to Use Juripass?</h4>
+                <p className='questions-body-item_text'>It costs absolutely nothing to register and start using Juripass. However, there will be the typical court filing fees mandated by each state's court fee schedule and service a cost effective service charge. This only applies when you initiate a case or file on existing case.</p>
+              </div>
+              <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>Can Non Lawyers Use Juripasss?</h4>
+                <p className='questions-body-item_text'>No. Juripass is designed for Lawyers. For a Lawyer to start filing on Juripass, the said Lawyer must be verified. To be verified, Juripass will require your Call to Bar Certificate and/or Qualifying Certificate. This is to safeguard against unauthorized practice of Law. It takes an average of 15-20 minutes to get verified on Juripass. Please refer to our Privacy Policy and Terms of Use to learn how we handle your Documents.</p>
+              </div>
+              <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>How Do I Get Verified as a Lawyer?</h4>
+                <p className='questions-body-item_text'>To be verified, Juripass will require your Call to Bar Certificate and/or Qualifying Certificate. This is to safeguard against unauthorized practice of Law. It takes an average of 15-20 minutes to get verified on Juripass. Please refer to our Privacy Policy and Terms of Use to learn how we handle your submitted Documents.</p>
+              </div>
+              <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>How Long Does it Take to File a Case?</h4>
+                <p className='questions-body-item_text'>Yes. With Juripass, you can easily serve opposing Counsel electronically through email and in-portal notification. However, the said opposing counsel must be a Juripass User to be able to receive access cases served electronically. Note also that initiating processes must be served personally as required by most Rules of High Court.</p>
+              </div>
+              <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>Does Juripass Provide for Electronic Service to Opposing Counsel or Other Parties?</h4>
+                <p className='questions-body-item_text'>Once you have created an account on Juripass, it takes less than 5 minutes to submit a case. After submission, the Court registrar will swiftly approve your case or refer back to you for further action if need be.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </Page>
   )

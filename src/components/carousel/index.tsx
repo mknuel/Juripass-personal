@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { QuoteIcon } from '../../assets/icons';
 import { IMAGE } from '../../assets/images/images';
 import './index.scss'
 
@@ -57,8 +58,9 @@ const Carousel = ({ testimonials }: any) => {
                   </div>
                ))} */}
                <div className='carousel-tab'>
+                  <QuoteIcon />
                   <div className='carousel-tab-user'>
-                     <img src={IMAGE.Lawyer3} alt="testifier" />
+                     <img src={IMAGE.Lawyer2} alt="testifier" />
                      <div>
                         <b>John Doe</b>
                         <p>Lawyer</p>
@@ -69,8 +71,9 @@ const Carousel = ({ testimonials }: any) => {
                   </div>
                </div>
                <div className='carousel-tab'>
+                  <QuoteIcon />
                   <div className='carousel-tab-user'>
-                     <img src={IMAGE.Lawyer3} alt="testifier" />
+                     <img src={IMAGE.Lawyer2} alt="testifier" />
                      <div>
                         <b>John Doe</b>
                         <p>Lawyer</p>
@@ -81,8 +84,9 @@ const Carousel = ({ testimonials }: any) => {
                   </div>
                </div>
                <div className='carousel-tab'>
+                  <QuoteIcon />
                   <div className='carousel-tab-user'>
-                     <img src={IMAGE.Lawyer3} alt="testifier" />
+                     <img src={IMAGE.Lawyer2} alt="testifier" />
                      <div>
                         <b>John Doe</b>
                         <p>Lawyer</p>
@@ -93,8 +97,9 @@ const Carousel = ({ testimonials }: any) => {
                   </div>
                </div>
                <div className='carousel-tab'>
+                  <QuoteIcon />
                   <div className='carousel-tab-user'>
-                     <img src={IMAGE.Lawyer3} alt="testifier" />
+                     <img src={IMAGE.Lawyer2} alt="testifier" />
                      <div>
                         <b>John Doe</b>
                         <p>Lawyer</p>
@@ -107,10 +112,10 @@ const Carousel = ({ testimonials }: any) => {
             </div>
          </div>
 
-         <div className="controls">
+         {/* <div className="controls">
             <button className="active" onClick={changeActiveCarouselPrev}>{"<<"}</button>
             <button onClick={changeActiveCarouselNext}>{">>"}</button>
-         </div>
+         </div> */}
       </div>
    )
 }
