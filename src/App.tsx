@@ -19,7 +19,14 @@ const DashboardHome = lazy(() => import("./views/dashboard/home"));
 const FileCase = lazy(() => import("./views/dashboard/file-case"));
 const BasicInfo = lazy(() => import("./views/dashboard/file-case/subs/basic"));
 const Claimant = lazy(
-	() => import("./views/dashboard/file-case/subs/claimant/index")
+	() => import("./views/dashboard/file-case/subs/claimant")
+);
+const Defendant = lazy(
+	() => import("./views/dashboard/file-case/subs/defendant")
+);
+const Uploads = lazy(() => import("./views/dashboard/file-case/subs/uploads"));
+const Documents = lazy(
+	() => import("./views/dashboard/file-case/subs/documents")
 );
 
 function App() {
@@ -60,6 +67,15 @@ function App() {
 									element={<BasicInfo />}
 								/>
 								<Route path={ROUTE.NEWCASES.CLAIMANT} element={<Claimant />} />
+								<Route
+									path={ROUTE.NEWCASES.DEFENDANT}
+									element={<Defendant />}
+								/>
+								<Route path={ROUTE.NEWCASES.UPLOADS} element={<Uploads />} />
+								<Route
+									path={ROUTE.NEWCASES.DOCUMENTS}
+									element={<Documents />}
+								/>
 							</Route>
 							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
 							<Route path={ROUTE.TRACKCASES} element={<Landing />} />

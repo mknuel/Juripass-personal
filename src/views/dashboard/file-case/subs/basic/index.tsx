@@ -2,6 +2,8 @@ import React from "react";
 import style from "../../file-case.module.scss";
 import Select from "../../../../../components/select";
 import { BtnTertiary } from "../../../../../components/button";
+import { useNavigate } from "react-router-dom";
+import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 const Flow = () => (
 	<div className={style.flow}>
 		<div className={`${style.flow__item} ${style["flow__item--active"]} `}>
@@ -30,6 +32,10 @@ const Flow = () => (
 );
 
 function Basic() {
+	const navigate = useNavigate();
+	const handleSubmit = () => {
+		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.CLAIMANT}`);
+	};
 	return (
 		<>
 			<Flow />
@@ -67,7 +73,9 @@ function Basic() {
 					<div
 						className={style["form__content"]}
 						style={{ justifyContent: "flex-end", marginTop: "6rem" }}>
-						<BtnTertiary className={style.submit}>Continue</BtnTertiary>
+						<BtnTertiary onClick={handleSubmit} className={style.submit}>
+							Continue
+						</BtnTertiary>
 					</div>
 				</form>
 			</div>

@@ -1,0 +1,54 @@
+.form{
+    margin-bottom: 2rem;
+    display: block;
+    background-color: red;
+
+    &__input{
+         width: 100%;
+        display: flex;
+        line-height: 3rem;
+
+    //    color: var(--color-text-alt);
+       color: var(--color-text-mid);
+       border-radius:var(--border-radius-input) ;
+       text-transform: capitalize;
+       font-size: 1.2rem;
+       padding: .75rem 1.25rem;
+       
+       
+       border: 1px solid currentColor;
+       &::placeholder{
+    color: var(--color-text-mid);
+
+    }
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        width: fill;
+        margin: 2rem 0;
+
+        label{
+             font-weight: 600;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+
+        display: block;
+        color: var(--color-text-dark);
+        width: 100%;
+        margin-bottom: 1rem;
+        }
+    }
+
+    &__content{
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        // background-color: pink;
+        color: var(--color-black);
+    }
+
+
+
+}

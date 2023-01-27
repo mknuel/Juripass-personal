@@ -65,6 +65,8 @@ img{
 
 html {
 	font-size: 62.5%;
+
+
 	@include respond(big-desktop) {
 		font-size: 75%;
 	}	
@@ -76,6 +78,7 @@ html {
 	}	
 	@include respond(phone) {
 		font-size: 50%;
+  
 	}	
 
   height: 100%;
