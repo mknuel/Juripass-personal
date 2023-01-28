@@ -6,12 +6,15 @@ import DashboardLayout from './components/dashboard-layout';
 import Layout from './components/layout';
 import Loader from './components/loader';
 import * as ROUTE from './constants/routes'
-import './styles/index.css'
+import './styles/index.css';
+// import './styles/Firms.scss';
+
 
 // lazy load routes
 const SignUp = lazy(() => import('./views/signup'))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
+const Firms = lazy(() => import('./views/dashboard/firms'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
 
 function App() {
@@ -49,7 +52,7 @@ function App() {
               <Route path={ROUTE.TRACKCASES} element={<Landing />} />
               <Route path={ROUTE.FILLINGS} element={<Landing />} />
               <Route path={ROUTE.DRAFTS} element={<Landing />} />
-              <Route path={ROUTE.FIRMS} element={<Landing />} />
+              <Route path={ROUTE.FIRMS} element={<Firms />} />
             </Route>
           </Routes>
         </BrowserRouter>
