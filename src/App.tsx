@@ -17,7 +17,6 @@ const Landing = lazy(() => import('./views/landing'))
 const About = lazy(() => import('./views/About/'))
 const Policy = lazy(() => import('./views/Policy/'))
 const DashboardHome = lazy(() => import('./views/dashboard/home'))
-const Policy = lazy(() => import('./views/policy'))
 const IconPage = lazy(() => import("./views/icon-page"));
 
 // dashboard routes
