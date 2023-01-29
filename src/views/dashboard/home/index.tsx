@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from "./subs/head";
+import Head from "../ui/head";
 import Banner from "./subs/banner";
 import CasesSection from "./subs/cases";
 import style from "./home.module.scss";

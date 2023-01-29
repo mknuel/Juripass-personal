@@ -1,4 +1,4 @@
-import { FlagIcon } from "../../../../assets/icons";
+import { FlagIcon } from "../../../../components/icons/icons";
 import style from "./cases.module.scss";
 
 function Cases() {

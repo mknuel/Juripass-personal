@@ -1,4 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { LOGO } from '../../assets/logos/logo'
+import * as ROUTE from '../../constants/routes'
+import { BtnPrimary, BtnSecondary, BtnTertiary } from '../button'
+import './index.scss';
 
 import { Link } from 'react-router-dom'
 
@@ -7,21 +12,39 @@ import logo from '../../../src/assets/icons/logo.png'
 import './header.scss'
 
 function Header() {
+  const active = {
+    borderBottom: '3px solid #0D294D',
+    fontWeight: 'bold'
+  }
   return (
-    <div className="header" >
-        <div className="nav">
-          <img src={logo} alt="Juripass Logo" />
-          <div className='links'>
-            <Link className='link' to='./'>Home</Link>
-            <Link className='link' to='/about'>About Us</Link>
-            <Link className='link' to='/policy'>Policy</Link>
-          </div>
-          <div className='logsig'>
-            <Link className='loginbtn' to='/login'>Login</Link>
-            <Link className='signupbtn' to='/signup'>Sign Up</Link>
-          </div>
+    <header className='header'>
+      <div className='con'>
+        <div className='header-logo'>
+          <img src={LOGO.LogoDark} alt="logo" />
         </div>
-    </div>
+        <nav className='header-nav'>
+          <div>
+            <NavLink to={ROUTE.LANDING} style={({ isActive }) => isActive ? active : undefined}>
+              Home
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to={ROUTE.ABOUT}>
+              About Us
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to={ROUTE.POLICY}>
+              Privacy Policy
+            </NavLink>
+          </div>
+        </nav>
+        <div className='header-btns'>
+          <BtnSecondary>Login</BtnSecondary>
+          <BtnPrimary>Sign Up</BtnPrimary>
+        </div>
+      </div>
+    </header>
   )
 }
 

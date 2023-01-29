@@ -1,4 +1,5 @@
 import React from 'react'
+import { LOGO } from '../../assets/logos/logo'
 
 import './footer.scss'
 
@@ -8,22 +9,62 @@ import newslbg from '../../../src/assets/images/Rectangle 16.png'
 
 function Footer() {
   return (
-    <footer>
-      {/* <div className='newsletter'>
-        <img src={newslbg} alt="" />
-        <h3>Subscribe to Newsletter</h3>
-        <input type="text" placeholder='Enter your email' />
-        <button>Enter</button>
+    <div>
+      <div className='subscribe'>
+        
       </div>
-      <div className='bg'>
-        <img src={footerbg} alt="" />
-      </div>
-      <div className='foot-all'>
-        <div className='jp'>
-          <img src="" alt="" />
+      <footer className='footer con'>
+        <div className='footer-con'>
+          <div className='footer-left'>
+            <img src={LOGO.LogoLight} alt="logo" />
+            <p>
+              We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.
+            </p>
+          </div>
+          <div className='footer-right'>
+            <div className='footer-col'>
+              <div className='footer-col-heading'>
+                <h4 >Quick Links</h4>
+                <hr />
+              </div>
+              <ul>
+                <li>My Account</li>
+                <li>Order</li>
+                <li>Payments</li>
+                <li>Returns</li>
+                <li>Manage Deliveries</li>
+              </ul>
+            </div>
+            <div className='footer-col'>
+              <div className='footer-col-heading'>
+                <h4 >Resources</h4>
+                <hr />
+              </div>
+              <ul>
+                <li>My Account</li>
+                <li>Order</li>
+                <li>Payments</li>
+                <li>Returns</li>
+                <li>Manage Deliveries</li>
+              </ul>
+            </div>
+            <div className='footer-col'>
+              <div className='footer-col-heading'>
+                <h4>Support</h4>
+                <hr />
+              </div>
+              <ul>
+                <li>My Account</li>
+                <li>Order</li>
+                <li>Payments</li>
+                <li>Returns</li>
+                <li>Manage Deliveries</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div> */}
-    </footer>
+      </footer>
+    </div>
   )
 }
 
