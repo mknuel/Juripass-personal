@@ -1,0 +1,52 @@
+.subscribe{
+   height: 300px;
+}
+.footer {
+   &-con {
+      display: flex;
+      // flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 16px;
+      & > div{
+
+      }
+      & .footer-left{
+         width: 600px;
+         & p{
+            width: 300px;
+            line-height: 1.6;
+         }
+      }
+      & .footer-right{
+         // width: 60%;
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+   }
+   &-col {
+      // width: 33.33%;
+      // margin-left: 4em;
+      // text-align: right;
+      &-heading {
+         display: flex;
+         align-items: center;
+
+         & h4 {
+            width: auto;
+            margin-right: 15px;
+         }
+
+         & hr {
+            border: 1px solid var(--color-primary);
+            width: 100px;
+         }
+      }
+      & ul{
+         & li{
+            margin: 1em 0;
+         }
+      }
+   }
+}

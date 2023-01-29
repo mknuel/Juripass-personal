@@ -1,0 +1,39 @@
+.header {
+   background-color: var(--color-background-light);
+   width: 100%;
+   position: fixed;
+   top: 0%;
+   z-index: 10;
+
+   & .con{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+  
+
+   &-logo{
+      width: 235px;
+   }
+
+   &-nav {
+      display: flex;
+
+      & a {
+         padding: 5px 0;
+         margin: 0 10px;
+         font-size: 1.6em;
+
+      }
+   }
+
+   &-btns {
+      padding: 1.5em 0;
+      & button{
+         width: 110px
+      }
+      & button:nth-child(2) {
+         margin-left: 15px;
+      }
+   }
+}
