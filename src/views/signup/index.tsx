@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {  useNavigate } from 'react-router-dom'
 
@@ -6,14 +6,29 @@ import {  useNavigate } from 'react-router-dom'
 import logo from '../../../src/assets/images/logo.png'
 
 import './signUp.scss'
+import SignUpM from './signUpM'
 
 function SignUp() {
   const navigate = useNavigate()
+  const [page, setPage] = useState(<PreSignUp/>)
 
   setTimeout(() => {
-            navigate('/login')
+            setPage(<SignUpM/>)
         }, 5000);
-  return (<div className="s-body">
+  return (
+    <>
+       {
+      page
+    }
+    </>
+  )
+}
+
+export default SignUp
+
+const PreSignUp = () => {
+  return (
+    <div className="s-body">
       <div className='left-s'>
         <div className="s-main">
           <div className="sp-logo">
@@ -28,5 +43,3 @@ function SignUp() {
   </div>
   )
 }
-
-export default SignUp

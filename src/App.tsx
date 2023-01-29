@@ -11,7 +11,7 @@ import ForgotPassword from './views/login/ForgotPassword';
 import ResetPassword from './views/login/ResetPassword';
 
 // lazy load routes
-const SignUp = lazy(() => import('./views/signup'))
+const SignUp = lazy(() => import('./views/signup'!))
 const Login = lazy(() => import('./views/login'))
 const Landing = lazy(() => import('./views/landing'))
 const About = lazy(() => import('./views/About/'))

@@ -1,7 +1,12 @@
+@import '/src/styles/mixins';
 .s-body {
     background-image: url('../../../src/assets/images/justice.png');
     background-repeat: no-repeat;
     background-position: right;
+        @include respond(phone) {
+            width: 100%;
+            height: 100%;
+        }
 }
 
 .left-s {
@@ -14,11 +19,17 @@
     background-color: #fff;
     border-top-right-radius: 4rem;
     border-bottom-right-radius: 4rem;
+    @include respond(phone){
+        width: 100%;
+        padding: 0 20px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 .right-s {
     width: 45%;
-    height: 100vh;
+    // height: 100vh;
 
 }
 
@@ -33,9 +44,10 @@
     width: 50%;
     margin: 0 auto;
     background-color: white;
-    // height: 100vh;
-    /* display: flex;
-    justify-content: center; */
+    @include respond(phone) {
+            width: 100%;
+            padding: 0;
+        }
 }
 
 .sp-logo {

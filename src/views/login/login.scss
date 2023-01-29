@@ -1,11 +1,19 @@
-
+@import '/src/styles/mixins';
 
 .s-body {
     background-image: url('../../../src/assets/images/justice.png');
     background-repeat: no-repeat;
     background-position: right;
+    background-attachment: fixed;
+    @include respond(phone) {
+            width: 100%;
+            height: 100%;
+        }
 }
 .left-s{
+    @include respond(phone){
+        width: 100%;
+    }
     // position: absolute;
     left: 0;
     top: 0;
@@ -19,12 +27,18 @@
 .right-s{
     width: 45%;
     // height: 100vh;
-   
+    @include respond(phone) {
+            width: 45%;
+        }
 }
 .right-s img{
     width: 100%;
     // height: 100vh;
     object-fit: contain;
+    @include respond(phone) {
+            width: 50%;
+            object-fit: contain;
+        }
 }
 .s-main {
     padding: 100px 0;
@@ -34,6 +48,10 @@
     // height: 100vh;
     /* display: flex;
     justify-content: center; */
+    @include respond(phone) {
+            padding: 0 40px;
+            width: 100%;
+        }
 }
 
 .sp-logo {
@@ -46,6 +64,9 @@
     font-size: 3rem;
     font-weight: 700;
     color: var(--color-secondary);
+    @include respond(phone) {
+        padding-top: 0px;
+        }
 }
 .wc span{
     margin-top: 0px;
@@ -79,6 +100,7 @@
     font-size: 14px;
     font-weight: 700;
     padding: 5px 0 0 0;
+    
 }
 .p-word{
     margin-top: 20px;
@@ -101,6 +123,9 @@
 .check-name {
     margin-left: 10px;
     color: #595a5a;
+}
+.check-name p{
+    font-weight: bold;
 }
 .f-pass {
     font-weight: 800;
@@ -146,6 +171,10 @@
 .toast{
     width: 100px;
     height: 120px;
+    @include respond(phone) {
+        width: 100px;
+        height: 100%;
+        }
 }
 .toast-h p{
     font-weight: bold;

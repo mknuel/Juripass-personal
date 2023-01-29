@@ -17,7 +17,6 @@ const About = () => {
     <div className='main-about'>
         <div className='header-a'>
           <div className='first'>
-            <img src={hit} />
             <div className='mid-text'>
                   <h3>About Juripass</h3>
                   <p>Rebranding and redefining Justice delivery in Africa with our cutting-edge technology that enables lawyers and litigants to file Court documents and pay filing fees online seamlessly from the comfort of their office in just 5 minutes.</p>
@@ -74,12 +73,12 @@ const About = () => {
           <p>The right solution to your legal concerns</p>
         </div>
         <div className='flex-inv'>
-        {innovation.map((innovation) => (
+        {innovation.map((innovation, index) => (
           <div className='flex-card'>
               <div className='in-img'>
                   <img src={innovation.icon} alt="" />
               </div>
-              <div className='in-title'>
+              <div style={{width: index !== 2 ? '150px' : ""}} className='in-title'>
                 <h4>{ innovation.title }</h4>
               </div>
               <div className='in-desc'>
