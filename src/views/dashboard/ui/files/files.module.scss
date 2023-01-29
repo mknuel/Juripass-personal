@@ -1,0 +1,31 @@
+.file{
+    background-color: var(--color-background-light);
+    padding: 1.25rem;
+    border-radius: .25rem;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 2fr 2fr 1.5fr;
+    margin-bottom: 1rem;
+    gap: .5rem;
+    font-size: 1.2rem;
+    align-items:center ;
+
+    &__container{
+        display: block;
+    }
+
+    h5{
+        font-size: 1.2rem;
+    }
+
+    &__court,&__client{
+        font-weight: 400;
+    }
+
+    &__status{
+        padding: .75rem 1rem;
+        color: #1F6532;
+        background-color:#85CB98;
+        text-align: center;
+        border-radius: 3rem;
+    }
+}
