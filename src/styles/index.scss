@@ -46,8 +46,8 @@
 
 
 .con {
-  max-width: 1300px;
-  padding: 0 1em;
+  max-width: 1340px;
+  padding: 0 2em;
   margin: auto;
 }
 
@@ -78,11 +78,11 @@ html {
   }
 
   @include respond(tab-port) {
-    font-size: 60%; //1rem = 9px
+    font-size: 50%; //1rem = 9px
   }
 
   @include respond(phone) {
-    font-size: 60%;
+    font-size: 50%;
   }
 
   height: 100%;

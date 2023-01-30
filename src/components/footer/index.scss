@@ -1,23 +1,71 @@
-.subscribe{
-   height: 300px;
+@import '../../styles/mixins';
+
+.subscribe {
+   width: 60%;
+   display: flex;
+   align-items: center;
+   margin: 0 auto 8em auto;
+   padding: 4em;
+   background-color: var(--color-secondary);
+   height: fit-content;
+   border-radius: 0.5em;
+   border-bottom: 1px solid var(--color-primary);
+   @include respond(tab-land) {
+      width: 80%;
+   }
+   @include respond(phone) {
+      width: 90%;
+   }
+   & h1 {
+      font-size: 3rem;
+      margin-bottom: 1em;
+      font-weight: 600;
+   }
+
+   &-form {
+      width: 100%;
+      display: flex;
+
+      & input {
+         display: block;
+         width: 300px;
+         height: 50px;
+         border-radius: 30px;
+         background: transparent;
+         border: 1px solid var(--color-primary);
+         padding: 1em;
+      }
+
+      & button {
+         display: block;
+         position: relative;
+         left: -40px;
+         height: 50px;
+      }
+   }
+
 }
+
 .footer {
    &-con {
       display: flex;
-      // flex-wrap: wrap;
       justify-content: space-between;
       font-size: 16px;
-      & > div{
 
+      @include respond(tab-land) {
+         flex-wrap: wrap;
       }
-      & .footer-left{
+
+      & .footer-left {
          width: 600px;
-         & p{
+
+         & p {
             width: 300px;
             line-height: 1.6;
          }
       }
-      & .footer-right{
+
+      & .footer-right {
          // width: 60%;
          width: 100%;
          display: flex;
@@ -25,10 +73,15 @@
          justify-content: space-between;
       }
    }
+
    &-col {
-      // width: 33.33%;
+
       // margin-left: 4em;
       // text-align: right;
+      @include respond(tab-land) {
+        width: 100%;
+        margin-top: 2em;
+      }
       &-heading {
          display: flex;
          align-items: center;
@@ -36,6 +89,8 @@
          & h4 {
             width: auto;
             margin-right: 15px;
+            font-size: 1.9rem;
+            font-weight: 500;
          }
 
          & hr {
@@ -43,10 +98,30 @@
             width: 100px;
          }
       }
-      & ul{
-         & li{
+
+      & ul {
+         & li {
             margin: 1em 0;
          }
+      }
+   }
+
+   &-break {
+      border: 0.5px solid gainsboro;
+      margin-top: 6em;
+      margin-bottom: 1em;
+
+   }
+
+   &-rights {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 5em;
+
+      & span {
+         display: inline-block;
+         font-size: 1.4rem;
+         margin-right: 1em;
       }
    }
 }
