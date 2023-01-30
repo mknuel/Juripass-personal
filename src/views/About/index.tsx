@@ -10,7 +10,6 @@ import './about.scss'
 
 import { innovation } from '../../constants/Innovation'
 
-import hit from '../../../src/assets/images/Mask group (2).png'
 import { team } from '../../constants/Team'
 const About = () => {
   return (
