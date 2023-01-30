@@ -1,5 +1,4 @@
-@import './_landing.scss';
-@import './_layout.scss';
+@import '../components/footer';
 @import './_mixins.scss';
 @import './_typo.scss';
 @import './_dashboard-layout.scss';
@@ -12,21 +11,20 @@
   --color-background-light: #FFFFFF;
   --color-background-dark: #EDEEF1;
   --color-text-light: #FFFFFF;
-  --color-text-dark: #231F20;
+  --color-text-dark: #231f2058;
   --color-text-alt: #cbccce;
   --color-text-primary: #9b9b9b;
   --color-text-mid: #898a8c;
   --color-green: #5DB975;
   --color-red: #FA7066;
   --color-black: #000;
-  
+  --color-gray-100: #BABBBE;
+  --color-gray-200: #636466;
+  --color-gray-300: #36373A;
+
   // border raadius
   --border-radius-container: .25rem;
   --border-radius-input: 3rem;
-
-
-
-  
 }
 
 [data-theme=dark] {
@@ -41,14 +39,19 @@
   --color-green: #5DB975;
   --color-red: #FA7066;
   --color-black: #000;
-  
+
 
 
 }
 
 
+.con {
+  max-width: 1300px;
+  padding: 0 1em;
+  margin: auto;
+}
 
-img{
+img {
   pointer-events: none;
 }
 
@@ -56,41 +59,38 @@ img{
 *::after,
 *::before {
   margin: 0;
-	padding: 0;
-	color: inherit;
-	box-sizing: border-box;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
   backface-visibility: hidden;
 }
 
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 
+  @include respond(big-desktop) {
+    font-size: 100%;
+  }
 
-	@include respond(big-desktop) {
-		font-size: 75%;
-	}	
-	@include respond(tab-land) {
-		font-size: 56.25%; //1rem = 8px
-	}	
-	@include respond(tab-port) {
-		font-size: 50%; //1rem = 9px
-	}	
-	@include respond(phone) {
-		font-size: 50%;
-  
-	}	
+  @include respond(tab-land) {
+    font-size: 66.25%; //1rem = 8px
+  }
+
+  @include respond(tab-port) {
+    font-size: 60%; //1rem = 9px
+  }
+
+  @include respond(phone) {
+    font-size: 60%;
+  }
 
   height: 100%;
 
-}	
-
-body{
-  font-size: 1.6rem;
 }
 
-
-input,select{
+input,
+select {
   outline: none;
   border: 1px solid currentColor;
 }
