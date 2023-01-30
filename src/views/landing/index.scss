@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .landing {
    background-color: var(--color-background-dark);
 
@@ -7,7 +9,7 @@
       position: relative;
       background: url(../../assets/images/herobg.png);
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: right;
       background-size: cover;
 
       &::after {
@@ -23,7 +25,7 @@
 
       & .con {
          position: relative;
-         height: 58vh;
+         height: 68vh;
          display: flex;
          justify-content: flex-start;
          align-items: center;
@@ -36,7 +38,7 @@
             text-align: left;
 
             & h1 {
-               font-size: 8.4rem;
+               font-size: 80px;
                color: var(--color-text-light);
                margin-bottom: 0.4em;
             }
@@ -79,7 +81,7 @@
             z-index: 1;
             background-color: var(--color-background-light);
             bottom: -10%;
-            right: 0%;
+            right: 2%;
             display: flex;
             align-items: center;
             padding: 2em 4.5em;
@@ -102,6 +104,30 @@
                font-weight: 400;
             }
          }
+
+         @include respond(tab-land) {
+            &-text {
+               width: 60%;
+
+               & h1 {
+                  font-size: 6.4rem;
+               }
+            }
+
+            &-contact {
+               right: 4%;
+            }
+         }
+
+         @include respond(phone) {
+            &-text {
+               width: 95%;
+
+               & h1 {
+                  font-size: 5.8rem;
+               }
+            }
+         }
       }
 
 
@@ -115,6 +141,10 @@
    // users section starts 
    & #users {
       padding: 11em 0;
+
+      @include respond(phone) {
+         padding-bottom: 6em;
+      }
 
       & .con {
          display: flex;
@@ -132,6 +162,21 @@
             // width: 100px;
             // height: 100px;
          }
+
+         @include respond(tab-land) {
+            flex-wrap: wrap;
+
+            & h4 {
+               font-size: 2.4rem;
+               margin-bottom: 1em;
+            }
+
+            & img {
+               margin: 2em 2.5em;
+            }
+
+         }
+
       }
    }
 
@@ -148,12 +193,12 @@
             margin-bottom: 4em;
 
             &_item {
-               width: 304px;
+               width: 310px;
                height: 350px;
                background-color: var(--color-background-light);
                padding: 4em;
                border-radius: 15px;
-               margin: 0.8em;
+               margin: 0.7em;
 
                & div {
                   width: 100px;
@@ -168,15 +213,15 @@
 
                & b {
                   display: block;
-                  font-size: 1.8rem;
+                  font-size: 18px;
                   font-weight: 600;
                   margin-bottom: 0.9em;
                }
 
                & p {
-                  font-size: 1.6rem;
+                  font-size: 16px;
                   line-height: 1.5;
-                  color: var(--color-text-dark);
+                  color: var(--color-gray-200);
                }
             }
          }
@@ -186,12 +231,17 @@
 
    & #about {
       background-color: var(--color-secondary);
+      padding: 8em 0 8em 0;
 
       & .con {
          display: flex;
          align-items: center;
          justify-content: center;
          min-height: 650px;
+
+         @include respond(phone) {
+            flex-wrap: wrap;
+         }
       }
 
       & .about {
@@ -218,9 +268,32 @@
             position: relative;
             width: 50%;
 
-            & img {}
+            & img {
+               width: 90%;
+            }
          }
+
+         @include respond(tab-land) {}
+
+         @include respond(phone) {
+            &-text {
+               width: 89%;
+               margin-top: 3em;
+            }
+
+            &-img {
+               position: relative;
+               width: 90%;
+               margin: 6em 0 6em 0;
+
+               & img {
+                  width: 90%;
+               }
+            }
+         }
+
       }
+
    }
 
    #comments {
@@ -245,6 +318,10 @@
                padding: 2em;
                border-radius: 10px;
                margin-bottom: 4em;
+
+               @include respond(phone) {
+                  width: 100%;
+               }
 
                & h4 {
                   font-size: 2.05rem;

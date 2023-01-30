@@ -11,7 +11,7 @@
 		} //600px
 	}
 	@if $breakpoint==tab-port {
-		@media (max-width: 56.25em) {
+		@media (max-width: 60.25em) {
 			@content;
 		} //900px
 	}

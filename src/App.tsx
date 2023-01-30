@@ -1,3 +1,4 @@
+
 import { lazy, Suspense, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -12,6 +13,7 @@ import Claimant from "./views/dashboard/file-case/subs/claimant";
 import Defendant from "./views/dashboard/file-case/subs/defendant";
 import Documents from "./views/dashboard/file-case/subs/documents";
 import BasicInfo from "./views/dashboard/file-case/subs/basic";
+
 
 // lazy load routes
 const SignUp = lazy(() => import("./views/signup"));
