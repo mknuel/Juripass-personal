@@ -1,5 +1,6 @@
 import React from 'react'
 import { LOGO } from '../../assets/logos/logo'
+import { BtnPrimary } from '../button'
 
 import './footer.scss'
 
@@ -11,12 +12,18 @@ function Footer() {
   return (
     <div>
       <div className='subscribe'>
-        
+        <div>
+          <h1>Subscribe Newsletter</h1>
+          <div className='subscribe-form'>
+            <input type="text" placeholder='Enter your email' />
+            <BtnPrimary>Enter</BtnPrimary>
+          </div>
+        </div>
       </div>
       <footer className='footer con'>
         <div className='footer-con'>
           <div className='footer-left'>
-            <img src={LOGO.LogoLight} alt="logo" />
+            <img src={LOGO.LogoLight} alt='logo' />
             <p>
               We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.
             </p>
@@ -61,6 +68,14 @@ function Footer() {
                 <li>Manage Deliveries</li>
               </ul>
             </div>
+          </div>
+        </div>
+        <hr className='footer-break'/>
+        <div className='footer-rights'>
+          <span>&copy; 2022 / All Right Reserved</span>
+          <div>
+            <span>Terms</span>
+            <span>Privacy Policy</span>
           </div>
         </div>
       </footer>
