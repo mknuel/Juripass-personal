@@ -60,7 +60,7 @@ const About = () => {
               <div className='heading'>
                   <p>Efficiency and effectiveness in Justice delivery</p>
               </div>
-            <div className='explanation'>
+            <div className='explana'>
               <p>We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.</p>
             </div>
           </div>
