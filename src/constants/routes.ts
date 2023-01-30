@@ -16,6 +16,7 @@ export const NEWCASES = {
 	UPLOADS: "uploads",
 	DOCUMENTS: "documents",
 	INVOICE: "invoice",
+	
 };
 
 export const EXISTINGCASES = 'case'

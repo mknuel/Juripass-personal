@@ -13,6 +13,7 @@
     border-radius: 3rem;
     transition: .2s ease-in-out;
     background-color: transparent;
+    white-space: nowrap;
     &::first-letter{
         text-transform: capitalize;
     }

@@ -30,9 +30,7 @@ const FirmCaseModal: React.FC<Props> = ({ hide }) => {
 					</div>
 					<div className={style["modal__content"]}>
 						<BtnTertiary onClick={changeModal}>File for a firm</BtnTertiary>
-						<Link to="/dashboard/new-case" onClick={hide}>
-							<BtnSecondary>File a personal case</BtnSecondary>
-						</Link>
+						<BtnSecondary onClick={hide}>File a personal case</BtnSecondary>
 					</div>
 				</div>
 			) : (
@@ -66,13 +64,7 @@ export const ChooseFirm: React.FC<Props> = ({ hide }) => {
 				</div>
 			</div>
 			<div className={style["modal__content"]}>
-				<Link
-					to={{
-						pathname: ROUTES.DASHBOARD + ROUTES.NEWCASES.DEFAULT,
-					}}
-					onClick={hide}>
-					<BtnTertiary>Continue</BtnTertiary>
-				</Link>
+				<BtnTertiary onClick={hide}>Continue</BtnTertiary>
 			</div>
 		</div>
 	);

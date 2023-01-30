@@ -44,12 +44,12 @@ function HeadFull() {
 					</>
 				)}
 
-					{!portrait&&
-				<Btn className={style.head__icon}>
+				{/* 	{!portrait && (
+					<Btn className={style.head__icon}>
 						<NotificationBellIcon />
-				</Btn>
-						}
-
+					</Btn>
+				)}
+ */}
 				<div className={style.head__icon}>
 					<Btn className={style.head__image} onClick={toggleMenu}>
 						<img src="/assets/juripassuser.png" alt="user" />
@@ -101,7 +101,7 @@ function HeadMini() {
 				className={style.head__content}
 				style={{ justifyContent: "flex-end" }}>
 				<Btn className={style.head__icon}>
-					{!portrait && <NotificationBellIcon />}
+					{/* 	{!portrait && <NotificationBellIcon />} */}
 				</Btn>
 
 				<div className={style.head__icon}>

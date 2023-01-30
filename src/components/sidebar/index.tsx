@@ -1,6 +1,6 @@
 import React, { ReactInstance, useState } from "react";
 import style from "./style.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import * as ROUTE from "../../constants/routes";
 import {
@@ -24,8 +24,10 @@ function Sidebar() {
 		showCase(!caseModal);
 	};
 
+	const navigate = useNavigate();
 	const hideModal = () => {
-		showCase(!false);
+		showCase(false);
+		navigate("/dashboard/new-case");
 	};
 	return (
 		<>
