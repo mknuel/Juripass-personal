@@ -1,7 +1,8 @@
+@import "../../../../styles/mixins";
 .form{
     margin-bottom: 2rem;
     display: block;
-    background-color: red;
+    // background-color: red;
 
     &__input{
          width: 100%;
@@ -47,8 +48,15 @@
         gap: 2rem;
         // background-color: pink;
         color: var(--color-black);
+     
+           @include respond(tab-port){
+        flex-direction: column;
+        gap: 0;
+    }
     }
 
 
 
 }
+
+

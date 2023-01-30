@@ -7,27 +7,24 @@ import Layout from './components/layout';
 import Loader from './components/loader';
 import * as ROUTE from './constants/routes'
 import './styles/index.css'
+import Uploads from "./views/dashboard/file-case/subs/uploads";
+import Claimant from "./views/dashboard/file-case/subs/claimant";
+import Defendant from "./views/dashboard/file-case/subs/defendant";
+import Documents from "./views/dashboard/file-case/subs/documents";
 
 // lazy load routes
-const SignUp = lazy(() => import('./views/signup'))
-const Login = lazy(() => import('./views/login'))
-const Landing = lazy(() => import('./views/landing'))
+const SignUp = lazy(() => import("./views/signup"));
+const Login = lazy(() => import("./views/login"));
+const Landing = lazy(() => import("./views/landing"));
 const IconPage = lazy(() => import("./views/icon-page"));
 
 // dashboard routes
 const DashboardHome = lazy(() => import("./views/dashboard/home"));
-const FileCase = lazy(() => import("./views/dashboard/file-case"));
+const FilePersonalCase = lazy(() => import("./views/dashboard/file-case"));
+const FileFirmCase = lazy(() => import("./views/dashboard/file-case"));
 const BasicInfo = lazy(() => import("./views/dashboard/file-case/subs/basic"));
-const Claimant = lazy(
-	() => import("./views/dashboard/file-case/subs/claimant")
-);
-const Defendant = lazy(
-	() => import("./views/dashboard/file-case/subs/defendant")
-);
-const Uploads = lazy(() => import("./views/dashboard/file-case/subs/uploads"));
-const Documents = lazy(
-	() => import("./views/dashboard/file-case/subs/documents")
-);
+
+const Cases = lazy(() => import("./views/dashboard/cases"));
 
 function App() {
 	const theme = useSelector((state: any) => state.theme.value);
@@ -59,13 +56,9 @@ function App() {
 						{/* nested route for dashboard (same header and sidebar) */}
 						<Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>
 							<Route index element={<DashboardHome />} />
-							<Route path={ROUTE.CASES} element={<Landing />} />
-							<Route path={ROUTE.NEWCASES.DEFAULT} element={<FileCase />}>
-								<Route index element={<FileCase />} />
-								<Route
-									path={ROUTE.NEWCASES.BASIC_INFO}
-									element={<BasicInfo />}
-								/>
+							<Route path={ROUTE.CASES} element={<Cases />} />
+							<Route path={ROUTE.NEWCASES.DEFAULT} element={<FileFirmCase />}>
+								<Route index element={<BasicInfo />} />
 								<Route path={ROUTE.NEWCASES.CLAIMANT} element={<Claimant />} />
 								<Route
 									path={ROUTE.NEWCASES.DEFENDANT}

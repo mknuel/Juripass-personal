@@ -134,7 +134,6 @@ function Documents() {
 						style={{
 							justifyContent: "flex-end",
 							marginTop: "6rem",
-							width: "70%",
 						}}>
 						<div style={{ width: "50%" }}>&nbsp;</div>
 						<BtnTertiary onClick={handleSubmit} className={style.submit}>

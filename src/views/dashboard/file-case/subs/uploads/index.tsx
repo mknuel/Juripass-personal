@@ -105,7 +105,7 @@ function Uploads() {
 							</div>
 						</div>
 
-						<div className={style.form__content}>
+						<div className={style["form__content--right"]}>
 							<BtnTertiary onClick={handleSubmit} className={style.submit}>
 								Continue
 							</BtnTertiary>

@@ -1,4 +1,4 @@
-
+@import "../../../styles/mixins";
 // banner section
 .banner{
     h2,h3{
@@ -111,6 +111,10 @@
     display: grid;
     grid-template-columns: 2fr 3.5fr;
     gap: 1rem;
+
+    @include respond(tab-port){
+        grid-template-columns: 1fr;
+    }
 }
 
 

@@ -9,24 +9,32 @@
        margin: 0 auto;
        width: 180rem;
    }
+   @include respond(big-desktop){
+       margin: 0 auto;
+       ;
+   }
 
    &-sidebar {
       width: max(32rem, 320px);
       height: calc(100vh);
       padding: 1.5rem 3rem;
-          position: sticky;
-          top: 0;
-          left: 0;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: var(--color-background-light);
 
-
-      background-color: var(--color-background-light);
+          @include respond(tab-port){
+       display: none;
    }
+    }
 
    &-main {
       width: 100%;
       min-height: calc(100vh);
       height: auto;
       padding: 3rem 1.5rem;
+       
       background-color: var(--color-background-dark);
    }
 }
@@ -60,10 +68,10 @@
     width: 60%;
     margin: 1rem auto;
     color: var(--color-secondary);
-       @include respond(tab-port){
-     width: 100%;   
-    
 
+    @include respond(tab-port){
+         width: 100%;   
+    
     }
 
     svg{
@@ -92,9 +100,6 @@
     padding: 2rem;
     // height: 10rem;
     background-color:var(--color-primary);
-  
-
-
 
 }
 

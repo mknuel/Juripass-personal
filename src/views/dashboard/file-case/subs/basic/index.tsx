@@ -42,7 +42,7 @@ function Basic() {
 
 			<div className={style.wrapper}>
 				<form action="" onSubmit={(e) => e.preventDefault()}>
-					<div className={style.form__content}>
+					<div className={style.form__content} style={{ marginTop: "0" }}>
 						<div className={style.form__group}>
 							<Select
 								options={["High Court", "Magistrate Court", "Customary Court"]}
