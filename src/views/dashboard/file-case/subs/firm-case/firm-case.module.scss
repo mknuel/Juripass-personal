@@ -1,0 +1,28 @@
+.firm__case{
+
+    &__modal{
+
+    }
+}
+
+.modal{
+    background-color: var(--color-background-light);
+    width: 40rem;
+    height: 28.7rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1.5rem;
+    &__container{
+        background-color: rgba(#000000, .7);
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 5;
+        display: grid;
+        place-items: center;
+    }
+}

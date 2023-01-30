@@ -1,23 +1,29 @@
 import React from "react";
 import {
+	AlertIcon,
 	AngleDownIcon,
 	ArrowDownIcon,
+	ArrowLeftIcon,
 	ArrowUpIcon,
 	CasesIcon,
 	CopyIcon,
 	DashboardIcon,
+	DeleteIcon,
+	DocumentIcon,
 	ExistingCaseIcon,
 	FlagIcon,
 	HammerIcon,
-	LeftArrowIcon,
 	LogoutIcon,
 	MyFilingsIcon,
 	MyFirmIcon,
 	NewCaseICon,
 	NotificationBellIcon,
+	ProcessingIcon,
 	ProfileIcon,
 	SavedDraftsIcon,
+	TickIcon,
 	TrackCaseIcon,
+	UploadIcon,
 } from "../../components/icons/icons";
 
 function IconPage() {
@@ -78,9 +84,9 @@ function IconPage() {
 			</div>
 
 			<div className="icon__item">
-				<span>{"<LeftArrowIcon />"}</span>
+				<span>{"<ArrowLeftIcon />"}</span>
 
-				<LeftArrowIcon />
+				<ArrowLeftIcon />
 			</div>
 
 			<div className="icon__item">
@@ -122,6 +128,42 @@ function IconPage() {
 				<span>{"<TrackCaseIcon />"}</span>
 
 				<TrackCaseIcon />
+			</div>
+
+			<div className="icon__item">
+				<span>{"<DeleteIcon />"}</span>
+
+				<DeleteIcon />
+			</div>
+
+			<div className="icon__item">
+				<span>{"<DocumentIcon />"}</span>
+
+				<DocumentIcon />
+			</div>
+
+			<div className="icon__item">
+				<span>{"<TickIcon />"}</span>
+
+				<TickIcon />
+			</div>
+
+			<div className="icon__item">
+				<span>{"<ProcessingIcon />"}</span>
+
+				<ProcessingIcon />
+			</div>
+
+			<div className="icon__item">
+				<span>{"<UploadIcon />"}</span>
+
+				<UploadIcon />
+			</div>
+
+			<div className="icon__item">
+				<span>{"<AlertIcon />"}</span>
+
+				<AlertIcon />
 			</div>
 		</div>
 	);
