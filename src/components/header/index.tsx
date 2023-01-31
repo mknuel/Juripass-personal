@@ -1,6 +1,6 @@
+import { HambergerMenu } from 'iconsax-react'
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Menu } from '@mui/icons-material'
 import { LOGO } from '../../assets/logos/logo'
 import * as ROUTE from '../../constants/routes'
 import { BtnPrimary, BtnSecondary } from '../button'
@@ -41,7 +41,7 @@ function Header() {
           <BtnPrimary onClick={() => navigate('/signup')}>Sign Up</BtnPrimary>
         </div>
 
-        <Menu className='header-menu' onClick={() => setIsOpen(current => !current)} />
+        <HambergerMenu size="32" color="#FF8A65" onClick={() => setIsOpen(current => !current)} className='header-menu' />
       </div>
 
       {

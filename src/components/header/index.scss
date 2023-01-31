@@ -53,8 +53,6 @@
 
    &-menu {
       display: none !important;
-      height: 30px !important;
-      width: 30px !important;
 
       @include respond(tab-port) {
          display: block !important;
