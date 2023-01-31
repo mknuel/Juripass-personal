@@ -1,0 +1,6 @@
+#layout {
+  &-footer {
+    background: linear-gradient(180deg, var(--color-background-light) 10%, var(--color-secondary) 10%);
+    color: var(--color-text-light);
+  }
+}

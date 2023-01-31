@@ -1,3 +1,4 @@
+
 import { lazy, Suspense, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -13,12 +14,20 @@ import Defendant from "./views/dashboard/file-case/subs/defendant";
 import Documents from "./views/dashboard/file-case/subs/documents";
 import BasicInfo from "./views/dashboard/file-case/subs/basic";
 
+
 // lazy load routes
-const SignUp = lazy(() => import("./views/signup"));
-const Login = lazy(() => import("./views/login"));
+
+// auth pages
+const SignUp = lazy(() => import("./views/auth/signup"));
+const Login = lazy(() => import("./views/auth/login"));
+const ForgotPassword = lazy(() => import("./views/auth/forgot-password"));
+const ResetPassword = lazy(() => import("./views/auth/reset-password"));
+
+
 const Landing = lazy(() => import("./views/landing"));
 const IconPage = lazy(() => import("./views/icon-page"));
 const Policy = lazy(() => import("./views/policy"));
+const About = lazy(() => import("./views/about"));
 
 // dashboard routes
 const FileFirmCase = lazy(() => import("./views/dashboard/file-case"));
@@ -44,14 +53,14 @@ function App() {
 						{/* nested route for main pages due to same header and footer */}
 						<Route path={ROUTE.LANDING} element={<Layout />}>
 							<Route index element={<Landing />} />
-							<Route path={ROUTE.ABOUT} element={<Landing />} />
+							<Route path={ROUTE.ABOUT} element={<About />} />
 							<Route path={ROUTE.POLICY} element={<Policy />} />
 						</Route>
 
 						<Route path={ROUTE.LOGIN} element={<Login />} />
 						<Route path={ROUTE.SIGNUP} element={<SignUp />} />
-						<Route path={ROUTE.FORGOTPASSWORD} element={<SignUp />} />
-						<Route path={ROUTE.RESETPASSWORD} element={<SignUp />} />
+						<Route path={ROUTE.FORGOTPASSWORD} element={<ForgotPassword />} />
+						<Route path={ROUTE.RESETPASSWORD} element={<ResetPassword />} />
 
 						{/* nested route for dashboard (same header and sidebar) */}
 						<Route path={ROUTE.DASHBOARD} element={<DashboardLayout />}>

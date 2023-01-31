@@ -2,6 +2,7 @@
 @import './_mixins.scss';
 @import './_typo.scss';
 @import './_dashboard-layout.scss';
+@import './_auth.scss';
 @import './_reset.scss';
 
 
@@ -46,8 +47,8 @@
 
 
 .con {
-  max-width: 1300px;
-  padding: 0 1em;
+  max-width: 1350px;
+  padding: 0 2em;
   margin: auto;
 }
 
@@ -65,27 +66,24 @@ img {
   backface-visibility: hidden;
 }
 
-
-
 html {
-	font-size: 62.5%;
-	@include respond(big-desktop) {
-		font-size: 75%;
-	}
-	@include respond(tab-land) {
-		font-size: 56.25%; //1rem = 8px
-	}
-	@include respond(tab-port) {
-		font-size: 50%; //1rem = 9px
-	}
-	@include respond(phone) {
-		font-size: 50%;
-	}
-	@include respond(small-phone) {
-		font-size: 45%;
-	}
-  height: 100%;
-}
+  font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 100%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 66.25%; //1rem = 8px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 9px
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 
 input,
 select {
