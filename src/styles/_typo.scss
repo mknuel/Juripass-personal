@@ -5,6 +5,10 @@
 
     &-ter {
         font-size: 1.6rem;
+
+        @include respond(tab-port){
+            margin-bottom:3rem;
+        }
     }
 }
 

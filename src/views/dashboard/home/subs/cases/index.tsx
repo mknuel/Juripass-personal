@@ -1,4 +1,4 @@
-import Cases from "../../../ui/cases";
+import Cases from "../../../ui/case";
 import style from "../../home.module.scss";
 function CasesSection() {
 	return (

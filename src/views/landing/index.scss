@@ -9,7 +9,7 @@
       position: relative;
       background: url(../../assets/images/herobg.png);
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: right;
       background-size: cover;
 
       &::after {
@@ -38,7 +38,7 @@
             text-align: left;
 
             & h1 {
-               font-size: 8.4rem;
+               font-size: 80px;
                color: var(--color-text-light);
                margin-bottom: 0.4em;
             }
@@ -121,14 +121,10 @@
 
          @include respond(phone) {
             &-text {
-               width: 80%;
+               width: 95%;
 
                & h1 {
                   font-size: 5.8rem;
-               }
-
-               &-contact {
-                  right: 4%;
                }
             }
          }
@@ -145,6 +141,10 @@
    // users section starts 
    & #users {
       padding: 11em 0;
+
+      @include respond(phone) {
+         padding-bottom: 6em;
+      }
 
       & .con {
          display: flex;
@@ -177,7 +177,6 @@
 
          }
 
-         @include respond(phone) {}
       }
    }
 
@@ -214,15 +213,15 @@
 
                & b {
                   display: block;
-                  font-size: 1.8rem;
+                  font-size: 18px;
                   font-weight: 600;
                   margin-bottom: 0.9em;
                }
 
                & p {
-                  font-size: 1.6rem;
+                  font-size: 16px;
                   line-height: 1.5;
-                  color: var(--color-text-dark);
+                  color: var(--color-gray-200);
                }
             }
          }
@@ -232,6 +231,7 @@
 
    & #about {
       background-color: var(--color-secondary);
+      padding: 8em 0 8em 0;
 
       & .con {
          display: flex;
@@ -295,6 +295,10 @@
                padding: 2em;
                border-radius: 10px;
                margin-bottom: 4em;
+
+               @include respond(phone) {
+                  width: 100%;
+               }
 
                & h4 {
                   font-size: 2.05rem;

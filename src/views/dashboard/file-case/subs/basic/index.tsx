@@ -2,6 +2,8 @@ import React from "react";
 import style from "../../file-case.module.scss";
 import Select from "../../../../../components/select";
 import { BtnTertiary } from "../../../../../components/button";
+import { useNavigate } from "react-router-dom";
+import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 const Flow = () => (
 	<div className={style.flow}>
 		<div className={`${style.flow__item} ${style["flow__item--active"]} `}>
@@ -30,13 +32,17 @@ const Flow = () => (
 );
 
 function Basic() {
+	const navigate = useNavigate();
+	const handleSubmit = () => {
+		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.CLAIMANT}`);
+	};
 	return (
 		<>
 			<Flow />
 
 			<div className={style.wrapper}>
 				<form action="" onSubmit={(e) => e.preventDefault()}>
-					<div className={style.form__content}>
+					<div className={style.form__content} style={{ marginTop: "0" }}>
 						<div className={style.form__group}>
 							<Select
 								options={["High Court", "Magistrate Court", "Customary Court"]}
@@ -67,7 +73,9 @@ function Basic() {
 					<div
 						className={style["form__content"]}
 						style={{ justifyContent: "flex-end", marginTop: "6rem" }}>
-						<BtnTertiary className={style.submit}>Continue</BtnTertiary>
+						<BtnTertiary onClick={handleSubmit} className={style.submit}>
+							Continue
+						</BtnTertiary>
 					</div>
 				</form>
 			</div>

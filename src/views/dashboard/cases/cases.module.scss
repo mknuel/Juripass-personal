@@ -1,0 +1,97 @@
+.case{
+    background-color: var(--color-background-light);
+    // width: 100vw;
+    position: relative;
+    // background-color: red;
+    margin: .5rem 0;
+
+
+td
+    div{
+        width: 100%;
+        position: relative;
+    }
+
+    &__title{
+        width: 40%;
+        font-weight: 700;
+        
+
+    }
+    &__suit{
+        width: 10%;
+
+    }
+    
+    &__counsel{
+        width: 10%;
+
+        &__image{
+            width: 3rem;
+            height: 3rem;
+        }
+
+        
+
+    }
+    
+    &__court{
+        width: 30%;
+
+        
+
+    }
+
+
+    
+
+
+}
+
+table{
+    width: 100%;
+    position: relative;
+    font-size: 1.2rem;
+
+    th{
+        border-bottom: 1px solid var(--color-text-alt);
+        padding: 1.5rem;
+        text-align: left;
+        color: var(--color-text-mid);
+        font-size: 1.2rem;
+        font-weight: 400!important;
+    }
+    
+    tr{
+        width: 100%;
+        border:none;
+        border-radius:.25rem;
+
+        margin: .5rem 0;
+        
+    }
+    
+    td{
+        padding: .75rem;
+        border:none;
+        height: 2rem;
+        margin: 1rem 0;
+
+
+    }
+}
+
+.filter{
+    width: 15rem;
+
+    &__text{
+        color: var(--color-text-mid);
+    }
+    &__container{
+
+        width: 100%;
+        gap: 1rem;
+        align-items: center;
+        display: inline-flex;
+    }
+}

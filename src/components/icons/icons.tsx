@@ -1,3 +1,6 @@
+import { ReactComponent as Tick } from "./assets/tick.svg";
+import { ReactComponent as Delete } from "./assets/delete.svg";
+import { ReactComponent as Processing } from "./assets/processing.svg";
 import { ReactComponent as Logout } from "./assets/logout.svg";
 import { ReactComponent as AngleDown } from "./assets/angledown.svg";
 import { ReactComponent as Dashboard } from "./assets/dashboard.svg";
@@ -6,9 +9,9 @@ import { ReactComponent as ExistingCase } from "./assets/existingcase.svg";
 import { ReactComponent as TrackCase } from "./assets/trackcase.svg";
 import { ReactComponent as Cases } from "./assets/cases.svg";
 import { ReactComponent as MyFilings } from "./assets/myfilings.svg";
-import { ReactComponent as Notification } from "./assets/arrowdown.svg";
+import { ReactComponent as Notification } from "./assets/notification.svg";
 import { ReactComponent as MyFirm } from "./assets/myfirm.svg";
-import { ReactComponent as Hammer } from "./assets/myfirm.svg";
+import { ReactComponent as Hammer } from "./assets/hammer.svg";
 import { ReactComponent as Flag } from "./assets/flag.svg";
 import { ReactComponent as ArrowDown } from "./assets/arrowdown.svg";
 import { ReactComponent as ArrowUp } from "./assets/arrowup.svg";
@@ -16,12 +19,26 @@ import { ReactComponent as SavedDrafts } from "./assets/saveddrafts.svg";
 import { ReactComponent as Copy } from "./assets/copy.svg";
 import { ReactComponent as Profile } from "./assets/profile.svg";
 import { ReactComponent as LeftArrow } from "./assets/leftarrow.svg";
+import { ReactComponent as Upload } from "./assets/upload.svg";
+import { ReactComponent as Alert } from "./assets/alert.svg";
+import { ReactComponent as Document } from "./assets/document.svg";
 
+export const DeleteIcon = () => {
+	return <Delete />;
+};
+
+export const ProcessingIcon = () => {
+	return <Processing />;
+};
+
+export const TickIcon = () => {
+	return <Tick />;
+};
 export const AngleDownIcon = () => {
 	return <AngleDown />;
 };
 
-export const LeftArrowIcon = () => {
+export const ArrowLeftIcon = () => {
 	return <LeftArrow />;
 };
 
@@ -84,4 +101,16 @@ export const ProfileIcon = () => {
 
 export const CopyIcon = () => {
 	return <Copy />;
+};
+
+export const UploadIcon = () => {
+	return <Upload />;
+};
+
+export const AlertIcon = () => {
+	return <Alert />;
+};
+
+export const DocumentIcon = () => {
+	return <Document />;
 };

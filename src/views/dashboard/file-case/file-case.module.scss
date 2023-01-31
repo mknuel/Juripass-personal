@@ -1,4 +1,5 @@
 
+@import "../../../styles/mixins";
 .head{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,7 +11,9 @@
     width: fit-content;
   }
 }
+
 .banner{
+
     
 }
 
@@ -19,6 +22,10 @@
     position: relative;
     display: inline-flex;
     margin: 1.5rem 0;
+
+    @include respond(tab-port){
+        display: none;
+    }
     &__item{
         color: var(--color-text-alt);
         display: inline-flex;
@@ -44,7 +51,7 @@
             margin-right: .5rem;
             word-wrap: normal;
             white-space: nowrap;
-            
+            font-size: 1.6rem;
 
         }
     }
@@ -78,63 +85,9 @@
     height: 30rem;
     display: block;
 
-    &__form{
-
     }
 
 
-}
-
-.form{
-    &__input{
-         width: 100%;
-        display: flex;
-        line-height: 3rem;
-
-    //    color: var(--color-text-alt);
-       color: var(--color-text-mid);
-       border-radius:var(--border-radius-input) ;
-       text-transform: capitalize;
-       font-size: 1.2rem;
-       padding: 1rem 1.25rem;
-       
-       
-       border: 1px solid currentColor;
-       &::placeholder{
-    color: var(--color-text-mid);
-
-}
-    }
-
-    &__group{
-        display: flex;
-        flex-direction: column;
-        width: fill;
-        margin: 2rem 0;
-
-        label{
-             font-weight: 600;
-        font-size: 1.2rem;
-        text-transform: capitalize;
-
-        display: block;
-        color: var(--color-text-dark);
-        width: 100%;
-        margin-bottom: 1rem;
-        }
-    }
-
-    &__content{
-        display: flex;
-        width: 100%;
-        gap: 2rem;
-        // background-color: pink;
-        color: var(--color-black);
-    }
-
-
-
-}
 
 .submit{
     padding-left: 5rem!important;
@@ -155,4 +108,268 @@
     margin: 2rem 0;
     margin-top: 4rem;
     font-size: 1.2rem;
+}
+
+.form{
+    margin-bottom: 4rem;
+}
+
+.form__content{
+    display: flex;
+    width: 100%;
+    // justify-content: flex-end;
+    margin-top: 6rem;
+
+    @include respond(tab-port){
+        flex-direction: column;
+        gap: 0!important;
+
+        margin-top: 2rem;
+
+
+    }
+}
+
+.extra{
+    margin-top: 4rem;
+}
+
+
+.upload{
+    display: inline-flex;
+    padding: 1.5rem ;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    align-items: center;
+    background-color: var(--color-background-dark);
+    border: 1px solid var(--color-text-alt);
+
+
+    &--success{
+        background-color: var(--color-background-light);
+
+    }
+
+    &--failed{
+        color: var(--color-red);
+        background-color: rgba(#FA7066, .3) ;
+        border-color: #FA7066;
+        strong{
+            font-size: 1.2rem;
+        }
+                
+        h5{
+            color: var(--color-black);
+        }
+
+        svg{
+            rect{
+                stroke: var(--color-background-light);
+                fill:     rgba(#FA7066, .1) ;
+            }
+            path{
+                fill:currentColor;
+            }
+        }
+
+    }
+
+    &__icon{
+        width: 3.5rem;
+        height: 3.5rem;
+
+        position: relative;
+        svg{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    }
+
+    p{
+        font-size: 1.2rem;
+        color: var(--color-text-mid);
+        line-height: 2;
+    }
+    
+    &__container{
+        display: grid;
+        grid-template-columns: 3.5fr 1fr;
+        gap: 3rem;
+        
+        @include respond (tab-port){
+            
+            grid-template-columns: 1fr;
+
+        }
+
+    }
+
+
+
+}
+
+.uploaded{
+    width: 100%;
+    margin-top: -3rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+
+.info{
+    position: relative;
+    line-height: 1.6;
+    
+    &__container{
+        border-radius: 1.5rem;
+        background-color: var(--color-background-dark);
+        height: fit-content;
+        padding: 1.5rem .5rem;
+        display: block;
+
+    }
+    
+
+    &__header{
+        display: inline-flex;
+        align-items: center;
+    }
+    h5{
+        display: inline-block;
+        width: fit-content;
+    }
+
+
+    ol{
+        position: relative;
+        // width: 100%;/
+        display: block;
+        padding-left: 2.5rem;
+            color: var(--color-text-mid);
+    }
+    li{
+        list-style: disc;
+        width: 100%;
+        // display: block;
+        position: relative;
+        font-size: 1.2rem;
+        margin: .15rem 0 ;
+
+    }
+}
+
+
+.form{
+    margin-bottom: 2rem;
+    display: block;
+    background-color: red;
+
+    &__input{
+         width: 100%;
+        display: flex;
+        line-height: 3rem;
+
+    //    color: var(--color-text-alt);
+       color: var(--color-text-mid);
+       border-radius:var(--border-radius-input) ;
+       text-transform: capitalize;
+       font-size: 1.2rem;
+       padding: .75rem 1.25rem;
+       
+       
+       border: 1px solid currentColor;
+       &::placeholder{
+    color: var(--color-text-mid);
+
+    }
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        width: fill;
+        margin: 2rem 0;
+
+        label{
+             font-weight: 600;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+
+        display: block;
+        color: var(--color-text-dark);
+        width: 100%;
+        margin-bottom: 1rem;
+        }
+
+        @include respond(tab-port){
+            margin: 1.5rem 0;
+        }
+    }
+
+    &__content{
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        // background-color: pink;
+        color: var(--color-black);
+        
+        &--right{
+            display: flex;
+            width: 100%;
+            gap: 2rem;
+            justify-content: flex-end;
+
+            @include respond(tab-port){
+                width: 100%;
+                margin-top: 3rem;
+            }
+        }
+    }
+
+
+    &__checkbox{
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        padding: 1.5rem;
+        
+        span{
+            font-weight: 600;
+            
+            label{
+                font-size: 1.4rem;
+                display: inline-block;
+                margin: 0;
+                
+            }
+        }
+    }
+
+
+}
+
+
+.document__form{
+
+    .form__group{
+        max-width: 35rem;
+        
+    }
+
+    .form__content{
+        gap: 7rem;
+        margin-top:2rem;
+        width: 70%;
+        
+        @include respond(tab-port){
+            gap:0rem;
+            width: 100%;
+            margin: 0;
+        }
+
+    }
 }

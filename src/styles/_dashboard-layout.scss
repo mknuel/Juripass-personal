@@ -1,26 +1,40 @@
+@import "./mixins";
 #dashboard {
    min-height: 100vh;
    height: auto;
    display: flex;
    align-items: flex-start;
+   width: 100%;
+   @include respond(big-desktop){
+       margin: 0 auto;
+       width: 180rem;
+   }
+   @include respond(big-desktop){
+       margin: 0 auto;
+       ;
+   }
 
    &-sidebar {
       width: max(32rem, 320px);
       height: calc(100vh);
       padding: 1.5rem 3rem;
-          position: sticky;
-          top: 0;
-          left: 0;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: var(--color-background-light);
 
-
-      background-color: var(--color-background-light);
+          @include respond(tab-port){
+       display: none;
    }
+    }
 
    &-main {
       width: 100%;
       min-height: calc(100vh);
       height: auto;
       padding: 3rem 1.5rem;
+       
       background-color: var(--color-background-dark);
    }
 }
@@ -53,23 +67,40 @@
     font-size: 1.6rem;
     width: 60%;
     margin: 1rem auto;
-color: var(--color-secondary);
+    color: var(--color-secondary);
 
-svg{
-    fill: currentColor;
-    width: 3rem;
-    height: 3rem;
+    @include respond(tab-port){
+         width: 100%;   
+    
+    }
+
+    svg{
+        fill: currentColor;
+        width: 3rem;
+        height: 3rem;
+    }
+
+     @include respond(big-desktop){
+        width: 100%;
+        font-size: 3rem;
+           
+        // background-color:var(--color-primary);
+
+    }
+
+
 }
 
-
-}
 .icon__item__header{
     position: sticky;
     top: 0;
-    color: white;
+    color: var(--color-secondary);
     text-transform: capitalize;
     left: 0;
     padding: 2rem;
-    background-color: var(--color-secondary);
     // height: 10rem;
+    background-color:var(--color-primary);
+
 }
+
+
