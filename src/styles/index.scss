@@ -66,27 +66,25 @@ img {
 }
 
 
+
 html {
-  font-size: 62.5%;
-
-  @include respond(big-desktop) {
-    font-size: 100%;
-  }
-
-  @include respond(tab-land) {
-    font-size: 66.25%; //1rem = 8px
-  }
-
-  @include respond(tab-port) {
-    font-size: 60%; //1rem = 9px
-  }
-
-  @include respond(phone) {
-    font-size: 60%;
-  }
-
+	font-size: 62.5%;
+	@include respond(big-desktop) {
+		font-size: 75%;
+	}
+	@include respond(tab-land) {
+		font-size: 56.25%; //1rem = 8px
+	}
+	@include respond(tab-port) {
+		font-size: 50%; //1rem = 9px
+	}
+	@include respond(phone) {
+		font-size: 50%;
+	}
+	@include respond(small-phone) {
+		font-size: 45%;
+	}
   height: 100%;
-
 }
 
 input,

@@ -21,6 +21,10 @@
             font-size: 1.2rem;
 
 
+            
+        @include respond(tab-port){
+            font-size: 1.4rem;
+        }
 
         }
 
@@ -51,6 +55,11 @@
             align-items: center;
             font-weight: 500;
 
+                  
+        @include respond(tab-port){
+            font-size: 1.4rem;
+        }
+
           
             span{
                 display: inline-block;
@@ -70,6 +79,11 @@
         &__numbers{
             color: var(--color-black);
             font-size: 4.2rem;
+
+                  
+        @include respond(tab-port){
+            font-size: 4.5rem;
+        }
         }
     }
 }
@@ -101,6 +115,11 @@
        color: #4D4D50; 
        padding-right: 2rem;
        font-weight: 500;
+
+             
+        @include respond(tab-port){
+            font-size: 1.4rem;
+        }
     }
  
     
@@ -118,18 +137,11 @@
 }
 
 
-@keyframes OpenPopup {
+.table{
 
-    from{
-        width: 3rem;
-        height: 3rem;
-
-    }
-    to{
-        width: 22.6rem;
-        height: 39.3rem;
-    }
+    max-width: calc(100vw - 3rem);
     
+    overflow: auto;
 }
 
 @keyframes OpenPopup {

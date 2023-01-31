@@ -27,7 +27,7 @@
     &__group{
         display: flex;
         flex-direction: column;
-        width: fill;
+        width: stretch;
         margin: 2rem 0;
 
         label{
@@ -39,6 +39,11 @@
         color: var(--color-text-dark);
         width: 100%;
         margin-bottom: 1rem;
+
+        
+        @include respond(tab-port){
+              font-size: 1.4rem;
+        }
         }
     }
 
