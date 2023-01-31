@@ -21,7 +21,7 @@
    &-nav {
       display: flex;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
          display: none;
       }
 
@@ -38,7 +38,7 @@
       text-align: right;
       padding: 1.5em 0;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
          display: none;
       }
 
@@ -56,7 +56,7 @@
       height: 30px !important;
       width: 30px !important;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
          display: block !important;
       }
    }

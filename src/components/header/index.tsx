@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { Menu } from '@mui/icons-material'
 import { LOGO } from '../../assets/logos/logo'
 import * as ROUTE from '../../constants/routes'
-import { BtnPrimary, BtnSecondary, BtnTertiary } from '../button'
+import { BtnPrimary, BtnSecondary } from '../button'
 import './index.scss';
 
 function Header() {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const active = {
     borderBottom: '3px solid #0D294D',
@@ -36,8 +37,8 @@ function Header() {
           </div>
         </nav>
         <div className='header-btns'>
-          <BtnSecondary>Login</BtnSecondary>
-          <BtnPrimary>Sign Up</BtnPrimary>
+          <BtnSecondary onClick={() => navigate('/login')}>Login</BtnSecondary>
+          <BtnPrimary onClick={() => navigate('/signup')}>Sign Up</BtnPrimary>
         </div>
 
         <Menu className='header-menu' onClick={() => setIsOpen(current => !current)} />
@@ -64,8 +65,8 @@ function Header() {
             </div>
           </nav>
           <div className='header-mobile-btns'>
-            <BtnSecondary>Login</BtnSecondary>
-            <BtnPrimary>Sign Up</BtnPrimary>
+            <BtnSecondary onClick={() => navigate('/login')}>Login</BtnSecondary>
+            <BtnPrimary onClick={() => navigate('/signup')}>Sign Up</BtnPrimary>
           </div>
         </div>
       }
