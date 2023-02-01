@@ -1,3 +1,4 @@
+import { Facebook } from 'iconsax-react'
 import React from 'react'
 import { LOGO } from '../../assets/logos/logo'
 import { BtnPrimary } from '../button'
@@ -21,6 +22,8 @@ function Footer() {
             <p>
               We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.
             </p>
+            <br/>
+            <Facebook size="32" color="#ffffff" variant="Bold"/>
           </div>
           <div className='footer-right'>
             <div className='footer-col'>
@@ -42,8 +45,8 @@ function Footer() {
                 <hr />
               </div>
               <ul>
-                <li>My Account</li>
-                <li>Order</li>
+                <li>Blog</li>
+                <li>Orders</li>
                 <li>Payments</li>
                 <li>Returns</li>
                 <li>Manage Deliveries</li>
@@ -55,11 +58,10 @@ function Footer() {
                 <hr />
               </div>
               <ul>
-                <li>My Account</li>
-                <li>Order</li>
-                <li>Payments</li>
-                <li>Returns</li>
-                <li>Manage Deliveries</li>
+                <li>Contact Us</li>
+                <li>Online Chat</li>
+                <li>Tiketing</li>
+                <li>FAQs</li>
               </ul>
             </div>
           </div>

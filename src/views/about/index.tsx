@@ -1,5 +1,5 @@
 import React from 'react'
-import { People, FolderCloud } from 'iconsax-react'
+import { People, FolderCloud, Shield } from 'iconsax-react'
 import { IMAGE } from '../../assets/images/images'
 import Page from '../../components/page'
 import './index.scss'
@@ -54,7 +54,7 @@ const About = () => {
                 <p>At Juripass, we believe that speedy and efficient delivery of justice starts with Fast-tracking the existing workflow in the filing of Courts process through technology.</p>
               </div>
               <div className='innovation-body_item'>
-                <People size="44" color="#FFFFFF" variant="Bold" />
+                <Shield size="44" color="#ffffff" variant="Bold" />
                 <b>Paving way for the in flux of <br /> technology in the Judiciary</b>
                 <p>We are optimistic that Juripass' innovation in the Nigeria Legal Industry will pave the way for the influx of technology in the Nigerian Judiciary and Africa at large.</p>
               </div>
@@ -71,15 +71,19 @@ const About = () => {
             <div className='team-body'>
               <div className='team-body_item'>
                 <img src={IMAGE.Team1} alt="Picture of Maxwell M. Igweogu Esq." />
+                <h4>Maxwell M. Igweogu<br/> Esq.</h4>
               </div>
               <div className='team-body_item'>
                 <img src={IMAGE.Team2} alt="Picture of Dr. Hon. Jibayo Adeyeye Esq." />
+                <h4>Dr. Hon. Jibayo Adeyeye<br/> Esq.</h4>
               </div>
               <div className='team-body_item'>
                 <img src={IMAGE.Team3} alt="Picture of Ajibayo Adeyeye Olugbenga PhD" />
+                <h4>Ajibayo Adeyeye <br/>Olugbenga PhD</h4>
               </div>
               <div className='team-body_item'>
                 <img src={IMAGE.Team4} alt="Pictiure of Mr Oluwasegun Kolawole" />
+                <h4>Mr Oluwasegun<br/> Kolawole</h4>
               </div>
             </div>
           </div>

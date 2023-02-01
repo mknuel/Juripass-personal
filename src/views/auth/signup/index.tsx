@@ -15,18 +15,24 @@ function SignUp() {
             <div className='c'>
               <img src={LOGO.LogoDark} alt="logo" />
               <h1>Create Account</h1>
-              <p>Join hundreds of Counsels already filing their Court processes<br /> online with Juripass</p>
+              <p>Join hundreds of Counsels already filing their Court processes online with Juripass</p>
               <div>
                 <InputField
-                  label='Name of Firm'
+                  label='First Name'
                   name='name'
-                  placeholder='Enter Full Name of Firm'
+                  placeholder='First Name'
                   type="text"
                 />
                 <InputField
-                  label='Email of Firm'
+                  label='Last Name'
+                  name='name'
+                  placeholder='Last Name'
+                  type="text"
+                />
+                <InputField
+                  label='Email'
                   name='email'
-                  placeholder='Enter Email of Firm'
+                  placeholder='Enter Email'
                   type="email"
                 />
                 <InputField
@@ -55,10 +61,10 @@ function SignUp() {
                 </div>
                 <BtnPrimary onClick={() => navigate('/dashboard')}>Sign Up</BtnPrimary>
                 <p>Already have an account? <span onClick={() => navigate('/login')}>Log In</span></p>
+                <br /><br /><br />
               </div>
             </div>
           </div>
-
         </div>
         <div className='auth-right'>
 

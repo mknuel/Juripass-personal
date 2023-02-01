@@ -23,7 +23,7 @@ function ForgotPassword() {
                            placeholder='abc@xyz.com'
                            type="email"
                         />
-                        <BtnPrimary onClick={() => navigate('/dashboard')}>Send Instructions</BtnPrimary>
+                        <BtnPrimary onClick={() => navigate('/reset-password')}>Send Instructions</BtnPrimary>
                         <p>Don't have an account? <span onClick={() => navigate('/signup')}>Sign Up</span></p>
                      </div>
                   </div>

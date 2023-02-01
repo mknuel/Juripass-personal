@@ -5,7 +5,7 @@ function Cases() {
 	return (
 		<div className={style.case}>
 			<div className={style.case__content}>
-				<FlagIcon />
+				{/* <FlagIcon /> */}
 			</div>
 			<div className={style.case__content}>
 				<h3 className={style.case__title}>
