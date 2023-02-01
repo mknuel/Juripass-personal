@@ -1,19 +1,101 @@
+@import "./mixins";
 #dashboard {
-   // height: 100vh;
+   min-height: 100vh;
+   height: auto;
    display: flex;
    align-items: flex-start;
+   width: 100%;
+   @include respond(big-desktop){
+       margin: 0 auto;
+       width: 180rem;
+   }
 
    &-sidebar {
-      width: 320px;
-      height: calc(100vh - 6em);
-      padding: 3em;
+      width: max(32rem, 320px);
+      height: calc(100vh);
+      padding: 1.5rem 3rem;
+          position: sticky;
+          top: 0;
+          left: 0;
+
+
       background-color: var(--color-background-light);
    }
 
    &-main {
       width: 100%;
-      height: calc(100vh - 6em);
-      padding: 3em;
+      min-height: calc(100vh);
+      height: auto;
+      padding: 3rem 1.5rem;
       background-color: var(--color-background-dark);
    }
 }
+
+
+/* .head__user{
+   animation: OpenPopup .3s ease-in-out 1 ;
+}
+
+@keyframes OpenPopup {
+
+    from{
+        width: 3rem;
+        height: 3rem;
+
+    }
+    to{
+        width: 22.6rem;
+        height: 39.3rem;
+    }
+    
+}
+ */
+
+ .icon__item{
+    display: flex;
+    justify-content: space-between;
+    // margin: 1rem;
+    padding: 1rem 5rem;
+    font-size: 1.6rem;
+    width: 60%;
+    margin: 1rem auto;
+    color: var(--color-secondary);
+       @include respond(tab-port){
+     width: 100%;   
+    
+
+    }
+
+    svg{
+        fill: currentColor;
+        width: 3rem;
+        height: 3rem;
+    }
+
+     @include respond(big-desktop){
+        width: 100%;
+        font-size: 3rem;
+           
+        // background-color:var(--color-primary);
+
+    }
+
+
+}
+
+.icon__item__header{
+    position: sticky;
+    top: 0;
+    color: var(--color-secondary);
+    text-transform: capitalize;
+    left: 0;
+    padding: 2rem;
+    // height: 10rem;
+    background-color:var(--color-primary);
+  
+
+
+
+}
+
+

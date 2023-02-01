@@ -11,7 +11,7 @@
   align-items: flex-start;
 }
 #dashboard-sidebar {
-  width: 320px;
+  width: 32rem;
   height: calc(100vh - 6em);
   padding: 3em;
   background-color: var(--color-background-light);
@@ -30,6 +30,8 @@
   --color-background-dark: #EDEEF1;
   --color-text-light: #FFFFFF;
   --color-text-dark: #231F20;
+  --color-text-alt: #cbccce;
+  --color-text-primary: #9b9b9b;
 }
 
 [data-theme=dark] {
@@ -39,4 +41,6 @@
   --color-background-dark: #EDEEF1;
   --color-text-light: #FFFFFF;
   --color-text-dark: #231F20;
+  --color-text-alt: #cbccce;
+  --color-text-primary: #9b9b9b;
 }

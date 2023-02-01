@@ -1,15 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../../styles/Firms.scss'
+import Lawyer from './Lawyer'
+import * as ROUTE from "../../../constants/routes";
 
 
-function Firms( ) {
-  // const handleClick = () =>{
-  //   console.log('clicked')
-    
-  //   // document.getElementById("p2").style.color = "blue";
 
-  // }
+function Firms (){
+  
 
   return (
     <div>
@@ -25,7 +23,7 @@ function Firms( ) {
           <h4 className="name">Dapo Agbede & C0.</h4>
           <p>Number of Lawyers : 6</p>
           <p>My Role : Admin</p>
-          <button >View Law Firm</button>
+          <Link to='lawyer'><button>View Law Firm</button></Link>
 
         </div>
         <div className='firmProfile'>
@@ -35,7 +33,7 @@ function Firms( ) {
           <h4 className="name">Sportlicitors LP</h4>
           <p>Number of Lawyers : 6</p>
           <p>My Role : Members</p>
-        <button>View Law Firm</button>
+          <Link to='lawyer'><button>View Law Firm</button></Link>
 
         </div>
         <div className='firmProfile'>
@@ -45,12 +43,15 @@ function Firms( ) {
           <h4 className="name">Dapo Agbede & C0.</h4>
           <p>Number of Lawyers : 6</p>
           <p>My Role : <span>Admin</span></p>
-          <button>View Law Firm</button>
+          <Link to='lawyer'><button>View Law Firm</button></Link>
 
         </div>
       </div>
+      {/* <Lawyer /> */}
     </div>
   )
 }
 
 export default Firms
+
+
