@@ -23,7 +23,7 @@ function Cases() {
 				<div className={style.filter__container}>
 					<h6 className={style.filter__text}>Filter:</h6>
 
-					<div className={style.filter__container}>
+					<div className={style.filter__content}>
 						<div className={style.filter}>
 							<Select
 								options={[
@@ -78,23 +78,29 @@ function Cases() {
 						</div>
 					</div>
 				</div>
-				<table>
-					<tr>
-						<th className={style.case__suit}>Suit No</th>
-						<th className={style.case__title}>Case Title</th>
-						<th className={style.case__counsel}>Counsel</th>
-						<th className={style.case__court}>Court</th>
-					</tr>
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-					<SingleCase />
-				</table>
+				<div className={style.table__container}>
+					<table>
+						<thead>
+							<tr>
+								<th className={style.case__suit}>Suit No</th>
+								<th className={style.case__title}>Case Title</th>
+								<th className={style.case__counsel}>Counsel</th>
+								<th className={style.case__court}>Court</th>
+							</tr>
+						</thead>
+						<tbody>
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+							<SingleCase />
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</Page>
 	);

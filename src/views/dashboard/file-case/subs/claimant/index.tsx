@@ -4,7 +4,7 @@ import Select from "../../../../../components/select";
 import { BtnTertiary, Btn } from "../../../../../components/button";
 import ClaimantForm from "../../../ui/form";
 import { generateUniqueId } from "../../../../../helper/utitlities/utilities";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 
 interface claimantDef {
@@ -62,8 +62,12 @@ function Claimant() {
 	};
 
 	const navigate = useNavigate();
+
+	const { state } = useLocation();
 	const handleSubmit = () => {
-		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.DEFENDANT}`);
+		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.DEFENDANT}`, {
+			state,
+		});
 	};
 	return (
 		<>

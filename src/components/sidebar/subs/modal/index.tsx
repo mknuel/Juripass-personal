@@ -4,16 +4,18 @@ import { BtnPrimary, BtnSecondary, BtnTertiary } from "../../../button";
 import { Link, RouteProps } from "react-router-dom";
 import Select from "../../../select";
 import * as ROUTES from "../../../../constants/routes";
+import useClose from "../../../../hooks/useClose";
 
 interface Props {
-	hide: () => void;
+	hide?: () => void;
+	goTo?: () => void;
 }
 
 interface StateProps {
 	type: string;
 }
 
-const FirmCaseModal: React.FC<Props> = ({ hide }) => {
+const FirmCaseModal: React.FC<Props> = ({ hide, goTo }) => {
 	const [modal, showModal] = useState(1);
 
 	const changeModal = () => {
@@ -22,6 +24,7 @@ const FirmCaseModal: React.FC<Props> = ({ hide }) => {
 
 	return (
 		<div className={style["modal__container"]}>
+			<div className={style["modal__box"]} onClick={hide}></div>
 			{modal === 1 ? (
 				<div className={style["modal"]}>
 					<div className={style["modal__content"]}>
@@ -30,11 +33,11 @@ const FirmCaseModal: React.FC<Props> = ({ hide }) => {
 					</div>
 					<div className={style["modal__content"]}>
 						<BtnTertiary onClick={changeModal}>File for a firm</BtnTertiary>
-						<BtnSecondary onClick={hide}>File a personal case</BtnSecondary>
+						<BtnSecondary onClick={goTo}>File a personal case</BtnSecondary>
 					</div>
 				</div>
 			) : (
-				<ChooseFirm hide={hide} />
+				<ChooseFirm hide={goTo} />
 			)}
 		</div>
 	);

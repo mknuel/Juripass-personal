@@ -1,6 +1,6 @@
-import React, { ReactInstance, useState } from "react";
+import React, { ReactInstance, useCallback, useState } from "react";
 import style from "./style.module.scss";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 
 import * as ROUTE from "../../constants/routes";
 import {
@@ -18,6 +18,7 @@ import FirmCase from "./subs/modal";
 
 function Sidebar() {
 	const [caseModal, showCase] = useState<boolean>(false);
+	const { pathname } = useLocation();
 
 	const handleCase = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
@@ -25,39 +26,48 @@ function Sidebar() {
 	};
 
 	const navigate = useNavigate();
-	const hideModal = () => {
+	const hideModal = useCallback(() => {
 		showCase(false);
-		navigate("/dashboard/new-case");
-	};
+	}, []);
+
+	const goTo = useCallback(() => {
+		showCase(false);
+		navigate("/dashboard/new-case", {
+			state: {
+				type: "firm",
+			},
+		});
+	}, []);
+
 	return (
 		<>
 			<aside className={style.sidebar}>
-				{caseModal && <FirmCase hide={hideModal} />}
+				{caseModal && <FirmCase hide={hideModal} goTo={goTo} />}
 				<div className={style.sidebar__logo}>
 					<img src="/assets/logo.png" alt="juripass logo" />
 				</div>
 				<ul className={style.sidebar__list}>
 					<li className={style.sidebar__item}>
-						<NavLink
+						<Link
 							to={ROUTE.DASHBOARD}
-							className={(navData) =>
-								`${navData.isActive ? style.active : ""} ${style.sidebar__link}`
-							}>
+							className={`${pathname === "/dashboard" ? style.active : ""} ${
+								style.sidebar__link
+							}`}>
 							<DashboardIcon />
 							<span>dashboard</span>
-						</NavLink>
+						</Link>
 					</li>
 
 					<li className={style.sidebar__item}>
-						<NavLink
+						<Link
 							to={ROUTE.NEWCASES.DEFAULT}
-							className={(navData) =>
-								`${navData.isActive ? style.active : ""} ${style.sidebar__link}`
-							}
+							className={`${pathname.match(/new-case/gi) ? style.active : ""} ${
+								style.sidebar__link
+							}`}
 							onClick={handleCase}>
 							<NewCaseICon />
 							<span>New case</span>
-						</NavLink>
+						</Link>
 					</li>
 
 					<li className={style.sidebar__item}>

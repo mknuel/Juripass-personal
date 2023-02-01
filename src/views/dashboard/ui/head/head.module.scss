@@ -22,6 +22,9 @@
         margin: 1rem  ;
 
 
+        @include respond(tab-port){}
+
+
     }
 &__image{
     height: 4rem;
@@ -44,7 +47,7 @@
         gap: 2rem;
 
         @include respond(tab-port){
-            
+              
         }
     }
 
@@ -87,10 +90,15 @@
 
         h4{
             margin: 1rem 0;
+            font-size: 1.6rem;
             &::first-letter{
 
          
             text-transform: capitalize;
+        }
+        
+        @include respond(tab-port){
+              font-size: 2rem;
         }
         }
 
@@ -99,6 +107,7 @@
             color: var(--color-black);
             display: inline-flex;
             align-items: center;
+            font-size: 1.2rem;
             span{
             
             }
@@ -106,6 +115,11 @@
                 color: inherit;
                 fill: currentColor;
             }
+
+            
+        @include respond(tab-port){
+              font-size:1.4rem
+        }
         }
            &__details{
         display: flex;
@@ -123,6 +137,10 @@
                 // display: block;
                 width: 100%;
                 background-color: transparent;
+                
+        @include respond(tab-port){
+              font-size: 1.4rem;
+        }
 
             }
 

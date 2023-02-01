@@ -9,7 +9,7 @@ import {
 	ProcessingIcon,
 	TickIcon,
 } from "../../../../../components/icons/icons";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 
 const Flow = () => (
@@ -41,8 +41,12 @@ const Flow = () => (
 
 function Uploads() {
 	const navigate = useNavigate();
+
+	const { state } = useLocation();
 	const handleSubmit = () => {
-		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.DOCUMENTS}`);
+		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.DOCUMENTS}`, {
+			state,
+		});
 	};
 	return (
 		<>
@@ -84,7 +88,7 @@ function Uploads() {
 									<h5>Hessington oil vs Tony Gianopolis.pdf</h5>
 									<p>200 KB - 100% Uploaded</p>
 								</div>
-								<div>
+								<div className={style.processing}>
 									<ProcessingIcon />
 								</div>
 							</div>
