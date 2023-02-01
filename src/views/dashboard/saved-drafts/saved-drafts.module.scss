@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+
+
+.case{
+    &__title{
+        width: 30%;
+        // background-color: red;
+    }
+
+    &__type,&__owner{
+
+        color: var(--color-text-mid);
+
+    }
+
+    &__action{
+        width: 5rem;
+
+
+        button{
+            background-color: transparent;
+        }
+        svg{
+            width: 2rem;
+            height: 2rem;
+            /* 
+            path{
+                fill: #fff;
+                fill: var(--color-secondary);
+            } */
+        }
+    }
+
+    &__status{
+
+        &__info{
+            padding: .75rem;
+            color: #B42318;
+            background-color:  #FEF3F2;
+            border-radius: 2rem;
+          
+        }
+
+    }
+}
