@@ -33,7 +33,7 @@ const About = lazy(() => import("./views/about"));
 const FileFirmCase = lazy(() => import("./views/dashboard/file-case"));
 const Cases = lazy(() => import("./views/dashboard/cases"));
 const DashboardHome = lazy(() => import("./views/dashboard/home"));
-const Firms = lazy(() => import("./views/dashboard/firms"));
+const SavedDrafts = lazy(() => import("./views/dashboard/saved-drafts"));
 
 function App() {
 	const theme = useSelector((state: any) => state.theme.value);
@@ -82,7 +82,7 @@ function App() {
 							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
 							<Route path={ROUTE.TRACKCASES} element={<Landing />} />
 							<Route path={ROUTE.FILLINGS} element={<Landing />} />
-							<Route path={ROUTE.DRAFTS} element={<Landing />} />
+							<Route path={ROUTE.DRAFTS} element={<SavedDrafts />} />
 							<Route path={ROUTE.FIRMS} element={<Landing />} />
 						</Route>
 					</Routes>

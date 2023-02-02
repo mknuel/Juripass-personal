@@ -104,3 +104,61 @@
 }
 
 
+.table__wrapper{
+
+    width: 100%;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    position: relative;
+    font-size: 1.2rem;
+    border-spacing: 0 1rem;
+    table-layout: fixed;
+
+    @include respond(phone){
+
+        
+         min-width:100rem ;
+         font-size: 1.4rem;
+       
+
+    }
+
+    th{
+        border-bottom: 1px solid var(--color-text-alt);
+        padding: 1.5rem;
+        text-align: left;
+        color: var(--color-text-mid);
+        font-size: 1.2rem;
+        font-weight: 600!important;
+        position: sticky;
+        
+    
+    }
+    
+    tr{
+        width: 100%;
+        border:none;
+        border-radius:.25rem;
+
+        left: 0;
+
+        
+    }
+    
+    td{
+        padding: 1.25rem;
+        border:none;
+        height: 2rem;
+        border-radius: .5rem;
+
+        background-color: var(--color-background-light);
+
+
+    }
+}
+
+
+
