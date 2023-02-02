@@ -1,12 +1,12 @@
+@import "../../../styles/mixins";
+
 .case{
     background-color: var(--color-background-light);
     // width: 100vw;
     position: relative;
     // background-color: red;
-    margin: .5rem 0;
 
 
-td
     div{
         width: 100%;
         position: relative;
@@ -29,6 +29,12 @@ td
         &__image{
             width: 3rem;
             height: 3rem;
+
+            @include respond(tab-port){
+                margin-left:2rem;
+                width: 4rem;
+                height: 4rem;
+        }
         }
 
         
@@ -48,50 +54,52 @@ td
 
 }
 
-table{
+.table__container{
+    overflow: auto;
     width: 100%;
-    position: relative;
-    font-size: 1.2rem;
 
-    th{
-        border-bottom: 1px solid var(--color-text-alt);
-        padding: 1.5rem;
-        text-align: left;
-        color: var(--color-text-mid);
-        font-size: 1.2rem;
-        font-weight: 400!important;
-    }
-    
-    tr{
-        width: 100%;
-        border:none;
-        border-radius:.25rem;
-
-        margin: .5rem 0;
-        
-    }
-    
-    td{
-        padding: .75rem;
-        border:none;
-        height: 2rem;
-        margin: 1rem 0;
-
-
-    }
 }
 
 .filter{
     width: 15rem;
 
     &__text{
+        font-size: 1.2rem;
+        font-weight: 600;
         color: var(--color-text-mid);
+
+           @include respond(tab-port){
+            font-size: 1.4rem;
+            }
     }
+
     &__container{
 
         width: 100%;
         gap: 1rem;
         align-items: center;
         display: inline-flex;
+          @include respond(tab-port){
+     align-items: flex-start;
     }
+    }
+
+    &__content{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+    
+        width: stretch;
+        @include respond(phone){
+            margin-left: 1rem;
+        }
+
+    }
+
+    @include respond(tab-port){
+        width: auto;
+        min-width: 19rem;
+    }
+
+
 }

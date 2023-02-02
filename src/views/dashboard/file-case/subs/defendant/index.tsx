@@ -4,7 +4,7 @@ import Select from "../../../../../components/select";
 import { BtnTertiary, Btn } from "../../../../../components/button";
 import DefendantForm from "../../../ui/form";
 import { generateUniqueId } from "../../../../../helper/utitlities/utilities";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 
 interface defendantDef {
@@ -62,8 +62,10 @@ function Defendant() {
 	};
 
 	const navigate = useNavigate();
+
+	const { state } = useLocation();
 	const handleSubmit = () => {
-		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.UPLOADS}`);
+		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.UPLOADS}`, { state });
 	};
 	return (
 		<>

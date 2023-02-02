@@ -23,15 +23,44 @@
     display: inline-flex;
     margin: 1.5rem 0;
 
-    @include respond(tab-port){
-        display: none;
+
+
+    @include respond(phone){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: min(100%, 75rem);
+
+        margin: 0;
+        position: absolute;
+        right: 0;
+        width: 3rem;
+
+
     }
     &__item{
         color: var(--color-text-alt);
         display: inline-flex;
         align-items: center;
-        width: fill;
+        width: stretch;
         margin: 1rem;
+
+
+        @include respond(phone){
+            width: 3rem;
+            height: stretch;
+            // background-color: #00bfff;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin:0 auto;
+
+           
+            
+        }
         
 
         &__number{
@@ -43,6 +72,12 @@
             aspect-ratio: 1/1;
             width: fit-content;
             border: 1px solid currentColor;
+            
+
+               @include respond(phone){
+                margin-right: 0;
+                font-size: 1.5rem;
+               }
         }
 
         h6{
@@ -51,20 +86,48 @@
             margin-right: .5rem;
             word-wrap: normal;
             white-space: nowrap;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            
 
+             @include respond(phone){
+
+                 
+                 white-space: normal;
+                 text-align: center;
+                 font-size: .9rem;
+                
+                 display: none;
+            }
         }
     }
 
     &__item--active{
         color: var(--color-secondary);
+        
+    }
+
+    &__item--complete{
+        color: var(--color-secondary);
+        
+        .flow__item__number{
+            background-color: var(--color-secondary);
+            color: var(--color-background-light);
+
+        }
+
     }
 
     &__line{
         background-color: currentColor;
         display: inline-block;
-        width: fill;
+        width: stretch;
         height: 1px;
+    
+
+           @include respond(phone){
+            height: stretch;
+            width: 1px;
+        }
 
 
 
@@ -78,6 +141,11 @@
     padding: 4rem;
     height: fit-content;
     border-radius: var(--border-radius-container);
+
+    @include respond (tab-port){
+        padding: 3rem;
+    }
+
 }
 
 
@@ -99,6 +167,11 @@
     background-color: transparent;
     font-weight: 600;
     font-size: 1.3rem;
+
+    
+        @include respond(tab-port){
+             font-size: 1.5rem; 
+        }
 }
 
 .save__claimant{
@@ -108,6 +181,11 @@
     margin: 2rem 0;
     margin-top: 4rem;
     font-size: 1.2rem;
+
+    
+        @include respond(tab-port){
+             font-size: 1.4rem; 
+        }
 }
 
 .form{
@@ -174,6 +252,12 @@
 
     }
 
+    .processing{
+        svg{
+              animation: rotate 2s linear infinite;
+        }
+    }
+
     &__icon{
         width: 3.5rem;
         height: 3.5rem;
@@ -195,7 +279,7 @@
     &__container{
         display: grid;
         grid-template-columns: 3.5fr 1fr;
-        gap: 3rem;
+        grid-column-gap: 3rem;
         
         @include respond (tab-port){
             
@@ -258,6 +342,18 @@
         font-size: 1.2rem;
         margin: .15rem 0 ;
 
+        
+        @include respond(tab-port){
+             font-size: 1.4rem; 
+        }
+
+    }
+
+    h6{
+        
+        @include respond(tab-port){
+             font-size: 1.4rem; 
+        }
     }
 }
 
@@ -290,7 +386,7 @@
     &__group{
         display: flex;
         flex-direction: column;
-        width: fill;
+        width: stretch;
         margin: 2rem 0;
 
         label{
@@ -331,13 +427,22 @@
 
 
     &__checkbox{
-        display: inline-flex;
-        align-items: center;
-        gap: 1rem;
-        position: relative;
-        padding: 1.5rem;
         
-        span{
+      
+
+        &__container{
+            position: relative;
+            padding: 1.5rem;
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            
+            @include respond(phone){
+                margin-top: -3rem;
+            }
+
+              span{
             font-weight: 600;
             
             label{
@@ -346,6 +451,7 @@
                 margin: 0;
                 
             }
+        }
         }
     }
 
@@ -358,18 +464,58 @@
     .form__group{
         max-width: 35rem;
         
+          @include respond(tab-land){
+
+            max-width: 100%;
+          }
     }
 
     .form__content{
-        gap: 7rem;
+        grid-column-gap: 7rem;
         margin-top:2rem;
         width: 70%;
         
-        @include respond(tab-port){
-            gap:0rem;
+        @include respond(tab-land){
+            display:  grid;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+
             width: 100%;
+            grid-column-gap: 5rem!important;
             margin: 0;
         }
 
+        @include respond (phone){
+            gap: 0!IMPORTANT;
+        }
+
+          label{
+                font-size: 1.2rem;
+                display: inline-block;
+                    
+        @include respond(tab-port){
+            font-size: 1.4rem;
+        }
+
+                
+            }
     }
+}
+
+.body__control{
+    position: relative;
+    width: 100%;
+    display: block;
+
+     @include respond(tab-port){
+           padding-right: 5rem;
+        }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
