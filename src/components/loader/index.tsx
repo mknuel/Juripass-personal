@@ -1,4 +1,5 @@
 import loader from '../../assets/loader.svg';
+import './index.scss'
 
 function Loader() {
   return (
