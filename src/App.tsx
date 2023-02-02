@@ -13,6 +13,7 @@ import Claimant from "./views/dashboard/file-case/subs/claimant";
 import Defendant from "./views/dashboard/file-case/subs/defendant";
 import Documents from "./views/dashboard/file-case/subs/documents";
 import BasicInfo from "./views/dashboard/file-case/subs/basic";
+import TrackCase from "./views/dashboard/track-case";
 
 
 // lazy load routes
@@ -34,6 +35,7 @@ const FileFirmCase = lazy(() => import("./views/dashboard/file-case"));
 const Cases = lazy(() => import("./views/dashboard/cases"));
 const DashboardHome = lazy(() => import("./views/dashboard/home"));
 const Firms = lazy(() => import("./views/dashboard/firms"));
+const TrackACase = lazy(() => import("./views/dashboard/track-case"));
 
 function App() {
 	const theme = useSelector((state: any) => state.theme.value);
@@ -90,7 +92,7 @@ function App() {
 								/>
 							</Route>
 							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
-							<Route path={ROUTE.TRACKCASES} element={<Landing />} />
+							<Route path={ROUTE.TRACKCASES} element={<TrackCase />} />
 							<Route path={ROUTE.FILLINGS} element={<Landing />} />
 							<Route path={ROUTE.DRAFTS} element={<Landing />} />
 							<Route path={ROUTE.FIRMS} element={<Landing />} />
