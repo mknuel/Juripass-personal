@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SingleCase from './subs/single-case'
 
 
 import './track-case.scss'
+
 const TrackCase = () => {
+  const id = "2354"
+  const [value, setValue] = (useState(''))
+  const [showCase, setShowCase] =(useState(false))
   return (
     <div>
           <div className='case-head'>
@@ -17,13 +21,17 @@ const TrackCase = () => {
               <button style={{background: 'transparent', color: 'black'}}>Track a file</button>
           </div>
           <div className='file-id'>
-              <input type="text" placeholder='Input case ID' style={{marginLeft: '20px'}}/>
-              <button>Track case</button>
+              <input value= {value} onChange={(e)=>setValue(e.target.value)} type="text" placeholder='Input case ID' style={{marginLeft: '20px'}}/>
+        <button
+        onClick={()=>setShowCase(true)}
+        >
+          Track case
+        </button>
           </div>
 
           
           <div>
-              <SingleCase />
+            { showCase && <SingleCase id={id} /> }
             </div>
     </div>
   )
