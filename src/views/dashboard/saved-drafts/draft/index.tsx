@@ -1,5 +1,4 @@
-import { Btn } from "../../../../components/button";
-import { TrashIcon } from "../../../../components/icons/icons";
+import { Trash } from "iconsax-react";
 import style from "../saved-drafts.module.scss";
 
 const Draft = () => {
@@ -22,9 +21,7 @@ const Draft = () => {
 				</span>
 			</td>
 			<td className={style.case__action}>
-				<Btn>
-					<TrashIcon />
-				</Btn>
+				<Trash size="32" color="#0D294D" variant="Bold" />
 			</td>
 		</tr>
 	);
