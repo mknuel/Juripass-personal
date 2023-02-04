@@ -1,42 +1,47 @@
-@import "./mixins";
-#dashboard {
-   min-height: 100vh;
-   height: auto;
-   display: flex;
-   align-items: flex-start;
-   width: 100%;
-   @include respond(big-desktop){
-       margin: 0 auto;
-       width: 180rem;
-   }
-   @include respond(big-desktop){
-       margin: 0 auto;
-       ;
-   }
+@import '../../styles/mixins';
 
-   &-sidebar {
-      width: max(32rem, 320px);
-      height: calc(100vh);
-      padding: 1.5rem 3rem;
+#dashboard {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+
+    @include respond(big-desktop) {
+        margin: 0 auto;
+        width: 180rem;
+    }
+
+    @include respond(big-desktop) {
+        margin: 0 auto;
+        ;
+    }
+
+    &-sidebar {
+        transition: 0.3s;
+        width: 320px !important;
+        height: calc(100vh);
+        padding: 1.5rem 3rem;
         position: sticky;
         top: 0;
         left: 0;
         z-index: 3;
         background-color: var(--color-background-light);
 
-          @include respond(tab-port){
-       display: none;
-   }
+        @include respond(tab-port) {
+            position: fixed;
+            // display: none;
+        }
     }
 
-   &-main {
-      width: 100%;
-      min-height: calc(100vh);
-      height: auto;
-      padding: 3rem 1.5rem;
-       
-      background-color: var(--color-background-dark);
-   }
+    &-main {
+        width: 100%;
+        min-height: calc(100vh);
+        height: auto;
+        padding: 3rem 1.5rem;
+
+        background-color: var(--color-background-dark);
+    }
 }
 
 
@@ -59,7 +64,7 @@
 }
  */
 
- .icon__item{
+.icon__item {
     display: flex;
     justify-content: space-between;
     // margin: 1rem;
@@ -69,21 +74,21 @@
     margin: 1rem auto;
     color: var(--color-secondary);
 
-    @include respond(tab-port){
-         width: 100%;   
-    
+    @include respond(tab-port) {
+        width: 100%;
+
     }
 
-    svg{
+    svg {
         fill: currentColor;
         width: 3rem;
         height: 3rem;
     }
 
-     @include respond(big-desktop){
+    @include respond(big-desktop) {
         width: 100%;
         font-size: 3rem;
-           
+
         // background-color:var(--color-primary);
 
     }
@@ -91,7 +96,7 @@
 
 }
 
-.icon__item__header{
+.icon__item__header {
     position: sticky;
     top: 0;
     color: var(--color-secondary);
@@ -99,66 +104,66 @@
     left: 0;
     padding: 2rem;
     // height: 10rem;
-    background-color:var(--color-primary);
+    background-color: var(--color-primary);
 
 }
 
 
-.table__wrapper{
+.table__wrapper {
 
     width: 100%;
     overflow: auto;
 }
 
-table{
+table {
     width: 100%;
     position: relative;
     font-size: 1.2rem;
     border-spacing: 0 1rem;
     table-layout: fixed;
 
-    @include respond(phone){
+    @include respond(phone) {
 
-        
-         min-width:100rem ;
-         font-size: 1.4rem;
-       
+
+        min-width: 100rem;
+        font-size: 1.4rem;
+
 
     }
 
-    th{
+    th {
         border-bottom: 1px solid var(--color-text-alt);
         padding: 1.5rem;
         text-align: left;
         color: var(--color-text-mid);
         font-size: 1.2rem;
-        font-weight: 600!important;
+        font-weight: 600 !important;
         position: sticky;
-        
-    
+
+
     }
-    
-    tr{
+
+    tr {
         width: 100%;
-        border:none;
-        border-radius:.25rem;
-
+        border: none;
+        border-radius: .25rem;
         left: 0;
+        &:hover{
+            box-shadow: 0.5px 0.5px 5px 0px gray;
+        }
 
-        
     }
-    
-    td{
+
+    td {
         padding: 1.25rem;
-        border:none;
+        border: none;
         height: 2rem;
         border-radius: .5rem;
 
         background-color: var(--color-background-light);
 
-
+        &:hover{
+            box-shadow: 0.5px 0.5px 5px 0px gray;
+        }
     }
 }
-
-
-

@@ -96,11 +96,18 @@
 
             &_item {
                margin: 1em 2em 1em 0em;
-               max-width: 415px;
-               height: 360px;
+               // height: 360px;
+               min-width: 330.505px;
+               max-width: 32.3%;
+               min-height: 350px;
                padding: 3em;
                border: 1px solid var(--color-text-light);
                border-radius: 20px;
+
+               @include respond(phone) {
+                  min-width: 370px;
+
+               }
 
                & b {
                   display: block;
@@ -153,7 +160,7 @@
                   filter: grayscale(160%);
                }
 
-               & h4{
+               & h4 {
                   position: relative;
                   top: -70px;
                   left: 20px;

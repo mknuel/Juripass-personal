@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { QuoteIcon } from '../../assets/icons';
-import { IMAGE } from '../../assets/images/images';
+import { QuoteIcon } from '../../../assets/icons';
+import { IMAGE } from '../../../assets/images/images';
 import './index.scss'
 
 let scrollNum = 0;

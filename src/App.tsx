@@ -7,7 +7,7 @@ import DashboardLayout from "./components/dashboard-layout";
 import Layout from "./components/layout";
 import Loader from "./components/loader";
 import * as ROUTE from "./constants/routes";
-import "./styles/index.css";
+import "./styles/index.scss";
 import Uploads from "./views/dashboard/file-case/subs/uploads";
 import Claimant from "./views/dashboard/file-case/subs/claimant";
 import Defendant from "./views/dashboard/file-case/subs/defendant";

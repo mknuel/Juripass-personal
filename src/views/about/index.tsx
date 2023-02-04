@@ -53,7 +53,7 @@ const About = () => {
                 <b>Speedy<br />filing of Court process</b>
                 <p>At Juripass, we believe that speedy and efficient delivery of justice starts with Fast-tracking the existing workflow in the filing of Courts process through technology.</p>
               </div>
-              <div className='innovation-body_item'>
+              <div className='innovation-body_item' style={{marginRight: '0'}}>
                 <Shield size="44" color="#ffffff" variant="Bold" />
                 <b>Paving way for the in flux of <br /> technology in the Judiciary</b>
                 <p>We are optimistic that Juripass' innovation in the Nigeria Legal Industry will pave the way for the influx of technology in the Nigerian Judiciary and Africa at large.</p>
