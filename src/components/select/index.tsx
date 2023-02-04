@@ -26,19 +26,15 @@ const Select: React.FC<Props> = memo(
 		return (
 			<div className={`${style.select__container}`}>
 				<div className={style.select}>
-<<<<<<< HEAD
 					<div className={style.select__title}>{name}</div>
 					<div className={style.select__header} onClick={toggleSelect}>
 						<div className={style["select__header__value"]}>
-=======
-					{name && <div className={style.select__title}>{name}</div>}
-					<div className={`${style.select__header} ${className}`} onClick={toggleSelect}>
-						<div className="select__header__value">
->>>>>>> 2f8b71b976dd7c171b76c99185a087f68bdaea61
 							<span>{value ?? "Select " + name}</span>
 						</div>
 						<div
-							className={`${style.select__header__icon} ${isOpen && style["select__header__icon--active"]}`}>
+							className={`${style.select__header__icon} ${
+								isOpen && style["select__header__icon--active"]
+							}`}>
 							<AngleDownIcon />
 						</div>
 					</div>
