@@ -9,11 +9,11 @@ import Loader from "./components/loader";
 import * as ROUTE from "./constants/routes";
 
 import "./styles/index.scss";
-import Uploads from "./views/dashboard/file-case/subs/uploads";
-import Claimant from "./views/dashboard/file-case/subs/claimant";
-import Defendant from "./views/dashboard/file-case/subs/defendant";
-import Documents from "./views/dashboard/file-case/subs/documents";
-import BasicInfo from "./views/dashboard/file-case/subs/basic";
+// import Uploads from "./views/dashboard/file-case/subs/uploads";
+// import Claimant from "./views/dashboard/file-case/subs/claimant";
+// import Defendant from "./views/dashboard/file-case/subs/defendant";
+// import Documents from "./views/dashboard/file-case/subs/documents";
+// import BasicInfo from "./views/dashboard/file-case/subs/basic";
 
 
 
@@ -27,7 +27,7 @@ const IconPage = lazy(() => import("./views/icon-page"));
 const FileCase = lazy(() => import("./views/dashboard/file-case"));
 const BasicInfo = lazy(() => import("./views/dashboard/file-case/subs/basic"));
 const Firms = lazy(() => import('./views/dashboard/firms/index'))
-const Lawyer = lazy(() => import('./views/dashboard/firms/Lawyer'))
+const Lawyer = lazy(() => import('./views/dashboard/firms/lawyer'))
 
 const Claimant = lazy(
 	() => import("./views/dashboard/file-case/subs/claimant")

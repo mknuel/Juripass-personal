@@ -3,17 +3,19 @@ import style from "./select.module.scss";
 import { AngleDownIcon } from "../icons/icons";
 
 interface Props {
-	name: string;
+	name?: string;
 	id?: string | null;
 	options?: string[];
+	defaultValue?: string;
+	className?: string;
 	handleChange: (option: string) => void;
 	children?: React.ReactNode | React.ReactNode[];
 }
 
 const Select: React.FC<Props> = memo(
-	({ id, children, name, options, handleChange }) => {
+	({ id, children, name, options, defaultValue, className, handleChange }) => {
 		const [isOpen, setIsOpen] = useState<boolean>(false);
-		const [value, setValue] = useState<string>();
+		const [value, setValue] = useState<string | undefined>(defaultValue);
 		const toggleSelect = () => setIsOpen(!isOpen);
 
 		const setOption = (option: string) => {
@@ -22,17 +24,15 @@ const Select: React.FC<Props> = memo(
 			setIsOpen(false);
 		};
 		return (
-			<div className={style.select__container}>
+			<div className={`${style.select__container}`}>
 				<div className={style.select}>
-					<div className={style.select__title}>{name}</div>
-					<div className={style.select__header} onClick={toggleSelect}>
+					{name && <div className={style.select__title}>{name}</div>}
+					<div className={`${style.select__header} ${className}`} onClick={toggleSelect}>
 						<div className="select__header__value">
 							<span>{value ?? "Select " + name}</span>
 						</div>
 						<div
-							className={`${style.select__header__icon} ${
-								isOpen && style["select__header__icon--active"]
-							}`}>
+							className={`${style.select__header__icon} ${isOpen && style["select__header__icon--active"]}`}>
 							<AngleDownIcon />
 						</div>
 					</div>
