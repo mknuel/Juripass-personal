@@ -1,7 +1,7 @@
+
 import React, { ReactInstance, useCallback, useState } from "react";
 import style from "./style.module.scss";
 import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
-
 import * as ROUTE from "../../constants/routes";
 import {
 	CasesIcon,
@@ -64,7 +64,7 @@ function Sidebar() {
 							className={`${pathname.match(/new-case/gi) ? style.active : ""} ${
 								style.sidebar__link
 							}`}
-							onClick={handleCase}>
+							onClick={handleCase}> 
 							<NewCaseICon />
 							<span>New case</span>
 						</Link>

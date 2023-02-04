@@ -1,12 +1,9 @@
-@import "../../../../styles/mixins";
 .case{
     background-color: var(--color-background-light);
     padding: 2rem;
     display: inline-flex;
     border-radius: .5rem;
-    border-left: 2px solid rgba(255, 0, 0, 0.711);
-    margin: 0 0 .9rem 0;
-    width: 100%;
+    margin: 0 0 .25rem 0;
     
     svg{
         margin-right: 1.25rem;
@@ -16,21 +13,12 @@
         font-size: 1.2rem ;
         font-weight: 700;
         line-height: 1.8rem;
-              
-        @include respond(tab-port){
-            font-size: 1.4rem;
-        }
         
     }
     
     &__paragraph{
         line-height: 1.8rem;
         font-size: 1.2rem ;
-
-              
-        @include respond(tab-port){
-            font-size: 1.4rem;
-        }
 
     }
 }

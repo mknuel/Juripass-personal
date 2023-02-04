@@ -24,6 +24,9 @@ import {
 	TickIcon,
 	TrackCaseIcon,
 	UploadIcon,
+	ToggeOnIcon,
+	ToggeOffIcon,
+
 } from "../../components/icons/icons";
 
 function IconPage() {
@@ -164,6 +167,16 @@ function IconPage() {
 				<span>{"<AlertIcon />"}</span>
 
 				<AlertIcon />
+			</div>
+			<div className="icon__item">
+				<span>{"<ToggleOn />"}</span>
+
+				<ToggeOnIcon />
+			</div>
+			<div className="icon__item">
+				<span>{"<ToggleOff />"}</span>
+
+				<ToggeOffIcon />
 			</div>
 		</div>
 	);

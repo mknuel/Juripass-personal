@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 #policy {
    position: relative;
 
@@ -7,21 +9,24 @@
          margin-top: 7em;
          padding-top: 10em;
          padding-bottom: 6em;
+
          & h1 {
             position: relative;
-            font-size: 5rem;
+
+            font-size: 4.5rem;
             z-index: 1;
-            margin-bottom: 0.2em;
+            margin-bottom: 0.12em;
          }
 
          & hr {
             position: relative;
-            width: 150px;
+            width: 160px;
             border: 2.5px solid var(--color-primary);
             border-radius: 20px;
             z-index: 1;
          }
-         & p{
+
+         & p {
             position: relative;
             z-index: 1;
             margin-top: 1em;
@@ -32,25 +37,38 @@
 
          &::after {
             content: '';
-            background-color: var(--color-background-dark);
+            background-color: #F7F8FA;
+            border: 1px solid #ececec;
             position: absolute;
             top: 0%;
             right: 0%;
             bottom: 0%;
             left: 0%;
-            border-bottom-left-radius: 30%;
+            border-bottom-left-radius: 200px;
+
+            @include respond(tab-land) {
+               border-bottom-left-radius: 100px !important;
+            }
+
+            @include respond(tab-port) {
+               border-bottom-left-radius: 50px !important;
+            }
+
             z-index: 0;
          }
       }
 
-      &-body{
+      &-body {
          margin-top: 8em;
-         & .policy-point{
-            margin: 3em 0;
-            & h4{
+
+         & .policy-point {
+            margin: 4em 0 7.2em 0;
+
+            & h4 {
                font-size: 2.15rem;
                font-weight: 600;
             }
+
             & p {
                font-size: 1.75rem;
                color: var(--color-gray-300);

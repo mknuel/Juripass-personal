@@ -23,10 +23,21 @@ import { ReactComponent as Upload } from "./assets/upload.svg";
 import { ReactComponent as Alert } from "./assets/alert.svg";
 import { ReactComponent as Document } from "./assets/document.svg";
 import { ReactComponent as Trash } from "./assets/trash.svg";
+<<<<<<< HEAD
 import { ReactComponent as Doc } from "./assets/doc.svg";
 
 export const DocIcon = () => {
 	return <Doc />;
+=======
+import { ReactComponent as  ToggleOn} from "./assets/ToggleOn.svg";
+import { ReactComponent as ToggleOff } from "./assets/ToggleOff.svg";
+
+export const ToggeOnIcon = () => {
+	return <ToggleOn />;
+};
+export const ToggeOffIcon = () => {
+	return <ToggleOff />;
+>>>>>>> 2f8b71b976dd7c171b76c99185a087f68bdaea61
 };
 
 export const DeleteIcon = () => {

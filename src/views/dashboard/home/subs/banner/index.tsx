@@ -1,18 +1,25 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import style from "../../home.module.scss";
 import {
 	ArrowDownIcon,
 	ArrowUpIcon,
 	HammerIcon,
 } from "../../../../../components/icons/icons";
+import { Folder, FolderOpen } from "iconsax-react";
 
-function Card() {
+interface Props {
+	icon: React.ReactNode;
+	title: string;
+}
+
+function Card(props: Props) {
+	const { icon,title } = props;
 	return (
 		<div className={style.card}>
-			<h4 className={style.card__title}>Total Cases</h4>
+			<h4 className={style.card__title}>{title}</h4>
 			<div className={style.card__content}>
 				<h4 className={style.card__numbers}>100</h4>
-				<HammerIcon />
+				{icon}
 			</div>
 
 			<div className={style["card__content--alt"]}>
@@ -40,14 +47,14 @@ function Card() {
 function HomeBanner() {
 	return (
 		<div className={style.banner}>
-			<h2 className="heading-sec">Welcome Jeff! </h2>
+			<h2 className="heading-sec">Welcome Jeff ! 👋</h2>
 
 			<h3 className={"heading-ter"}>Dashboard</h3>
 
 			<div className={style.card__container}>
-				<Card />
-				<Card />
-				<Card />
+				<Card icon={<HammerIcon />} title="Total Cases" />
+				<Card icon={<Folder size="44" color="#0d294d" variant="Bold"/>} title="Files" />
+				<Card icon={<FolderOpen size="44" color="#0d294d" variant="Bold"/>} title="Awaiting Approval" />
 			</div>
 		</div>
 	);

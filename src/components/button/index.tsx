@@ -4,7 +4,7 @@ import style from "./button.module.scss";
 interface Props {
 	className?: string | null;
 	loading?: boolean | null;
-	onClick?: () => void | null;
+	onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => | void | null;
 	children?: React.ReactNode | Array<React.ReactNode>;
 }
 

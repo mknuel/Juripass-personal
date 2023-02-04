@@ -1,4 +1,21 @@
+@import '../../styles/mixins';
+
 #layout {
+  & .con {
+    max-width: 1400px;
+    padding: 0 6em;
+    margin: auto;
+
+    @include respond(tab-port) {
+      padding: 0 3em;
+    }
+
+    @include respond(phone) {
+      padding: 0 2em;
+    }
+
+  }
+
   &-footer {
     background: linear-gradient(180deg, var(--color-background-light) 10%, var(--color-secondary) 10%);
     color: var(--color-text-light);

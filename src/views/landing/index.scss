@@ -1,3 +1,4 @@
+
 @import '../../styles/mixins';
 
 .landing {
@@ -9,6 +10,7 @@
       position: relative;
       background: url(../../assets/images/herobg.png);
       background-repeat: no-repeat;
+
       background-position: right;
       background-size: cover;
 
@@ -25,7 +27,7 @@
 
       & .con {
          position: relative;
-         height: 68vh;
+         height: 70vh;
          display: flex;
          justify-content: flex-start;
          align-items: center;
@@ -51,7 +53,7 @@
             }
 
             & button {
-               width: 250px;
+               width: 290px;
                height: 60px;
                font-size: 2rem;
                font-weight: 600;
@@ -69,9 +71,9 @@
                   border: 3px solid white;
                   border-radius: 50%;
                   position: absolute;
-                  left: -1%;
-                  right: -1%;
-                  rotate: 183deg;
+                  left: 0%;
+                  right: -2%;
+                  rotate: 5deg;
                }
             }
          }
@@ -80,28 +82,31 @@
             position: absolute;
             z-index: 1;
             background-color: var(--color-background-light);
-            bottom: -10%;
-            right: 2%;
+            bottom: -6.5%;
+            right: 9.5%;
             display: flex;
             align-items: center;
             padding: 2em 4.5em;
-            border-radius: 10px;
-            box-shadow: 1px 1px 20px 0px #0d294d65;
+            border-radius: 15px;
+            box-shadow: 1px 1px 30px 0px #0d294d65;
             text-align: center;
 
             & h2 {
-               font-size: 2.45rem;
+               font-size: 2.85rem;
+               font-weight: 600;
             }
 
             & hr {
-               height: 60px;
-               border: 1.5px solid var(--color-primary);
+               height: 70px;
+               border: 1px solid var(--color-primary);
                margin: 0 3em;
             }
 
             & p {
-               font-size: 1.2rem;
+               font-size: 1.43rem;
                font-weight: 400;
+               color: var(--color-gray-200);
+               margin-bottom: 0.4em;
             }
          }
 
@@ -140,7 +145,7 @@
 
    // users section starts 
    & #users {
-      padding: 11em 0;
+      padding: 11em 0 8em 0;
 
       @include respond(phone) {
          padding-bottom: 6em;
@@ -152,7 +157,7 @@
          justify-content: space-between;
 
          & h4 {
-            font-size: 1.9rem;
+            font-size: 1.95rem;
             font-weight: 600;
          }
 
@@ -183,7 +188,7 @@
    & #features {
       & .features {
          &-heading {
-            margin-bottom: 4em;
+            margin-bottom: 3.1em;
          }
 
          &-body {
@@ -193,12 +198,18 @@
             margin-bottom: 4em;
 
             &_item {
-               width: 310px;
-               height: 350px;
+               // min-width: 313.505px;
+               min-width: 260.505px;
+               max-width: 23.8%;
+               min-height: 350px;
                background-color: var(--color-background-light);
                padding: 4em;
                border-radius: 15px;
-               margin: 0.7em;
+               margin: 0.7em 1.4em 0.7em 0;
+
+               @include respond(phone) {
+                  min-width: 313.505px;
+               }
 
                & div {
                   width: 100px;
@@ -280,7 +291,7 @@
 
    #questions {
       background-color: var(--color-background-light);
-      padding: 6em 0;
+      padding: 8em 0;
 
       & .questions {
          &-body {
@@ -292,7 +303,7 @@
 
             &-item {
                width: 50%;
-               padding: 2em;
+               padding: 2em 2em 4em 2em;
                border-radius: 10px;
                margin-bottom: 4em;
 
@@ -314,7 +325,7 @@
                }
 
                &:hover {
-                  box-shadow: 1px 1px 20px 0px #0d294d44;
+                  box-shadow: 0px 0px 10px 0px #0d294d44;
                }
             }
          }
@@ -326,10 +337,10 @@
       color: var(--color-secondary);
       font-size: 2.9rem;
       font-weight: 600;
-      margin-bottom: 0.75em;
+      margin-bottom: 0.55em;
 
       &-sub {
-         color: var(--color-text-dark);
+         color: var(--color-gray-200);
          font-size: 1.9rem;
          line-height: 1.5;
       }

@@ -93,7 +93,7 @@ function App() {
 									path={ROUTE.NEWCASES.DOCUMENTS}
 									element={<Documents />}
 								/>
-								<Route path={ROUTE.NEWCASES.INVOICE} element={<Invoice />} />
+								{/* 	<Route path={ROUTE.NEWCASES.INVOICE} element={<Invoice />} /> */}
 							</Route>
 							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
 							<Route path={ROUTE.TRACKCASES} element={<TrackCase />} />
@@ -103,10 +103,10 @@ function App() {
 									path={ROUTE.FILLINGS.DETAILS}
 									element={<MyFillingsDetails />}
 								/>
-								{/* <Route
+								<Route
 									path={ROUTE.FILLINGS.INVOICE}
 									element={<MyFillingsInvoice />}
-								/> */}
+								/>
 							</Route>
 							<Route path={ROUTE.DRAFTS} element={<SavedDrafts />} />
 							<Route path={ROUTE.FIRMS} element={<Landing />} />

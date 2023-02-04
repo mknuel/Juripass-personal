@@ -1,0 +1,125 @@
+@mixin smallPc {
+  @media screen and (max-width: 1230px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 950px) {
+    @content;
+  }
+}
+
+.firms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  margin-bottom: 1.5em;
+
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+}
+
+.firm {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
+
+  &-select {
+    display: block;
+    align-self: flex-start !important;
+    text-align: center;
+    height: 25px !important;
+    background-color: #EAECEF !important;
+    width: 80px !important;
+    color: var(--color-gray-200);
+    border: 0px;
+    // padding: 0px;
+  }
+
+  &-profile {
+    background-color: var(--color-background-light);
+    min-width: 300px;
+    max-width: 25%;
+    // width: auto;
+    border-radius: 16px;
+    padding: 25px 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      span {
+        padding: 15px;
+        text-align: center;
+        color: var(--color-secondary);
+        font-size: 20px;
+        background-color: #f9f5ff;
+        border-radius: 50%;
+        font-weight: 500;
+      }
+    }
+
+    h4 {
+      color: var(--color-secondary);
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 0px;
+    }
+
+    p {
+      color: var(--color-text-dark);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 0px;
+    }
+
+    & button {
+      display: block;
+      margin: auto;
+      margin-top: 1em;
+    }
+
+    svg {
+      font-size: 20px;
+      height: 30px;
+      width: 30px;
+    }
+
+  }
+}
+
+.lawyer{
+  & tr{
+    &:first-child{
+      & td{
+        background-color: var(--color-secondary);
+        color: white;
+      }
+    }
+    & td{
+      &:nth-child(5){
+        text-align: right;
+      }
+    }
+  }
+}
