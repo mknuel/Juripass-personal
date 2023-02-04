@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { BtnSecondary, BtnTertiary } from "../../../../../components/button";
-import style from "../../file-case.module.scss";
-const Invoice = () => {
+import style from "../../my-filings.module.scss";
+const FilingInvoice = () => {
 	const navigate = useNavigate();
 
 	const cancel = () => navigate(-1);
@@ -66,4 +66,4 @@ const Invoice = () => {
 	);
 };
 
-export default Invoice;
+export default FilingInvoice;

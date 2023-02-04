@@ -21,7 +21,13 @@ export const NEWCASES = {
 
 export const EXISTINGCASES = 'case'
 export const TRACKCASES = 'track-cases'
-export const FILLINGS = 'fillings'
+
+export const FILLINGS = {
+	DEFAULT: "fillings/",
+	DETAILS: "details",
+	INVOICE: "invoice",
+};
+
 export const DRAFTS = 'drafts'
 export const FIRMS = 'firms'
 

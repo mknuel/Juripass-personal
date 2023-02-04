@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SingleCase from './subs/single-case'
+import SingleCase from "./subs/single-case";
 
 
 import './track-case.scss'

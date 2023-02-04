@@ -23,6 +23,11 @@ import { ReactComponent as Upload } from "./assets/upload.svg";
 import { ReactComponent as Alert } from "./assets/alert.svg";
 import { ReactComponent as Document } from "./assets/document.svg";
 import { ReactComponent as Trash } from "./assets/trash.svg";
+import { ReactComponent as Doc } from "./assets/doc.svg";
+
+export const DocIcon = () => {
+	return <Doc />;
+};
 
 export const DeleteIcon = () => {
 	return <Delete />;

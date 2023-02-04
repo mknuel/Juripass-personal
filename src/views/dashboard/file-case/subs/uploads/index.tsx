@@ -14,19 +14,19 @@ import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 
 const Flow = () => (
 	<div className={style.flow}>
-		<div className={`${style.flow__item} ${style["flow__item--active"]} `}>
+		<div className={`${style.flow__item} ${style["flow__item--complete"]} `}>
 			<span className={style.flow__item__number}>1</span>
 			<h6>Basic information</h6>
 			<span className={style.flow__line}></span>
 		</div>
 
-		<div className={`${style.flow__item} ${style["flow__item--active"]} `}>
+		<div className={`${style.flow__item} ${style["flow__item--complete"]} `}>
 			<span className={style.flow__item__number}>2</span>
 			<h6>Claimant</h6>
 			<span className={style.flow__line}></span>
 		</div>
 
-		<div className={`${style.flow__item} ${style["flow__item--active"]} `}>
+		<div className={`${style.flow__item} ${style["flow__item--complete"]} `}>
 			<span className={style.flow__item__number}>3</span>
 			<h6>Defendant</h6>
 			<span className={style.flow__line}></span>

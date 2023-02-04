@@ -34,7 +34,7 @@ const Select: React.FC<Props> = memo(
 				<div className={style.select}>
 					<div className={style.select__title}>{name}</div>
 					<div className={style.select__header} onClick={toggleSelect}>
-						<div className="select__header__value">
+						<div className={style["select__header__value"]}>
 							<span>{value ?? "Select " + name}</span>
 						</div>
 						<div

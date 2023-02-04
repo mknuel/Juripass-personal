@@ -105,10 +105,10 @@ function Sidebar() {
 
 					<li className={style.sidebar__item}>
 						<NavLink
-							to={ROUTE.FILLINGS}
-							className={(navData) =>
-								`${navData.isActive ? style.active : ""} ${style.sidebar__link}`
-							}>
+							to={ROUTE.FILLINGS.DEFAULT}
+							className={`${pathname.match(/fillings/gi) ? style.active : ""} ${
+								style.sidebar__link
+							}`}>
 							<MyFilingsIcon />
 							<span>My filings</span>
 						</NavLink>

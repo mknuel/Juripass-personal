@@ -1,14 +1,16 @@
 .heading {
     &-sec {
         font-size: 1.8rem;
-                @include respond(tab-port){
+        font-weight: 600;
+        @include respond(tab-port){
             margin-bottom:3rem;
             font-size: 2rem;
         }
     }
-
+    
     &-ter {
         font-size: 1.6rem;
+        font-weight: 600;
 
         @include respond(tab-port){
             margin-bottom:3rem;

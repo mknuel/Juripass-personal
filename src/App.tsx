@@ -1,4 +1,3 @@
-
 import { lazy, Suspense, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -15,8 +14,12 @@ import Documents from "./views/dashboard/file-case/subs/documents";
 import BasicInfo from "./views/dashboard/file-case/subs/basic";
 import TrackCase from "./views/dashboard/track-case";
 
-
 // lazy load routes
+import MyFillings from "./views/dashboard/my-filings";
+import MyFillingsLanding from "./views/dashboard/my-filings/subs/all";
+import MyFillingsDetails from "./views/dashboard/my-filings/subs/details";
+import MyFillingsInvoice from "./views/dashboard/my-filings/subs/invoice";
+import Invoice from "./views/dashboard/file-case/subs/invoice";
 
 // auth pages
 const SignUp = lazy(() => import("./views/auth/signup"));
@@ -24,11 +27,10 @@ const Login = lazy(() => import("./views/auth/login"));
 const ForgotPassword = lazy(() => import("./views/auth/forgot-password"));
 const ResetPassword = lazy(() => import("./views/auth/reset-password"));
 
-
 const Landing = lazy(() => import("./views/landing"));
 const IconPage = lazy(() => import("./views/icon-page"));
-const Policy = lazy(() => import("./views/Policy"));
-const About = lazy(() => import("./views/About")); 
+const Policy = lazy(() => import("./views/policy"));
+const About = lazy(() => import("./views/About"));
 
 // dashboard routes
 const FileFirmCase = lazy(() => import("./views/dashboard/file-case"));
@@ -53,12 +55,12 @@ function App() {
 					<Routes>
 						<Route path={"/icons"} element={<IconPage />} />
 
-            {/* nested route for main pages due to same header and footer */}
-            <Route path={ROUTE.LANDING} element={<Layout />}>
-              <Route index element={<Landing />} />
-              <Route path={ROUTE.ABOUT} element={<About />} />
-              <Route path={ROUTE.POLICY} element={<Policy />} />
-            </Route>
+						{/* nested route for main pages due to same header and footer */}
+						<Route path={ROUTE.LANDING} element={<Layout />}>
+							<Route index element={<Landing />} />
+							<Route path={ROUTE.ABOUT} element={<About />} />
+							<Route path={ROUTE.POLICY} element={<Policy />} />
+						</Route>
 						{/* nested route for main pages due to same header and footer */}
 						<Route path={ROUTE.LANDING} element={<Layout />}>
 							<Route index element={<Landing />} />
@@ -66,10 +68,10 @@ function App() {
 							<Route path={ROUTE.POLICY} element={<Policy />} />
 						</Route>
 
-            <Route path={ROUTE.LOGIN} element={<Login />} />
-            <Route path={ROUTE.SIGNUP} element={<SignUp />} />
-            <Route path={ROUTE.FORGOTPASSWORD} element={<ForgotPassword />} />
-            <Route path={ROUTE.RESETPASSWORD} element={<ResetPassword />} />
+						<Route path={ROUTE.LOGIN} element={<Login />} />
+						<Route path={ROUTE.SIGNUP} element={<SignUp />} />
+						<Route path={ROUTE.FORGOTPASSWORD} element={<ForgotPassword />} />
+						<Route path={ROUTE.RESETPASSWORD} element={<ResetPassword />} />
 						<Route path={ROUTE.LOGIN} element={<Login />} />
 						<Route path={ROUTE.SIGNUP} element={<SignUp />} />
 						<Route path={ROUTE.FORGOTPASSWORD} element={<ForgotPassword />} />
@@ -91,10 +93,21 @@ function App() {
 									path={ROUTE.NEWCASES.DOCUMENTS}
 									element={<Documents />}
 								/>
+								<Route path={ROUTE.NEWCASES.INVOICE} element={<Invoice />} />
 							</Route>
 							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
 							<Route path={ROUTE.TRACKCASES} element={<TrackCase />} />
-							<Route path={ROUTE.FILLINGS} element={<Landing />} />
+							<Route path={ROUTE.FILLINGS.DEFAULT} element={<MyFillings />}>
+								<Route index element={<MyFillingsLanding />} />
+								<Route
+									path={ROUTE.FILLINGS.DETAILS}
+									element={<MyFillingsDetails />}
+								/>
+								{/* <Route
+									path={ROUTE.FILLINGS.INVOICE}
+									element={<MyFillingsInvoice />}
+								/> */}
+							</Route>
 							<Route path={ROUTE.DRAFTS} element={<SavedDrafts />} />
 							<Route path={ROUTE.FIRMS} element={<Landing />} />
 						</Route>
