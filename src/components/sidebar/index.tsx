@@ -64,7 +64,7 @@ function Sidebar() {
 							className={`${pathname.match(/new-case/gi) ? style.active : ""} ${
 								style.sidebar__link
 							}`}
-							onClick={handleCase}>
+							onClick={handleCase}> 
 							<NewCaseICon />
 							<span>New case</span>
 						</Link>

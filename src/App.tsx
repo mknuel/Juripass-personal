@@ -7,12 +7,14 @@ import { ToastContainer } from "react-toastify";
 import Layout from "./components/layout";
 import Loader from "./components/loader";
 import * as ROUTE from "./constants/routes";
-// import "./styles/index.css";
-// import Uploads from "./views/dashboard/file-case/subs/uploads";
-// import Claimant from "./views/dashboard/file-case/subs/claimant";
-// import Defendant from "./views/dashboard/file-case/subs/defendant";
-// import Documents from "./views/dashboard/file-case/subs/documents";
-// import BasicInfo from "./views/dashboard/file-case/subs/basic";
+
+import "./styles/index.scss";
+import Uploads from "./views/dashboard/file-case/subs/uploads";
+import Claimant from "./views/dashboard/file-case/subs/claimant";
+import Defendant from "./views/dashboard/file-case/subs/defendant";
+import Documents from "./views/dashboard/file-case/subs/documents";
+import BasicInfo from "./views/dashboard/file-case/subs/basic";
+
 
 
 // lazy load routes

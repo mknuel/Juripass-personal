@@ -1,7 +1,6 @@
 @import '../components/footer';
 @import './_mixins.scss';
 @import './_typo.scss';
-@import './_dashboard-layout.scss';
 @import './_auth.scss';
 @import './_reset.scss';
 @import './Firms.scss';
@@ -46,11 +45,6 @@
 }
 
 
-.con {
-  max-width: 1350px;
-  padding: 0 2em;
-  margin: auto;
-}
 
 img {
   pointer-events: none;

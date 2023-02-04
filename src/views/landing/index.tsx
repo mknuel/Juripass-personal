@@ -3,7 +3,7 @@ import { EmailIcon, FolderIcon, PlayIcon, ReportIcon, SecureWindowIcon, Security
 import { LOGO } from '../../assets/logos/logo';
 import { IMAGE } from '../../assets/images/images';
 import { BtnPrimary, } from '../../components/button'
-import Carousel from '../../components/carousel';
+import Carousel from './carousel';
 import Page from '../../components/page'
 import './index.scss';
 import { useNavigate } from 'react-router';

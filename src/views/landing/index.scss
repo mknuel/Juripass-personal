@@ -27,7 +27,7 @@
 
       & .con {
          position: relative;
-         height: 68vh;
+         height: 70vh;
          display: flex;
          justify-content: flex-start;
          align-items: center;
@@ -198,12 +198,18 @@
             margin-bottom: 4em;
 
             &_item {
-               width: 313.505px;
-               height: 350px;
+               // min-width: 313.505px;
+               min-width: 260.505px;
+               max-width: 23.8%;
+               min-height: 350px;
                background-color: var(--color-background-light);
                padding: 4em;
                border-radius: 15px;
-               margin:0.7em 1.4em 0.7em 0;
+               margin: 0.7em 1.4em 0.7em 0;
+
+               @include respond(phone) {
+                  min-width: 313.505px;
+               }
 
                & div {
                   width: 100px;
