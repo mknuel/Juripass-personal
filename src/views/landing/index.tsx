@@ -6,7 +6,8 @@ import { BtnPrimary, } from '../../components/button'
 import Carousel from './carousel';
 import Page from '../../components/page'
 import './index.scss';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
+
 
 function Landing() {
   const navigate = useNavigate()

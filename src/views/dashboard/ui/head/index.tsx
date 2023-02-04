@@ -108,7 +108,6 @@ function HeadMini() {
 					<Btn className={style.head__image} onClick={toggleMenu}>
 						<img src="/assets/juripassuser.png" alt="user" />
 					</Btn>
-
 					{menu && (
 						<div className={style.user}>
 							<div className={style.user__details}>

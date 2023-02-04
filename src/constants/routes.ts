@@ -16,7 +16,7 @@ export const NEWCASES = {
 	UPLOADS: "uploads",
 	DOCUMENTS: "documents",
 	INVOICE: "invoice",
-	
+
 };
 
 export const EXISTINGCASES = 'case'
@@ -24,4 +24,5 @@ export const TRACKCASES = 'track-cases'
 export const FILLINGS = 'fillings'
 export const DRAFTS = 'drafts'
 export const FIRMS = 'firms'
+//export const LAWYER = 'lawyer'
 

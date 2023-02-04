@@ -1,7 +1,6 @@
-import React, { memo, useState, useRef, useEffect } from "react";
+import React, { memo, useState } from "react";
 import style from "./select.module.scss";
 import { AngleDownIcon } from "../icons/icons";
-import useClose from "../../hooks/useClose";
 
 interface Props {
 	name: string;
@@ -9,7 +8,6 @@ interface Props {
 	options?: string[];
 	handleChange: (option: string) => void;
 	children?: React.ReactNode | React.ReactNode[];
-	placeholder?: string;
 }
 
 const Select: React.FC<Props> = memo(
@@ -18,19 +16,13 @@ const Select: React.FC<Props> = memo(
 		const [value, setValue] = useState<string>();
 		const toggleSelect = () => setIsOpen(!isOpen);
 
-		const close = () => {
-			setIsOpen(false);
-		};
-
-		const ref = useClose(close);
-
 		const setOption = (option: string) => {
 			setValue(option);
 			handleChange(option);
 			setIsOpen(false);
 		};
 		return (
-			<div className={style.select__container} ref={ref}>
+			<div className={style.select__container}>
 				<div className={style.select}>
 					<div className={style.select__title}>{name}</div>
 					<div className={style.select__header} onClick={toggleSelect}>
