@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import style from "./form.module.scss";
 import Select from "../../../../components/select";
+import usePortrait from "../../../../hooks/usePortrait";
 
 interface Props {
 	changeType: (val: string) => void;
@@ -163,11 +164,9 @@ const Personnal: React.FC<Props> = ({ changeType }) => {
 };
 
 const Business: React.FC<Props> = ({ changeType }) => {
+	const portrait = usePortrait();
 	return (
-		<form
-			action=""
-			className={style.claimant__form}
-			onSubmit={(e) => e.preventDefault()}>
+		<form action="" className={style.form} onSubmit={(e) => e.preventDefault()}>
 			<div className={style.form__content}>
 				<div className={style.form__group}>
 					<Select
@@ -175,8 +174,8 @@ const Business: React.FC<Props> = ({ changeType }) => {
 						name="Type"
 						handleChange={changeType}></Select>
 				</div>
-				<div className={style.form__group}></div>{" "}
-				<div className={style.form__group}></div>
+				{!portrait && <div className={style.form__group}></div>}
+				{!portrait && <div className={style.form__group}></div>}
 			</div>
 
 			{/* second row */}

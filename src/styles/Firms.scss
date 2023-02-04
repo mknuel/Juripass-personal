@@ -1,3 +1,18 @@
+@mixin smallPc {
+  @media screen and (max-width: 1230px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: 950px) {
+    @content;
+  }
+}
 .firmheader {
   display: flex;
   justify-content: space-between;
@@ -22,9 +37,11 @@
 .allFirms {
   width: 85%;
   display: flex;
-  //grid-template-columns: 1fr 1fr 1fr ;
   gap: 30px;
   justify-content: left;
+  @include tablets {
+    flex-wrap: wrap;
+  }
   .firmProfile {
     background-color: var(--color-background-light);
     width: 100%;
@@ -70,6 +87,9 @@
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
+      @include smallPc {
+        padding: 13px 20px;
+      }
     }
   }
 }
@@ -85,10 +105,9 @@
     }
 
     .active {
-      border-radius: 10px;
+      // border-radius: 10px;
       background-color: var(--color-secondary);
-      color: var(--color-text-light);
-      
+      color: var(--color-text-light);      
     }
 
     .notActive {
@@ -102,6 +121,9 @@
         text-align: left;
         border-bottom: 3px solid #ddd;
         padding: 10px;
+        background-color: transparent;
+        border-radius: 0px;
+
         svg{
           font-size: 20px;
           height: 30px;

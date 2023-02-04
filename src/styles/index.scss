@@ -2,8 +2,9 @@
 @import './_mixins.scss';
 @import './_typo.scss';
 @import './_dashboard-layout.scss';
+@import './_auth.scss';
 @import './_reset.scss';
-
+@import './Firms.scss';
 
 :root {
   --color-primary: #FAB641;
@@ -46,8 +47,8 @@
 
 
 .con {
-  max-width: 1300px;
-  padding: 0 1em;
+  max-width: 1350px;
+  padding: 0 2em;
   margin: auto;
 }
 
@@ -65,7 +66,6 @@ img {
   backface-visibility: hidden;
 }
 
-
 html {
   font-size: 62.5%;
 
@@ -78,17 +78,14 @@ html {
   }
 
   @include respond(tab-port) {
-    font-size: 60%; //1rem = 9px
+    font-size: 50%; //1rem = 9px
   }
 
   @include respond(phone) {
-    font-size: 60%;
+    font-size: 50%;
   }
 
-  height: 100%;
-
 }
-
 input,
 select {
   outline: none;

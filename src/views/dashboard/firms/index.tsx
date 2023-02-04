@@ -24,7 +24,6 @@ function Firms (){
           <p>Number of Lawyers : 6</p>
           <p>My Role : Admin</p>
           <Link to='lawyer'><button>View Law Firm</button></Link>
-
         </div>
         <div className='firmProfile'>
           <div className='logo'>

@@ -12,6 +12,7 @@ import {
 	BtnSecondary,
 } from "../../../../components/button";
 import style from "./head.module.scss";
+import usePortrait from "../../../../hooks/usePortrait";
 interface Props {
 	showFull?: boolean | null;
 }
@@ -22,6 +23,7 @@ function HeadFull() {
 	const toggleMenu = () => {
 		showMenu(!menu);
 	};
+	const portrait = usePortrait();
 
 	return (
 		<nav className={style.head}>
@@ -35,13 +37,19 @@ function HeadFull() {
 				/>
 			</div>
 			<div className={style.head__content}>
-				<BtnSecondary>file a new case</BtnSecondary>
-				<BtnPrimary>File on an existing case</BtnPrimary>
+				{!portrait && (
+					<>
+						<BtnSecondary>file a new case</BtnSecondary>
+						<BtnPrimary>File on an existing case</BtnPrimary>
+					</>
+				)}
 
-				<Btn className={style.head__icon}>
-					<NotificationBellIcon />
-				</Btn>
-
+				{/* 	{!portrait && (
+					<Btn className={style.head__icon}>
+						<NotificationBellIcon />
+					</Btn>
+				)}
+ */}
 				<div className={style.head__icon}>
 					<Btn className={style.head__image} onClick={toggleMenu}>
 						<img src="/assets/juripassuser.png" alt="user" />
@@ -81,6 +89,7 @@ function HeadFull() {
 
 function HeadMini() {
 	const [menu, showMenu] = useState<boolean>(false);
+	const portrait = usePortrait();
 
 	const toggleMenu = () => {
 		showMenu(!menu);
@@ -92,7 +101,7 @@ function HeadMini() {
 				className={style.head__content}
 				style={{ justifyContent: "flex-end" }}>
 				<Btn className={style.head__icon}>
-					<NotificationBellIcon />
+					{/* 	{!portrait && <NotificationBellIcon />} */}
 				</Btn>
 
 				<div className={style.head__icon}>

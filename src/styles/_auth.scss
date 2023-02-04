@@ -1,0 +1,126 @@
+.auth {
+   height: 100vh;
+   display: flex;
+   background-color: #133557fc;
+   overflow: hidden;
+
+   &-left {
+      width: 50%;
+      height: 100vh;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      background-color: white;
+      @include respond(tab-port){
+         width: 100%;
+      }
+
+      &-con {
+         height: 100vh;
+         width: 60%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: auto;
+         overflow-y: scroll;
+
+         &::-webkit-scrollbar {
+            width: 0px;
+         }
+
+         @include respond(phone){
+            width: 90%;
+         }
+
+         &.signup {
+            margin-top: 3em;
+            align-items: flex-start;
+         }
+
+         & .c {
+            width: 100%;
+         }
+
+         & img {
+            width: 80px;
+         }
+
+         & h1 {
+            font-size: 3.8rem;
+            margin: 1em 0 0.2em 0;
+            color: var(--color-secondary);
+         }
+
+         & p {
+            color: var(--color-gray-200);
+            font-size: 1.7rem;
+            margin-bottom: 2em;
+            line-height: 1.5;
+
+            & span {
+               color: var(--color-secondary);
+               font-weight: 600;
+               cursor: pointer;
+            }
+         }
+         & label{
+            & span {
+               color: var(--color-secondary);
+               font-weight: 600;
+               cursor: pointer;
+            }
+         }
+
+         & button {
+            width: 100%;
+            margin-bottom: 1em;
+            height: 56px;
+            font-weight: 600;
+         }
+
+      }
+
+      & .password-actions {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 3em;
+
+         & label {
+            font-size: 16px;
+            color: var(--color-gray-200);
+         }
+
+         & b {
+            color: var(--color-secondary);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+
+         }
+      }
+   }
+
+   &-right {
+      position: relative;
+      width: 50%;
+      height: 100vh;
+      background: url(../assets/images/auth.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0%;
+         bottom: 0%;
+         left: 0%;
+         right: 0%;
+         background-color: rgba(0, 0, 0, 0.078);
+      }
+
+      @include respond(tab-port){
+         display: none;
+      }
+   }
+
+}

@@ -1,3 +1,4 @@
+@import "../../../../styles/mixins";
 .head{
     display: grid;
     grid-template-rows: 1;
@@ -8,9 +9,20 @@
     position: relative;
     align-items: center;
     z-index: 2;
+
+    
+        @include respond(tab-port){
+            display: grid;
+            width: fit-content;
+            width: 100%;
+            grid-template-columns: 3.5fr 1fr;
+        }
     &__icon{
         display: inline-flex;
         margin: 1rem  ;
+
+
+        @include respond(tab-port){}
 
 
     }
@@ -33,6 +45,13 @@
         justify-content: flex-end;
         align-items: center;
         gap: 2rem;
+        & button{
+            font-weight: 600;
+        }
+
+        @include respond(tab-port){
+              
+        }
     }
 
     &__search{
@@ -74,10 +93,15 @@
 
         h4{
             margin: 1rem 0;
+            font-size: 1.6rem;
             &::first-letter{
 
          
             text-transform: capitalize;
+        }
+        
+        @include respond(tab-port){
+              font-size: 2rem;
         }
         }
 
@@ -86,6 +110,7 @@
             color: var(--color-black);
             display: inline-flex;
             align-items: center;
+            font-size: 1.2rem;
             span{
             
             }
@@ -93,6 +118,11 @@
                 color: inherit;
                 fill: currentColor;
             }
+
+            
+        @include respond(tab-port){
+              font-size:1.4rem
+        }
         }
            &__details{
         display: flex;
@@ -110,6 +140,10 @@
                 // display: block;
                 width: 100%;
                 background-color: transparent;
+                
+        @include respond(tab-port){
+              font-size: 1.4rem;
+        }
 
             }
 

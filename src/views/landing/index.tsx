@@ -6,8 +6,11 @@ import { BtnPrimary, } from '../../components/button'
 import Carousel from '../../components/carousel';
 import Page from '../../components/page'
 import './index.scss';
+import { useNavigate } from 'react-router';
+
 
 function Landing() {
+  const navigate = useNavigate()
   return (
     <Page title='Juripass | Home'>
       <div className='landing'>
@@ -117,7 +120,7 @@ function Landing() {
           <div className='con'>
             <div className='about-text'>
               <p>We believe that justice delivery in Nigeria will be more effective and efficient if interfaced with technology.</p>
-              <BtnPrimary>About Us</BtnPrimary>
+              <BtnPrimary onClick={() => navigate('/about')}>About Us</BtnPrimary>
             </div>
             <div className='about-img'>
               <img src={IMAGE.Lawyers} alt='lawyer pic' />
@@ -147,6 +150,10 @@ function Landing() {
             </div>
             <div className='questions-body'>
               <div className='questions-body-item'>
+                <h4 className='questions-body-item_heading'>Does Juripass Provide for Electronic Service to Opposing Counsel or Other Parties?</h4>
+                <p className='questions-body-item_text'>Yes. With Juripass, you can easily serve opposing Counsel electronically through email and in-portal notification. However, the said opposing counsel must be a Juripass User to be able to receive access cases served electronically. Note also that initiating processes must be served personally as required by most Rules of High Court.</p>
+              </div>
+              <div className='questions-body-item'>
                 <h4 className='questions-body-item_heading'>What States Does Juripass Offer its e-filing Service in?</h4>
                 <p className='questions-body-item_text'>At the moment, Juripass is being implemented in the Ondo State Judiciary. We are working assiduously to spread our reach in other states. Very soon users will be able to file cases across other jurisdictions.</p>
               </div>
@@ -164,12 +171,9 @@ function Landing() {
               </div>
               <div className='questions-body-item'>
                 <h4 className='questions-body-item_heading'>How Long Does it Take to File a Case?</h4>
-                <p className='questions-body-item_text'>Yes. With Juripass, you can easily serve opposing Counsel electronically through email and in-portal notification. However, the said opposing counsel must be a Juripass User to be able to receive access cases served electronically. Note also that initiating processes must be served personally as required by most Rules of High Court.</p>
-              </div>
-              <div className='questions-body-item'>
-                <h4 className='questions-body-item_heading'>Does Juripass Provide for Electronic Service to Opposing Counsel or Other Parties?</h4>
                 <p className='questions-body-item_text'>Once you have created an account on Juripass, it takes less than 5 minutes to submit a case. After submission, the Court registrar will swiftly approve your case or refer back to you for further action if need be.</p>
               </div>
+
             </div>
           </div>
         </section>

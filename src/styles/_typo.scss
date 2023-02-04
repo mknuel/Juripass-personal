@@ -1,13 +1,31 @@
 .heading {
     &-sec {
         font-size: 1.8rem;
+                @include respond(tab-port){
+            margin-bottom:3rem;
+            font-size: 2rem;
+        }
     }
 
     &-ter {
         font-size: 1.6rem;
+
+        @include respond(tab-port){
+            margin-bottom:3rem;
+            font-size: 1.8rem;
+        }
     }
 }
 
 .dark {
     color: var(--color-black) !important;
+}
+
+
+h5{
+    font-size: 1.2rem;
+
+    @include respond(tab-port){
+        font-size: 1.4rem;
+    }
 }

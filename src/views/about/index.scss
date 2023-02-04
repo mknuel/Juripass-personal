@@ -1,0 +1,183 @@
+@import '../../styles/mixins';
+
+#about {
+   margin-top: 8em;
+
+   & #hero {
+      background: url(../../assets/images/about.png);
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      background-position: center;
+
+      & .hero {
+         color: var(--color-text-light);
+         text-align: center;
+
+         & h1 {
+            font-size: 5rem;
+            margin-bottom: 0.5em;
+         }
+
+         & p {
+            width: 80%;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.5;
+         }
+      }
+   }
+
+   & #purpose {
+      margin: 7em 0;
+
+      & .purpose {
+         &-item {
+            margin: 5em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_text {
+               width: 50%;
+
+               & b {
+                  display: block;
+                  margin-bottom: 0.5em;
+                  font-size: 2rem;
+                  font-weight: 600;
+               }
+
+               & p {
+                  font-size: 16px;
+                  line-height: 1.5;
+                  color: var(--color-gray-300);
+               }
+            }
+
+            &_img {
+               width: 50%;
+
+               & img {
+                  width: 100%;
+               }
+
+            }
+
+            @include respond(tab-port) {
+               flex-wrap: wrap;
+
+               &_text {
+                  width: 100%;
+               }
+
+               &_img {
+                  width: 80%;
+                  margin: 4em auto;
+               }
+            }
+         }
+
+      }
+   }
+
+   & #innovation {
+      background-color: var(--color-secondary);
+      color: var(--color-text-light);
+      padding: 9em 0;
+
+      & .innovation {
+         &-body {
+            margin: 5em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &_item {
+               margin: 1em 2em 1em 0em;
+               max-width: 415px;
+               height: 360px;
+               padding: 3em;
+               border: 1px solid var(--color-text-light);
+               border-radius: 20px;
+
+               & b {
+                  display: block;
+                  font-size: 1.8rem;
+                  margin: 1.5em 0;
+                  line-height: 1.5;
+               }
+
+               & p {
+                  font-size: 16px;
+                  line-height: 1.5;
+               }
+
+               &:hover {
+                  border: 1px solid var(--color-primary);
+               }
+            }
+         }
+      }
+   }
+
+   & #team {
+      // background-color: var(--color-background-dark);
+      padding: 6em 0;
+
+      & .team {
+         & .heading {
+            &-main {
+               color: var(--color-secondary);
+            }
+
+            &-sub {
+               color: var(--color-gray-200);
+            }
+         }
+
+         &-body {
+            margin: 6.6em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &_item {
+               position: relative;
+               margin: 1em 2em 1em 0;
+
+               & img {
+                  min-width: 305px;
+                  filter: grayscale(160%);
+               }
+
+               & h4{
+                  position: relative;
+                  top: -70px;
+                  left: 20px;
+                  color: var(--color-text-light);
+                  font-size: 2rem;
+               }
+            }
+         }
+      }
+
+
+   }
+
+   & .heading {
+      &-main {
+         font-size: 2.8rem;
+         font-weight: 600;
+         color: var(--color-text-light);
+         margin-bottom: 0.5em;
+      }
+
+      &-sub {
+         font-size: 1.8rem;
+         color: var(--color-gray-100);
+      }
+   }
+}

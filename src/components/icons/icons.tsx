@@ -22,6 +22,7 @@ import { ReactComponent as LeftArrow } from "./assets/leftarrow.svg";
 import { ReactComponent as Upload } from "./assets/upload.svg";
 import { ReactComponent as Alert } from "./assets/alert.svg";
 import { ReactComponent as Document } from "./assets/document.svg";
+import { ReactComponent as Trash } from "./assets/trash.svg";
 import { ReactComponent as  ToggleOn} from "./assets/ToggleOn.svg";
 import { ReactComponent as ToggleOff } from "./assets/ToggleOff.svg";
 
@@ -35,6 +36,11 @@ export const ToggeOffIcon = () => {
 export const DeleteIcon = () => {
 	return <Delete />;
 };
+
+export const TrashIcon = () => {
+	return <Trash />;
+};
+
 export const ProcessingIcon = () => {
 	return <Processing />;
 };

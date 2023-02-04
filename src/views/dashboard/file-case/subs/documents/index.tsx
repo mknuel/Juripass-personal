@@ -9,7 +9,7 @@ import {
 	ProcessingIcon,
 	TickIcon,
 } from "../../../../../components/icons/icons";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 import Select from "../../../../../components/select";
 
@@ -42,13 +42,18 @@ const Flow = () => (
 
 function Documents() {
 	const navigate = useNavigate();
+
+	const { state } = useLocation();
 	const handleSubmit = () => {
-		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.INVOICE}`);
+		/* 	navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.INVOICE}`, { state }); */
 	};
 	return (
 		<>
 			<Flow />
 			<div className={style.wrapper}>
+				<div style={{ margin: "1rem 0 3rem 0" }}>
+					<h3 className="heading-sec">Documents</h3>
+				</div>
 				<form
 					action=""
 					onSubmit={(e) => e.preventDefault()}
@@ -113,7 +118,7 @@ function Documents() {
 								&nbsp;
 							</label>
 
-							<div className={style.form__checkbox}>
+							<div className={style.form__checkbox__container}>
 								<input
 									placeholder="1"
 									type="checkbox"
@@ -134,7 +139,6 @@ function Documents() {
 						style={{
 							justifyContent: "flex-end",
 							marginTop: "6rem",
-							width: "70%",
 						}}>
 						<div style={{ width: "50%" }}>&nbsp;</div>
 						<BtnTertiary onClick={handleSubmit} className={style.submit}>

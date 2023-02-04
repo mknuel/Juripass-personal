@@ -2,7 +2,7 @@ import React from "react";
 import style from "../../file-case.module.scss";
 import Select from "../../../../../components/select";
 import { BtnTertiary } from "../../../../../components/button";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { DASHBOARD, NEWCASES } from "../../../../../constants/routes";
 const Flow = () => (
 	<div className={style.flow}>
@@ -33,8 +33,12 @@ const Flow = () => (
 
 function Basic() {
 	const navigate = useNavigate();
+
+	const { state } = useLocation();
 	const handleSubmit = () => {
-		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.CLAIMANT}`);
+		navigate(`${DASHBOARD}/${NEWCASES.DEFAULT + NEWCASES.CLAIMANT}`, {
+			state,
+		});
 	};
 	return (
 		<>
@@ -42,7 +46,7 @@ function Basic() {
 
 			<div className={style.wrapper}>
 				<form action="" onSubmit={(e) => e.preventDefault()}>
-					<div className={style.form__content}>
+					<div className={style.form__content} style={{ marginTop: "0" }}>
 						<div className={style.form__group}>
 							<Select
 								options={["High Court", "Magistrate Court", "Customary Court"]}

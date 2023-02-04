@@ -3,7 +3,7 @@
     display: block;
     padding: 1rem;
     height: 100vh;
-position: relative;
+    position: relative;
     top: 0;
     left: 0;
     
@@ -17,13 +17,14 @@ position: relative;
         margin: 2.5rem 0;
         text-transform: capitalize;
         color: var(--color-text-alt);
+        font-size: 1.6rem;
     }
 
     &__link{
         color: inherit;
         display: inline-flex;
         transition: .15s ease-in-out;
-
+        font-size: 1.6rem;
         svg{
             fill: currentColor;
             margin-right: 1rem;
