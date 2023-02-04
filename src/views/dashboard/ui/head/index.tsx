@@ -44,12 +44,12 @@ function HeadFull() {
 					</>
 				)}
 
-				{/* 	{!portrait && (
+					{!portrait && (
 					<Btn className={style.head__icon}>
 						<NotificationBellIcon />
 					</Btn>
 				)}
- */}
+
 				<div className={style.head__icon}>
 					<Btn className={style.head__image} onClick={toggleMenu}>
 						<img src="/assets/juripassuser.png" alt="user" />

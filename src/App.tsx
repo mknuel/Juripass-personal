@@ -107,9 +107,9 @@ function App() {
 									element={<Documents />}
 								/>
 							</Route>
-							<Route path={ROUTE.EXISTINGCASES} element={<Landing />} />
-							<Route path={ROUTE.TRACKCASES} element={<Landing />} />
-							<Route path={ROUTE.FILLINGS} element={<Landing />} />
+							<Route path={ROUTE.EXISTINGCASES} element={<h1>What are you looking for ?</h1>} />
+							<Route path={ROUTE.TRACKCASES} element={<h1>What are you looking for ?</h1>} />
+							<Route path={ROUTE.FILLINGS} element={<h1>What are you looking for ?</h1>} />
 							<Route path={ROUTE.FIRMS} element={<Firms />} />
 							<Route path={'firms/lawyer'} element={<Lawyer />} />
 							<Route path={ROUTE.DRAFTS} element={<SavedDrafts />} />
